@@ -1,0 +1,8 @@
+{
+  "name": "nipsh",
+  "description": "National Institute of Public Safety Health Project",
+  "image": "heroku/ruby",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}

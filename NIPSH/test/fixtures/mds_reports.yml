@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_id: MyString
+  demographic_id: MyString
+  report_date: 2016-07-12
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  report_id: MyString
+  demographic_id: MyString
+  report_date: 2016-07-12
+  created_at: MyString
+  updated_at: MyString

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: MyString
+  lname: MyString
+  fname: MyString
+  mname: MyString
+  date_of_birth: 2016-07-12
+  gender: 1
+  race: 1
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  patient_id: MyString
+  lname: MyString
+  fname: MyString
+  mname: MyString
+  date_of_birth: 2016-07-12
+  gender: 1
+  race: 1
+  created_at: MyString
+  updated_at: MyString

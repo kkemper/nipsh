@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'mds_reports/new'
+
   get 'demographics/new'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -11,22 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712211859) do
+ActiveRecord::Schema.define(version: 20160713172616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "demographics", force: :cascade do |t|
-    t.string   "patient_id"
-    t.string   "lname"
-    t.string   "fname"
-    t.string   "mname"
-    t.date     "date_of_birth"
-    t.integer  "gender"
-    t.integer  "race"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
 
   create_table "mds_reports", force: :cascade do |t|
     t.string   "report_id"
@@ -34,6 +22,16 @@ ActiveRecord::Schema.define(version: 20160712211859) do
     t.date     "report_date"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string   "patient_id"
+    t.string   "lname"
+    t.string   "fname"
+    t.string   "mname"
+    t.date     "date_of_birth"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

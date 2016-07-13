@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'health_conditions/new'
+
+  get 'injury_illnesses/new'
+
+  get 'duties/new'
+
   get 'mds_reports/new'
 
   get 'demographics/new'

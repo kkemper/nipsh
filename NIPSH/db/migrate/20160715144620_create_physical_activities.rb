@@ -2,7 +2,7 @@ class CreatePhysicalActivities < ActiveRecord::Migration
   def change
     create_table :physical_activities do |t|
       t.string :report_id
-      t.integer :30_min
+      t.integer :thirty_min
       t.integer :cardio
       t.integer :muscle
       t.integer :sweat

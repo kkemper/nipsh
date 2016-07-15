@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715180553) do
+ActiveRecord::Schema.define(version: 20160715181413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,24 @@ ActiveRecord::Schema.define(version: 20160715180553) do
     t.integer  "right_8000"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "immunizations", force: :cascade do |t|
+    t.string   "report_id"
+    t.date     "immunization_date"
+    t.integer  "hepatitis_b"
+    t.integer  "hep_b_titer_1"
+    t.date     "hep_b_titer_1_date"
+    t.integer  "heb_b_titer_2"
+    t.date     "hep_b_titer_2_date"
+    t.integer  "hep_a"
+    t.boolean  "influenza"
+    t.integer  "tb_test"
+    t.date     "tb_test_date"
+    t.boolean  "tb_quantiferon"
+    t.integer  "hep_c"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "injury_illnesses", force: :cascade do |t|

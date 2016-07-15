@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_id: MyString
+  30_min: 1
+  cardio: 1
+  muscle: 1
+  sweat: 1
+  everyday: 1
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  report_id: MyString
+  30_min: 1
+  cardio: 1
+  muscle: 1
+  sweat: 1
+  everyday: 1
+  created_at: MyString
+  updated_at: MyString

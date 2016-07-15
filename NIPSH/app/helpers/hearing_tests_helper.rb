@@ -1,0 +1,2 @@
+module HearingTestsHelper
+end

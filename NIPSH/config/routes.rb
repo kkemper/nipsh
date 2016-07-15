@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'other_employments/new'
+
   get 'health_conditions/new'
 
   get 'injury_illnesses/new'

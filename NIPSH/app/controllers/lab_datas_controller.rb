@@ -1,0 +1,2 @@
+class LabDatasController < ApplicationController
+end

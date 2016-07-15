@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: MyString
+  lab_date: 2016-07-15
+  wbc_count: 1
+  hemoglobin: 1
+  hematocrit: 1
+  sgot_ast: 1
+  sgpt_alt: 1
+  triglyceride: 1
+  cholesterol: 1
+  ldl: 1
+  hdl: 1
+  glucose: 1
+  bun: 1
+  creatinine: 1
+  urine_blood: 1
+  urine_glucose: 1
+  urine_protein: 
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  patient_id: MyString
+  lab_date: 2016-07-15
+  wbc_count: 1
+  hemoglobin: 1
+  hematocrit: 1
+  sgot_ast: 1
+  sgpt_alt: 1
+  triglyceride: 1
+  cholesterol: 1
+  ldl: 1
+  hdl: 1
+  glucose: 1
+  bun: 1
+  creatinine: 1
+  urine_blood: 1
+  urine_glucose: 1
+  urine_protein: 
+  created_at: MyString
+  updated_at: MyString

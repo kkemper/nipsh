@@ -14,7 +14,7 @@ class CreatePhysicalExams < ActiveRecord::Migration
       t.float :body_fat
       t.float :fvc
       t.float :fev1
-      t.float :fev1-fvc
+      t.float :fev1_fvc
       t.string :created_at
       t.string :updated_at
 

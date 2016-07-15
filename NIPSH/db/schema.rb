@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715174913) do
+ActiveRecord::Schema.define(version: 20160715180553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -167,6 +167,28 @@ ActiveRecord::Schema.define(version: 20160715174913) do
     t.datetime "updated_at",          null: false
   end
 
+  create_table "lab_data", force: :cascade do |t|
+    t.string   "patient_id"
+    t.date     "lab_date"
+    t.integer  "wbc_count"
+    t.integer  "hemoglobin"
+    t.integer  "hematocrit"
+    t.integer  "sgot_ast"
+    t.integer  "sgpt_alt"
+    t.integer  "triglyceride"
+    t.integer  "cholesterol"
+    t.integer  "ldl"
+    t.integer  "hdl"
+    t.integer  "glucose"
+    t.integer  "bun"
+    t.integer  "creatinine"
+    t.integer  "urine_blood"
+    t.integer  "urine_glucose"
+    t.integer  "urine_protein"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "mds_reports", force: :cascade do |t|
     t.string   "report_id"
     t.string   "demographic_id"
@@ -208,6 +230,25 @@ ActiveRecord::Schema.define(version: 20160715174913) do
     t.integer  "everyday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "physical_exams", force: :cascade do |t|
+    t.string   "patient_id"
+    t.date     "exam_date"
+    t.integer  "systolic"
+    t.integer  "diastolic"
+    t.integer  "pulse"
+    t.float    "weight"
+    t.float    "height"
+    t.float    "hip"
+    t.float    "waist"
+    t.integer  "body_comp_method"
+    t.float    "body_fat"
+    t.float    "fvc"
+    t.float    "fev1"
+    t.float    "fev1_fvc"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "surgeries", force: :cascade do |t|

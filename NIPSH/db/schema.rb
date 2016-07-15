@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715145454) do
+ActiveRecord::Schema.define(version: 20160715171615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -158,6 +158,22 @@ ActiveRecord::Schema.define(version: 20160715145454) do
     t.integer  "everyday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tobacco_and_alcohols", force: :cascade do |t|
+    t.string   "report_id"
+    t.boolean  "smoke"
+    t.date     "start_smoke"
+    t.date     "stop_smoke"
+    t.integer  "pack_count"
+    t.boolean  "chew_tobacco"
+    t.boolean  "smoke_cigar"
+    t.boolean  "smoke_cessation"
+    t.boolean  "cessation_success"
+    t.boolean  "alcohol"
+    t.boolean  "alcohol_count"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

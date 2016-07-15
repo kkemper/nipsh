@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tobacco_and_alcohols/new'
+
   get 'family_histories/new'
 
   get 'physical_activities/new'

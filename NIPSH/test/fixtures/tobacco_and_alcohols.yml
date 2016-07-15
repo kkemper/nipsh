@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_id: MyString
+  smoke: false
+  start: 
+  stop_smoke: 2016-07-15
+  pack_count: 1
+  chew_tobacco: false
+  smoke_cigar: false
+  smoke_cessation: false
+  cessation_success: false
+  alcohol: 
+  alcohol_count: false
+  created_at: MyString
+  updated_at: MyString
+
+two:
+  report_id: MyString
+  smoke: false
+  start: 
+  stop_smoke: 2016-07-15
+  pack_count: 1
+  chew_tobacco: false
+  smoke_cigar: false
+  smoke_cessation: false
+  cessation_success: false
+  alcohol: 
+  alcohol_count: false
+  created_at: MyString
+  updated_at: MyString

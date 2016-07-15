@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cancer_screenings/new'
+
   get 'surgeries/new'
 
   get 'current_jobs/new'

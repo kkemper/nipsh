@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715173458) do
+ActiveRecord::Schema.define(version: 20160715174035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cancer_screenings", force: :cascade do |t|
+    t.string   "report_id"
+    t.integer  "psa"
+    t.integer  "dre"
+    t.integer  "fob"
+    t.integer  "colonoscopy"
+    t.integer  "pap_smear"
+    t.integer  "breast_exam"
+    t.integer  "mammogram"
+    t.integer  "skin"
+    t.integer  "testicular"
+    t.date     "exam_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "current_jobs", force: :cascade do |t|
     t.string   "report_id"

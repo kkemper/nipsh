@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'application#hello'
+  
   get 'fitness_tests/new'
 
   get 'immunizations/new'

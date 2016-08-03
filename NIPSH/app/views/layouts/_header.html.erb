@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	<div class="container">
+		  <span><%= link_to image_tag("logo.png", alt: "logo", class:"navbar-brand"), 'root_path' %></span>
+		  <%= link_to "NIPSH Data Repository", 'root_path', id: "logo" %>
+		<nav>
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to 'Home', root_path %></li>
+				<li><%= link_to 'Help', help_path %></li>
+				<li><%= link_to 'About', about_path %></li>
+				<li><%= link_to 'Contact', contact_path %></li>
+				<li><%= link_to 'Log In', '#' %></li>
+			</ul>
+		</nav>
+	</div>
+</header>

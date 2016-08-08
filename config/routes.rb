@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  get 'user_sessions/new'
+
   root 'static_pages#home'
 
   get 'home' => 'static_pages#home'
@@ -40,6 +44,13 @@ Rails.application.routes.draw do
   get 'mds_reports/new'
 
   get 'demographics/new'
+
+  resources :users, only: [:new, :create]
+
+  resources :user_sessions, only: [:create, :destroy]
+
+  delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
+  get 'sign_in', to: 'user_sessions#new', as: :sign_in
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

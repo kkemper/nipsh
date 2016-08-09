@@ -1,0 +1,10 @@
+<h1>Forgot Your Password?</h1>
+<p>Please provide your email address in the form below and a link to reset your password will be emailed to you.
+<%= form_tag password_resets_path, method: :create do %>
+	<div class="form-group">
+		<%= label_tag 'email', 'E-mail' %>
+		<%= email_field_tag 'email', nil, class: 'form-control' %>
+	</div>
+
+	<%= submit_tag 'Send reset instructions', class: 'btn btn-primary' %>
+<% end %>

@@ -1,0 +1,42 @@
+<% provide(:title, "Request Access") %>
+<div class="jumbotron">
+<h1>Request Full Access</h1>
+If you are conducting research and would like full access to the data within the NIPSH Data Repository, please complete the form below. In order to fully protect the privacy of participants, only serious inquiries will be considered and all data will be anonymized.
+
+Please allow 5 business days for approval.
+
+<%= form_for @user do |f| %>
+	<%= render 'shared/errors', object: @user %>
+
+	<div class="form-group">
+		<%= f.label :name %>
+		<%= f.text_field :name, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :organization %>
+		<%= f.text_field :organization, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :address %>
+		<%= f.text_field :address, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :research_synopsis %>
+		<%= f.text_area :research_synopsis	, size: '50x10', class: 'form-control' %>
+	</div>
+
+
+	<div class="form-group">
+		<%= f.label :email %>
+		<%= f.email_field :email, class: 'form-control' %>
+	</div>
+
+
+	<%= f.submit 'Request Access', class: 'btn btn-primary btn-lg' %>
+<% end %>
+
+
+</div>

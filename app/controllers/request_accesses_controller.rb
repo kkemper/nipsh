@@ -1,0 +1,2 @@
+class RequestAccessesController < ApplicationController
+end

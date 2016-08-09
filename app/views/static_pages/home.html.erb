@@ -4,7 +4,11 @@
 
 <p>The NIPSH Data Repository consists of a collection of health, fitness, and wellbeing information collected from thousands of public safety employees across all fields and disciplines.  This data is made available in an anonymized state to the public for research purposes. If you or your organization are interested in access to the full dataset, please use the button below to request access.</p>
 
-<button type="button" class="btn btn-primary btn-lg center-block">Request Access</button>
+<div class="center block">
+<div class="btn-group">
+<%= link_to 'Request Access', request_path, class: 'btn btn-primary btn-lg center-block no-underline', type: 'button' %>
+</div>
+</div>
 
 <h3>Data Sources</h3>
 
@@ -12,8 +16,8 @@
 
 <div class="center block">
 <div class="btn-group" role="group">
-	<button type="button" class="btn btn-primary btn-lg center-block">Available Data</button>
-	<button type="button" class="btn btn-primary btn-lg center-block">Download PDF </button>
+	<%= link_to 'Available Data', data_path, class: 'btn btn-primary btn-lg no-underline' %>
+	<%= link_to 'Download PDF', asset_path('NIPSH_data_sources.pdf'), class: 'btn btn-primary btn-lg center-block no-underline' %>
 </div>
 </div>
 
@@ -22,3 +26,4 @@
 
 <button type="button" class="btn btn-primary btn-lg center-block">Sample Access</button>
 </div>
+

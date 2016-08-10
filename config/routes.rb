@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'demographics/new'
+
   get 'results' => 'results#new'
 
   get 'queries' => 'queries#new'
@@ -53,7 +55,7 @@ Rails.application.routes.draw do
 
   get 'mds_reports/new'
 
-  get 'demographics/new'
+  get 'patients/new'
 
   resources :users, only: [:new, :create]
 

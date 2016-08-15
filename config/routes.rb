@@ -7,6 +7,14 @@ Rails.application.routes.draw do
   get 'queries' => 'queries#new'
 
   ActiveAdmin.routes(self)
+  get 'static_pages/submit_request'
+
+  get 'static_pages/confirm_access'
+
+  get 'static_pages/queries'
+
+  get 'static_pages/results'
+
   get 'users/new'
 
   get 'user_sessions/new'
@@ -55,7 +63,7 @@ Rails.application.routes.draw do
 
   get 'mds_reports/new'
 
-  get 'patients/new'
+  get 'patients' => 'patients#new'
 
   resources :users, only: [:new, :create]
 

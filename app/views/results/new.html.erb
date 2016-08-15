@@ -1,2 +1,8 @@
-<h1>Results#new</h1>
-<p>Find me in app/views/results/new.html.erb</p>
+<h1>Search Results</h1>
+<ul class="results">
+	<% @patients.all do |patient| %>
+	<li>
+	<%= patient.lname %>,  <%= patient.fname %> <%= mname %>
+	</li>
+</ul> 
+

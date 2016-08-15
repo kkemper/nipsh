@@ -28,6 +28,7 @@ gem 'pg'
 gem 'bootstrap-sass'
 gem 'authlogic', '3.4.6'
 gem 'activeadmin', github: 'activeadmin'
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,2 +1,17 @@
-<h1>Queries#new</h1>
-<p>Find me in app/views/queries/new.html.erb</p>
+<% provide(:title, "Search") %>
+<div class="jumbotron">
+
+<h1>Search</h1>
+<p></p>
+
+<%= form_tag(queries_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Patients" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<% if @patients.present? %>
+	<%= render @posts %>
+<% else %>
+	<p>There are no patients matching your search criteria: <%= params[:search] %>.</p>
+<% end %>
+</div>

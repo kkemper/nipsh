@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* variables */
+$gray-medium-light: #eaeaea;
+
 /* universal */
 
 body {
@@ -17,10 +20,9 @@ textarea {
 
 .center {
 	text-align: center;
-}
-
-.center h1 {
+	h1 {
 	margin-bottom: 10px;
+	}
 }
 
 .no-underline {
@@ -46,7 +48,7 @@ h2 {
 	letter-spacing: -1px;
 	margin-bottom: 30px;
 	font-weight: normal;
-	color: #777;
+	color: $gray-light;
 }
 
 p {
@@ -65,11 +67,11 @@ p {
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
-}
-
-#logo:hover {
+	text-decoration: none;
+	&:hover {
 	color: #fff;
 	text-decoration: none;
+	}
 }
 
 /* footer */
@@ -77,35 +79,28 @@ p {
 footer {
 	margin-top: 45px;
 	padding-top: 5px;
-	border-top: 1px solid #eaeaea;
-	color: #777;
-}
-
-footer a {
-	color: #555;
-}
-
-footer a:hover {
-	color: #222;
-}
-
-footer small {
+	border-top: 1px solid $gray-medium-light;
+	color: $gray-light;
+	a {
+		color: #555;
+		&:hover {
+		color: #222;
+		}
+	}
+	small {
 	float: left;
 	list-style: none;
 	padding-top: 56px;
-}
-
-footer ul li {
+	}
+	ul li {
 	float: left;
 	margin-left: 15px;
 	list-style: none;
-}
-
-footer small img {
+	}
+	small img {
 	width: 56px;
-}
-
-
-footer .navbar-right {
+	}
+	.navbar-right {
 	padding-right: 20px;
+	}
 }

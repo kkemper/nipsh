@@ -7,13 +7,6 @@ Rails.application.routes.draw do
   get 'queries' => 'queries#new'
 
   ActiveAdmin.routes(self)
-  get 'static_pages/submit_request'
-
-  get 'static_pages/confirm_access'
-
-  get 'static_pages/queries'
-
-  get 'static_pages/results'
 
   get 'users/new'
 
@@ -32,6 +25,14 @@ Rails.application.routes.draw do
   get 'data' => 'static_pages#data_sources'
 
   get 'request' => 'request_accesses#new'
+
+  get 'submit_request' => 'static_pages#submit_request'
+
+  get 'confirm_access' =>'static_pages#confirm_access'
+
+  get 'queries' => 'static_pages#queries'
+
+  get 'results' => 'static_pages#results'
   
   get 'fitness_tests/new'
 

@@ -4,11 +4,13 @@ class StaticPagesControllerTest < ActionController::TestCase
 
   def setup
     @base_title = "Public Safety Medical Datastore"
+  end
+
   test "should get home" do
     get :home
     assert_response :success
     assert_select "title", "Home | #{@base_title}"
-  end
+    end
 
   test "should get help" do
     get :help
@@ -27,5 +29,37 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "Contact | #{@base_title}"
   end
+
+  test "should get confirm access" do
+    get :confirm_access
+    assert_response :success
+    assert_select "title", "Confirm Account | #{@base_title}"
+  end
+
+  test "should get data sources" do
+    get :data
+    assert_response :success
+    assert_select "title", "Data Sources | #{@base_title}"
+  end
+
+    test "should get queries" do
+    get :queries
+    assert_response :success
+    assert_select "title", "Search | #{@base_title}"
+  end
+
+    test "should get results" do
+    get :results
+    assert_response :success
+    assert_select "title", "Search Results | #{@base_title}"
+  end
+
+    test "should get submit request" do
+    get :submit_request
+    assert_response :success
+    assert_select "title", "Request Access | #{@base_title}"
+  end
+
+
 
 end

@@ -3,7 +3,7 @@
 one:
   report_id: MyString
   smoke: false
-  start: 
+  start_smoke: 2016-05-15
   stop_smoke: 2016-07-15
   pack_count: 1
   chew_tobacco: false
@@ -12,13 +12,13 @@ one:
   cessation_success: false
   alcohol: 
   alcohol_count: false
-  created_at: MyString
-  updated_at: MyString
+  created_at: 2016-05-23 11:00:00
+  updated_at: 2016-05-24 12:00:00
 
 two:
   report_id: MyString
   smoke: false
-  start: 
+  start_smoke: 2016-05-15
   stop_smoke: 2016-07-15
   pack_count: 1
   chew_tobacco: false
@@ -27,5 +27,5 @@ two:
   cessation_success: false
   alcohol: 
   alcohol_count: false
-  created_at: MyString
-  updated_at: MyString
+  created_at: 2016-05-23 11:00:00
+  updated_at: 2016-05-24 12:00:00

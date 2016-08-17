@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionController::TestCase
 
   def setup
-    @base_title = "Public Safety Medical Datastore"
+    @base_title = "NIPSH Data Repository"
   end
 
   test "should get home" do
@@ -37,7 +37,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   end
 
   test "should get data sources" do
-    get :data
+    get :data_sources
     assert_response :success
     assert_select "title", "Data Sources | #{@base_title}"
   end

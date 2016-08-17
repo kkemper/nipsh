@@ -29490,3 +29490,7 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (3.4ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('kitkemp@iu.edu') LIMIT 1
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."persistence_token" = 'db682b8aacdd090806fc6cbbcf82000c23520ea68299dee4561cb36660a7316f89566b01936a12bc172096ac243705c83f364cc6abebed50eddc02450278de3e' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK

@@ -2,11 +2,13 @@
 <div class="jumbotron">
 <h1>Patients</h1>
 <p>All patients are listed below.</p>
+<% if false %>
 <ul class="patients">
 	<% @patients.each do |patient| %>
 		<li>
 			<%= patient.lname %>, <%= patient.fname %><% patient.mname %>
 		</li>
-	 <% end %>
+	<% end %>
 </ul>
+<% end %>
  

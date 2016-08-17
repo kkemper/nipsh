@@ -6,8 +6,8 @@ one:
   injury_related_days: 1
   alternative_duty: 1
   lt_alternative_duty: false
-  created_at: MyString
-  updated_at: MyString
+  created_at: 2016-05-23 11:00:00
+  updated_at: 2016-05-24 12:00:00
 
 two:
   report_id: MyString
@@ -15,5 +15,5 @@ two:
   injury_related_days: 1
   alternative_duty: 1
   lt_alternative_duty: false
-  created_at: MyString
-  updated_at: MyString
+  created_at: 2016-05-23 11:00:00
+  updated_at: 2016-05-24 12:00:00

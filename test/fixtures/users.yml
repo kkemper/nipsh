@@ -6,6 +6,6 @@ one:
   persistence_token: MyString
 
 two:
-  email: MyString
+  email: MyString2
   crypted_password_salt: MyString
   persistence_token: MyString

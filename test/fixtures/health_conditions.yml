@@ -21,8 +21,8 @@ one:
   heart_disease: false
   heart_disease_ty: false
   heart_disease_current: false
-  heart_disease: MyString
-  _medication: false
+  heart_disease: false
+  heart_disease_medication: false
   resp_disease: false
   resp_disease_ty: false
   resp_disease_current: false
@@ -67,8 +67,8 @@ one:
   other_ty: false
   other_current: false
   other_medication: false
-  created_at: MyString
-  updated_at: MyString
+  created_at: 2016-05-23 11:00:00
+  updated_at: 2016-05-24 12:00:00
 
 two:
   report_id: MyString
@@ -91,8 +91,8 @@ two:
   heart_disease: false
   heart_disease_ty: false
   heart_disease_current: false
-  heart_disease: MyString
-  _medication: false
+  heart_disease: false
+  heart_disease_medication: false
   resp_disease: false
   resp_disease_ty: false
   resp_disease_current: false
@@ -137,5 +137,5 @@ two:
   other_ty: false
   other_current: false
   other_medication: false
-  created_at: MyString
-  updated_at: MyString
+  created_at: 2016-05-23 11:00:00
+  updated_at: 2016-05-24 12:00:00

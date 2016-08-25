@@ -42859,3 +42859,18 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (4.4ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('kitkemp@iu.edu') LIMIT 1
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."persistence_token" = 'da9c524ee352b3a42422b7aba0464753ea997b61d9cb789ac6f715471a834405837f809d7a11dfc1c2e6fcafb0a238e5cb7141e03147aab08f902f61967157f1' LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('cgkemper@gmail.com') LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."persistence_token" = 'bc2aa1a49ac0c20a95ff6613e325abb30bb279d893e744f0b07c091dca6333bed8128f7c73926c61483646cbc1538f4c28031f0bc3c74afb2018a99098703832' LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('cgkemper@gmail.com') LIMIT 1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."persistence_token" = 'bc2aa1a49ac0c20a95ff6613e325abb30bb279d893e744f0b07c091dca6333bed8128f7c73926c61483646cbc1538f4c28031f0bc3c74afb2018a99098703832' LIMIT 1[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "users" ("email", "name", "organization", "research_synopsis", "persistence_token", "perishable_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["email", "cgkemper@gmail.com"], ["name", "Kit Kemper"], ["organization", "IUPUI"], ["research_synopsis", "blah blah blah"], ["persistence_token", "bc2aa1a49ac0c20a95ff6613e325abb30bb279d893e744f0b07c091dca6333bed8128f7c73926c61483646cbc1538f4c28031f0bc3c74afb2018a99098703832"], ["perishable_token", "ARPNbo23n4innNFGttAb"], ["created_at", "2016-08-17 17:25:53.984669"], ["updated_at", "2016-08-17 17:25:53.984669"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (6.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m

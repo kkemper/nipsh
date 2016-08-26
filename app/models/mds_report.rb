@@ -1,4 +1,4 @@
-class MdsReport < ActiveRecord::Base
+class MDSReport < ActiveRecord::Base
 	belongs_to :patient
 	has_one :cancer_screening
 	has_one :current_job

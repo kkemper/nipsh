@@ -34,7 +34,7 @@
 	marital_status = Faker::Number.between(0,6)
 	education_level = Faker::Number.between(0,5)
 	current_duties = Faker::Number.between(0,2)
-	volunteer_hours = Faker::Number.between (0, 160)
+	volunteer_hours = Faker::Number.between(0,160)
 	fire_suppression_years = Faker::Number.between(0,25)
 	ems_years = Faker::Number.between(0,25)
 	mgmt_years = Faker::Number.between(0,25)
@@ -126,8 +126,8 @@
 	other_current = Faker::Number.between(0,1)
 	other_medication = Faker::Number.between(0,1)
 	smoke = Faker::Number.between(0,1)
-	start_smoke = Faker::Number.between(1960, 2016)
-	stop_smoke = Faker::Number.between(1960, 2016)
+	start_smoke = Faker::Date.backward(15250)
+	stop_smoke = Faker::Date.backward(14250)
 	pack_count = Faker::Number.between(0,5)
 	chew_tobacco = Faker::Number.between(0,1)
 	smoke_cigar = Faker::Number.between(0,1)
@@ -153,9 +153,9 @@
 	leg_strength = Faker::Number.between(0,200)
 	arm_strength = Faker::Number.between(0,200)
 	vertical_jump = Faker::Number.between(700,1500)
-	endurance_push_up = Faker::Number.between(0,150)
+	endurance_push_ups = Faker::Number.between(0,150)
 	plank = Faker::Number.between(0,300)
-	hearing_date = Faker::Number.between(0,1)
+	hearing_date = Faker::Date.backward(730)
 	left_500 = Faker::Date.backward(730)
 	right_500 = Faker::Number.between(0,1)
 	left_1000 = Faker::Number.between(0,1)
@@ -211,9 +211,9 @@
 	height = Faker::Number.between(54,96)
 	hip = Faker::Number.between(25, 60)
 	waist = Faker::Number.between(23, 50)
-	body_comp_met = Faker::Number.between(0,3)
+	body_comp_method = Faker::Number.between(0,3)
 	body_fat = Faker::Number.between(5, 40)
-	fvc = Faker::Number.between(0,10)
+	fvc = Faker::Number.between(1,10)
 	fev1 = Faker::Number.between(0,10)
 	fev1_fvc = fev1/fvc
 
@@ -242,15 +242,15 @@
 	#Create cancer_screenings
 	CancerScreening.create!(report_id: report_id, psa: psa, dre: dre, fob: fob, colonoscopy: colonoscopy, pap_smear: pap_smear, breast_exam: breast_exam, mammogram: mammogram, skin: skin, testicular: testicular, exam_date: exam_date)
 	#Create fitness_tests
-	FitnessTest.create!(report_id: report_id, fit_test_date: fit_test_date, aerobic_test_type: aerobic_test_type, aerobic_capacity: aerobic_capacity, flex_sit_reach: flex_sit_reach, hand_strength: hand_strength, leg_strength: leg_strength, arm_strength: arm_strength, vertical_jump: vertical_jump, endurance_push_up: endurance_push_up, plank: plank)
+	FitnessTest.create!(report_id: report_id, fit_test_date: fit_test_date, aerobic_test_type: aerobic_test_type, aerobic_capacity: aerobic_capacity, flex_sit_reach: flex_sit_reach, hand_strength: hand_strength, leg_strength: leg_strength, arm_strength: arm_strength, vertical_jump: vertical_jump, endurance_push_ups: endurance_push_ups, plank: plank)
 	#Create hearing_tests
 	HearingTest.create!(report_id: report_id, hearing_date: hearing_date, left_500: left_500, right_500: right_500, left_1000: left_1000, right_1000: right_1000, left_2000: left_2000, right_2000: right_2000, left_3000: left_3000, right_3000: right_3000, left_4000: left_4000, right_4000: right_4000, left_6000: left_6000, right_6000: right_6000, left_8000: left_8000, right_8000: right_8000)
 	#Create immunizations
 	Immunization.create!(report_id: report_id, immunization_date: immunization_date, hepatitis_b: hepatitis_b, hep_b_titer_1: hep_b_titer_1, hep_b_titer_1_date: hep_b_titer_1_date, heb_b_titer_2: heb_b_titer_2, hep_b_titer_2_date: hep_b_titer_2_date, hep_a: hep_a, influenza: influenza, tb_test: tb_test, tb_test_date: tb_test_date, tb_quantiferon: tb_quantiferon, hep_c:hep_c)
 	#Create lab_data
-	LabData.create!(patient_id: patient_id, lab_date: lab_date, wbc_count: wbc_count, hemoglobin: hemoglobin, hematocrit: hematocrit, sgot_ast:sgot_ast, sgpt_alt:sgpt_alt, triglyceride:triglyceride, cholesterol:cholesterol, ldl:ldl, hdl:hdl, glucose:glucose, bun:bun, creatinine:creatinine, urine_blood:urine_blood, urine_glucose:urine_glucose, urine_protein:urine_protein)
+	LabDatum.create!(patient_id: patient_id, lab_date: lab_date, wbc_count: wbc_count, hemoglobin: hemoglobin, hematocrit: hematocrit, sgot_ast:sgot_ast, sgpt_alt:sgpt_alt, triglyceride:triglyceride, cholesterol:cholesterol, ldl:ldl, hdl:hdl, glucose:glucose, bun:bun, creatinine:creatinine, urine_blood:urine_blood, urine_glucose:urine_glucose, urine_protein:urine_protein)
 	#Create physical_activities
 	PhysicalActivity.create!(report_id:report_id, thirty_min:thirty_min, cardio:cardio, muscle:muscle, sweat: sweat, everyday: everyday)
 	#Create physical_exams
-	PhysicalExam.create!(patient_id: patient_id, exam_date: exam_date, systolic:systolic, diastolic:diastolic, pulse:pulse, weight:weight, height:height, hip:hip, waist:waist, body_comp_met:body_comp_met, body_fat:body_fat, fvc:fvc, fev1:fev1, fev1_fvc:fev1_fvc)
+	PhysicalExam.create!(patient_id: patient_id, exam_date: exam_date, systolic:systolic, diastolic:diastolic, pulse:pulse, weight:weight, height:height, hip:hip, waist:waist, body_comp_method:body_comp_method, body_fat:body_fat, fvc:fvc, fev1:fev1, fev1_fvc:fev1_fvc)
 end

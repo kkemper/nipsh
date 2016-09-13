@@ -14,13 +14,19 @@ class RequestAccessesController < ApplicationController
   	end
   end
 
-  def approve
+  def update
   	@user = User.find_by(perishable_token: params[:id])
-  	if @user.update_attribute()
+  	if @user.update_attribute(approved = true)
+  		flash[:success] = @user.name " has been approved for access."
+  		redirect_to_root_path
+  	else
+  		render :new
+  	end
   end
 
   def deny
   	@user = User.find_by(perishable_token: params[:id])
+  	if @user.
   private
 
   def users_params

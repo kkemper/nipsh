@@ -78,11 +78,7 @@ Rails.application.routes.draw do
 
   resources :request_accesses, only: [:new, :create]
 
-  resources :approve_user, controller: 'request_accesses' do
-    user do
-      put :approved
-    end
-  end
+  resources :access_approvals, only: [:edit]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

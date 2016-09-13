@@ -1,0 +1,2 @@
+module AccessApprovalsHelper
+end

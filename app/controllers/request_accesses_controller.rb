@@ -14,6 +14,13 @@ class RequestAccessesController < ApplicationController
   	end
   end
 
+  def approve
+  	@user = User.find_by(perishable_token: params[:id])
+  	if @user.update_attributes()
+  end
+
+  def deny
+  	@user = User.find_by(perishable_token: params[:id])
   private
 
   def users_params

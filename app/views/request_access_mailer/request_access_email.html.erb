@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content = 'text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+	<h1>User Access Request: <%= @user.name %></h1>
+	<p>The user below has requested access to the NIPSH Data Repository. Please review the details below and approve or deny the request using the links below.</p>
+	<h2>Request Details</h2>
+	<p>
+		<ul>
+			<li>Name: <%= @user.name %></li>
+			<li>Email: <%= @user.email %></li>
+			<li>Organization: <%= @user.organization %></li>
+			<li>Research Synopsis: <%= @user.research_synopsis %></li>
+		</ul>
+	</p>
+
+	

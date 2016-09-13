@@ -16,4 +16,10 @@
 		</ul>
 	</p>
 
-	
+	<h3>Approve/Reject User:</h3>
+		<ul>
+			<li><%= link_to "Approve", approve_user_path, :method => put, remote: true %></li>
+			<li><%= link_to "Reject", reject_user_path, :method => put, remote: true %></li>
+		</ul>
+	</body>
+</html>

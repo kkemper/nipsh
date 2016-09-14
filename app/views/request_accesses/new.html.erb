@@ -28,6 +28,17 @@ Please allow 5 business days for approval.</p>
 		<%= f.email_field :email, class: 'form-control' %>
 	</div>
 
+	<div class="form-group">
+		<%= f.label :password %>
+		<%= f.password_field :password, class: 'form-control' %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :password %>
+		<%= f.password_field :password_confirmation, class: 'form-control' %>
+	</div>
+
+
 
 	<%= f.submit 'Request Access', class: 'btn btn-primary btn-lg' %>
 <% end %>

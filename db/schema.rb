@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913173427) do
+ActiveRecord::Schema.define(version: 20160914084201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -338,23 +338,24 @@ ActiveRecord::Schema.define(version: 20160913173427) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-    t.string   "crypted_password_salt"
+    t.string   "crypted_password"
     t.string   "persistence_token"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
-    t.integer  "login_count",           default: 0,     null: false
-    t.integer  "failed_login_count",    default: 0,     null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "login_count",        default: 0,     null: false
+    t.integer  "failed_login_count", default: 0,     null: false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
     t.string   "perishable_token"
-    t.boolean  "admin",                 default: false
+    t.boolean  "admin",              default: false
     t.string   "name"
     t.string   "organization"
     t.text     "research_synopsis"
-    t.boolean  "approved",              default: false
+    t.boolean  "approved",           default: false
+    t.string   "password_salt"
   end
 
   add_index "users", ["approved"], name: "index_users_on_approved", using: :btree

@@ -9,7 +9,8 @@ def create
       flash[:success] = "Your request has been sent. Please allow 5 business days for approval."
       redirect_to_root_path
     else
-      render :new
+      #render :new
+      redirect_to request_url
     end
   end
   # def create

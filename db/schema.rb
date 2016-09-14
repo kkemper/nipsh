@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914084201) do
+ActiveRecord::Schema.define(version: 20160914122016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -356,6 +356,10 @@ ActiveRecord::Schema.define(version: 20160914084201) do
     t.text     "research_synopsis"
     t.boolean  "approved",           default: false
     t.string   "password_salt"
+    t.string   "approval_digest"
+    t.datetime "approved_at"
+    t.string   "denial_digest"
+    t.datetime "denial_at"
   end
 
   add_index "users", ["approved"], name: "index_users_on_approved", using: :btree

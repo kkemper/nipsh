@@ -10,7 +10,7 @@ class RequestAccessesController < ApplicationController
   		flash[:success] = "Your request has been sent. Please allow 5 business days for approval."
   		redirect_to_root_path
   	else
-  		render :new
+  		render :create
   	end
   end
 
@@ -24,9 +24,16 @@ class RequestAccessesController < ApplicationController
   	end
   end
 
-  def deny
+	def deny
   	@user = User.find_by(perishable_token: params[:id])
-  	if @user.
+  	if @user.update_attribute(approved = false)
+  		flash[:success] = @user.name " has been denied access."
+  		redirect_to_root_path
+  	else
+  		render :new
+  	end
+  end
+
   private
 
   def users_params

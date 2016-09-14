@@ -1,11 +1,11 @@
 <% provide(:title, "Request Access") %>
 <div class="jumbotron">
 <h1>Request Full Access</h1>
-If you are conducting research and would like full access to the data within the NIPSH Data Repository, please complete the form below. In order to fully protect the privacy of participants, only serious inquiries will be considered and all data will be anonymized.
+<p>If you are conducting research and would like full access to the data within the NIPSH Data Repository, please complete the form below. In order to fully protect the privacy of participants, only serious inquiries will be considered and all data will be anonymized.
 
-Please allow 5 business days for approval.
+Please allow 5 business days for approval.</p>
 
-<%= form_for @request_access do |f| %>
+<%= form_for @user do |f| %>
 
 	<div class="form-group">
 		<%= f.label :name %>

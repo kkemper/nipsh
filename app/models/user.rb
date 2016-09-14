@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
 
 	def deliver_access_request!
 		reset_perishable_token!
-		RequestAccessMailer.request_email(self).deliver_now
+		RequestAccessMailer.request_access_email(self).deliver_now
 	end
 end

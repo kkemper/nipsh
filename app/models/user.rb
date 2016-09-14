@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
 
 	#Returns the hash digest of the given string.
 	def User.digest(string)
-		cost = ActioveModel::SecurePassword.min_cost ? Bcrypt::Engine::MIN_COST : Bcrypt::Engine.cost
-		Bcrypt::Password.create(string, cost: cost)
+		cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+		BCrypt::Password.create(string, cost: cost)
 	end
 
 	#Returns a new random token
@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
 	def remember
 		self.remember_token = User.new_token
 		update_attribute(:remember_digest, User.digest(remember_token))
-	end
+	end	
 
 	def deliver_password_reset_instructions!
 		reset_perishable_token!
@@ -36,6 +36,12 @@ class User < ActiveRecord::Base
 	def deliver_access_request!
 		reset_perishable_token!
 		RequestAccessMailer.request_access_email(self).deliver_now
+	end
+
+	def authenticated?(attribute, token)
+		digest = send("#{attribute}_digest")
+		return false if digest.nil?
+		BCyrpt::Password.new(digest).is_password?(token)
 	end
 
 	private

@@ -7,7 +7,7 @@ def create
     if @user.save
       @user.deliver_access_request!
       flash[:success] = "Your request has been sent. Please allow 5 business days for approval."
-      redirect_to_root_path
+      redirect_to root_url
     else
       #render :new
       redirect_to request_url

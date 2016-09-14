@@ -2,10 +2,10 @@
 
 one:
   email: MyString
-  crypted_password_salt: MyString
+  crypted_password: MyString
   persistence_token: MyString
 
 two:
   email: MyString2
-  crypted_password_salt: MyString
+  crypted_password: MyString
   persistence_token: MyString

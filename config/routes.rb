@@ -66,7 +66,7 @@ Rails.application.routes.draw do
 
   get 'patients' => 'patients#new'
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
 
   resources :user_sessions, only: [:create, :destroy]
 

@@ -30,4 +30,14 @@ class UserTest < ActiveSupport::TestCase
   	@user.research_synopsis = "      "
   	assert_not @user.valid?
   end
+
+  test "password should be present" do
+    @user.password = "      "
+    assert_not @user.valid?
+  end
+
+  test "password confirmation should be present" do
+    @user.password_confirmation = "      "
+    assert_not @user.valid?
+  end
 end

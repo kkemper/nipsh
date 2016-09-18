@@ -1,0 +1,71 @@
+<% provide(:title, "Search") %>
+<div class="jumbotron">
+<h1>Search the Data</h1>
+<p>Use the form to search our database. Use the <%= link_to "Data Sources List", data_path %> as guidance with regard to where items may be found.</p>
+
+<h2>Fitness Tests</h2>
+<%= form_for @search do |f| %>
+
+  <div class="form_group">
+    <%= f.label :aerobic_test_type %>
+    <select class="form-control">
+    <%= options_for_select([['WFI sub maximal treadmill', 0], ['WFI sub maximal step mill', 1], ['Gerkin protocol treadmill sub maximal', 2], ['FDNY protocol stepmill sub maximal', 3], ['Medical Protocol treadmill maximal', 4], ['Bruce Protocol treadmill maximal', 5], ['Bruce Protocol treadmill sub maximal', 6], ['Modified Bruce treadmill maximal', 7], ['Modified Bruce treadmill sub maximal', 8]]) %>
+    </select>
+  </div>
+
+
+
+  <div class="form_group">
+    <%= f.label :aerobic_capacity %>
+    <%=f.text_field :aerobic_capacity, class: 'form-control'%>
+  </div>
+
+
+  <div class="form_group">
+    <%= f.label :flex_sit_reach %>
+    <%=f.text_field :flex_sit_reach, class: 'form-control'%>
+  </div>
+
+
+  <div class="form_group">
+    <%= f.label :hand_strengthe %>
+    <%=f.text_field :hand_strength, class: 'form-control'%>
+  </div>
+
+
+  <div class="form_group">
+    <%= f.label :leg_strength %>
+    <%=f.text_field :leg_strength, class: 'form-control'%>
+  </div>
+
+
+  <div class="form_group">
+    <%= f.label :arm_strength %>
+    <%=f.text_field :arm_strength, class: 'form-control'%>
+  </div>
+
+
+  <div class="form_group">
+    <%= f.label :vertical_jump %>
+    <%=f.text_field :vertical_jump, class: 'form-control'%>
+  </div>
+
+
+  <div class="form_group">
+    <%= f.label :endurance_push_ups %>
+    <%=f.text_field :endurance_push_ups, class: 'form-control'%>
+  </div>
+
+    <div class="form_group">
+    <%= f.label :plank %>
+    <%=f.text_field :plank, class: 'form-control'%>
+  </div>
+
+
+<div class="form-group">
+ <%= f.submit 'Search', class: "btn btn-primary" %>
+</div>
+
+<% end %>
+
+</div>

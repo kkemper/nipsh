@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'results' => 'results#new'
 
-  get 'queries' => 'queries#new'
+  #get 'queries' => 'queries#new'
 
   ActiveAdmin.routes(self)
 
@@ -81,6 +81,8 @@ Rails.application.routes.draw do
   resources :access_approvals, only: [:edit]
 
   resources :access_denials, only: [:edit]
+
+  resources :searches
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

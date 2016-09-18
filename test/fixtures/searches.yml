@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aerobic_test_type: 1
+  aerobic_capacity: 1.5
+  flex_sit_reach: 1.5
+  hand_strength: 1.5
+  leg_strength: 1.5
+  arm_strength: 1.5
+  vertical_jump: 1.5
+  endurance_push_ups: 1
+  plank: 1
+
+two:
+  aerobic_test_type: 1
+  aerobic_capacity: 1.5
+  flex_sit_reach: 1.5
+  hand_strength: 1.5
+  leg_strength: 1.5
+  arm_strength: 1.5
+  vertical_jump: 1.5
+  endurance_push_ups: 1
+  plank: 1

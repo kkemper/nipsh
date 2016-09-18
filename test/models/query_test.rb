@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MDSReportTest < ActiveSupport::TestCase
+class QueryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

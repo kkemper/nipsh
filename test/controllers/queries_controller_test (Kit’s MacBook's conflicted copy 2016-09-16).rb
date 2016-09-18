@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MDSReportTest < ActiveSupport::TestCase
+class QueriesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

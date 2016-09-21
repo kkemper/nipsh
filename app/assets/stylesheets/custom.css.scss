@@ -120,3 +120,14 @@ footer {
 	margin-top: 45px;
 	@include box_sizing;
 }
+
+/* search results */
+.search_results ul
+{
+	padding-top: 1em;
+}
+
+.search_results ul li
+{
+	list-style: none;
+}

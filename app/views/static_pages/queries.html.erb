@@ -4,7 +4,7 @@
 <p>Use the form to search our database. Use the <%= link_to "Data Sources List", data_path %> as guidance with regard to where items may be found.</p>
 
 
-<%= form_for @fitness_test do |f| %>
+<%= form_for @fitness_tests do |f| %>
 <h2>Fitness Tests</h2>
 <div class="form-inline">
 	<div class="form_group">
@@ -73,5 +73,7 @@
 <div class="form-group"><br/>
 <button type="submit" class="btn btn-primary btn-lg">Search</button>
 </div>
+
+<% end %>
 
 </div>

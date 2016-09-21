@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   get 'confirm_access' =>'static_pages#confirm_access'
 
-  get 'queries' => 'static_pages#queries'
+  #get 'queries' => 'static_pages#queries'
 
   get 'results' => 'static_pages#results'
   
@@ -65,6 +65,8 @@ Rails.application.routes.draw do
   get 'mds_reports/new'
 
   get 'patients' => 'patients#new'
+
+  get 'patients/index'
 
   resources :users, only: [:new, :create, :show]
 

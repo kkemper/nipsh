@@ -1,0 +1,13 @@
+<% provide(:title, "Patients") %>
+<div class="jumbotron">
+<h1>Patients</h1>
+<h3>Patients are listed below.</h3><br />
+<ul>
+<% @patients.each do |patient| %>
+  <div class="patient">
+    <ul>
+      <li><%= patient.fname %> <%= patient.lname %></li>
+  </div>
+</ul>
+<% end %>
+</div>

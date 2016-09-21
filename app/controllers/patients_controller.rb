@@ -1,5 +1,12 @@
 class PatientsController < ApplicationController
   def new
+    @patient = Patient.new
+    @patients = Patient.all
+    if params[:search]
+      @patients = Patient.search(params[:search]).order("lname DESC")
+    else
+      @patients = Patient.all.order('lname DESC')
+    end
   end
 
   def index
@@ -12,6 +19,6 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:lname])
+    @patients = Patient.find(params[:lname])
   end
 end

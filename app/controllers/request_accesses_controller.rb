@@ -14,6 +14,10 @@ class RequestAccessesController < ApplicationController
   	end
   end
 
+  def index
+    @request_accesses = RequestAccess.all
+  end
+
  #  def update
  #  	@user = User.find_by(perishable_token: params[:id])
  #  	if @user.update_attribute(approved = true)

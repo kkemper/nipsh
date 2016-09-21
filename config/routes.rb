@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'results' => 'results#new'
 
-  #get 'queries' => 'queries#new'
+  get 'basic_queries' => 'queries#new'
 
   ActiveAdmin.routes(self)
 

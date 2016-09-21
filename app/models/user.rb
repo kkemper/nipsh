@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
 		c.crypto_provider = Authlogic::CryptoProviders::Sha512
 	end
 
+	def index
+		@users = User.all
+	end
+
 	#Returns the hash digest of the given string.
 	def User.digest(string)
 		cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

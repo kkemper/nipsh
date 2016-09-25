@@ -68,6 +68,8 @@ Rails.application.routes.draw do
 
   get 'patients/index'
 
+  get 'searches/new'
+
   resources :users, only: [:new, :create, :show]
 
   resources :user_sessions, only: [:create, :destroy]

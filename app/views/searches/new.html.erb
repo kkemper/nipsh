@@ -1,71 +1,133 @@
 <% provide(:title, "Search") %>
 <div class="jumbotron">
-<h1>Search the Data</h1>
-<p>Use the form to search our database. Use the <%= link_to "Data Sources List", data_path %> as guidance with regard to where items may be found.</p>
+  <h1>Search the Data</h1>
+  <p>Use the form to search our database. Use the <%= link_to "Data Sources List", data_path %> as guidance with regard to where items may be found.</p>
 
-<h2>Fitness Tests</h2>
-<%= form_for @search do |f| %>
+  <%= form_for @search do |f| %>
+    <div class="row">
+      <div class="col-md-6">
 
-  <div class="form_group">
-    <%= f.label :aerobic_test_type %>
-    <select class="form-control">
-    <%= options_for_select([['WFI sub maximal treadmill', 0], ['WFI sub maximal step mill', 1], ['Gerkin protocol treadmill sub maximal', 2], ['FDNY protocol stepmill sub maximal', 3], ['Medical Protocol treadmill maximal', 4], ['Bruce Protocol treadmill maximal', 5], ['Bruce Protocol treadmill sub maximal', 6], ['Modified Bruce treadmill maximal', 7], ['Modified Bruce treadmill sub maximal', 8]])%>
-    </select>
-  </div>
-
-
-
-  <div class="form_group">
-    <%= f.label :aerobic_capacity %>
-    <%=f.text_field :aerobic_capacity, class: 'form-control'%>
-  </div>
+        <h2>Fitness Tests</h2>
+        <div class="form_group">
+          <%= f.label :aerobic_test_type %>
+          <select class="form-control">
+          <%= options_for_select([['WFI sub maximal treadmill', 0], ['WFI sub maximal step mill', 1], ['Gerkin protocol treadmill sub maximal', 2], ['FDNY protocol stepmill sub maximal', 3], ['Medical Protocol treadmill maximal', 4], ['Bruce Protocol treadmill maximal', 5], ['Bruce Protocol treadmill sub maximal', 6], ['Modified Bruce treadmill maximal', 7], ['Modified Bruce treadmill sub maximal', 8]])%>
+          </select>
+        </div>
 
 
-  <div class="form_group">
-    <%= f.label :flex_sit_reach %>
-    <%=f.text_field :flex_sit_reach, class: 'form-control'%>
-  </div>
+
+        <div class="form_group">
+          <%= f.label :aerobic_capacity %>
+          <%=f.text_field :aerobic_capacity, class: 'form-control'%>
+        </div>
 
 
-  <div class="form_group">
-    <%= f.label :hand_strengthe %>
-    <%=f.text_field :hand_strength, class: 'form-control'%>
-  </div>
+        <div class="form_group">
+          <%= f.label :flex_sit_reach %>
+          <%=f.text_field :flex_sit_reach, class: 'form-control'%>
+        </div>
 
 
-  <div class="form_group">
-    <%= f.label :leg_strength %>
-    <%=f.text_field :leg_strength, class: 'form-control'%>
-  </div>
+        <div class="form_group">
+          <%= f.label :hand_strengthe %>
+          <%=f.text_field :hand_strength, class: 'form-control'%>
+        </div>
 
 
-  <div class="form_group">
-    <%= f.label :arm_strength %>
-    <%=f.text_field :arm_strength, class: 'form-control'%>
-  </div>
+        <div class="form_group">
+          <%= f.label :leg_strength %>
+          <%=f.text_field :leg_strength, class: 'form-control'%>
+        </div>
 
 
-  <div class="form_group">
-    <%= f.label :vertical_jump %>
-    <%=f.text_field :vertical_jump, class: 'form-control'%>
-  </div>
+        <div class="form_group">
+          <%= f.label :arm_strength %>
+          <%=f.text_field :arm_strength, class: 'form-control'%>
+        </div>
 
 
-  <div class="form_group">
-    <%= f.label :endurance_push_ups %>
-    <%=f.text_field :endurance_push_ups, class: 'form-control'%>
-  </div>
+        <div class="form_group">
+          <%= f.label :vertical_jump %>
+          <%=f.text_field :vertical_jump, class: 'form-control'%>
+        </div>
+
+
+        <div class="form_group">
+          <%= f.label :endurance_push_ups %>
+          <%=f.text_field :endurance_push_ups, class: 'form-control'%>
+        </div>
+
+          <div class="form_group">
+          <%= f.label :plank %>
+          <%=f.text_field :plank, class: 'form-control'%>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Current Employment</h2>
+
+        <h5>Currently Employed</h5>
+
+        <div class="form_group">
+          <ul>
+            <li><%= radio_button_tag(:currently_emp, TRUE) %>
+            <%= label_tag(:currently_employed_y, "Currently Employed") %></li>
+            <li><%= radio_button_tag(:currently_emp, FALSE) %>
+            <%= label_tag(:currently_employed_n, "    Currently Unemployed") %></li>
+          </ul>
+        </div>
+
+        <div class="form_group">
+          <%=label_tag(:date_of_hire, "Date of Hire") %>
+          <%= date_field(:current_jobs, :date_of_hire) %>
+        </div>
+
+        <div class="form_group">
+          <%=label_tag(:date_of_exit, "Date of Exit") %>
+          <%= date_field(:current_jobs, :date_of_exit) %>
+        </div>
+
+        <h5>Current Duties</h5>
+        <div class="form_group">
+          <ul>
+            <li><%= radio_button_tag(:current_duties, 0) %>
+            <%= label_tag(:fire_suppression, "Fire Suppresssion") %></li>
+            <li><%= radio_button_tag(:current_duties, 1) %>
+            <%= label_tag(:EMS, "    EMS/Paramedic") %></li>
+            <li><%= radio_button_tag(:current_duties, 2) %>
+            <%= label_tag(:management, "    Management/Administration") %></li>
+          </ul>
+        </div>
+
+        <h5>Volunteer</h5>
+        <div class="form_group">
+          <ul>
+            <li><%= radio_button_tag(:volunteer, TRUE) %>
+            <%= label_tag(:volunteer_y, "Yes") %></li>
+            <li><%= radio_button_tag(:volunteer, FALSE) %>
+            <%= label_tag(:volunteer_n, "No") %></li>
+          </ul>
+        </div>
+
+        <h5>Other Employment</h5>
+        <div class="form_group">
+          <ul>
+            <li><%= radio_button_tag(:other_employment, TRUE) %>
+            <%= label_tag(:other_employment_y, "Yes") %></li>
+            <li><%= radio_button_tag(:other_employment, FALSE) %>
+            <%= label_tag(:other_employment_n, "No") %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
 
     <div class="form_group">
-    <%= f.label :plank %>
-    <%=f.text_field :plank, class: 'form-control'%>
-  </div>
+     <%= f.submit 'Search', class: "btn btn-primary" %>
+    </div>
 
-
-<div class="form-group">
- <%= f.submit 'Search', class: "btn btn-primary" %>
-</div>
-
-<% end %>
+  <% end %>
 
 </div>

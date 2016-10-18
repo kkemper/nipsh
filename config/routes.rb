@@ -70,6 +70,8 @@ Rails.application.routes.draw do
 
   get 'searches/new'
 
+  get 'searches/index'
+
   resources :users, only: [:new, :create, :show]
 
   resources :user_sessions, only: [:create, :destroy]

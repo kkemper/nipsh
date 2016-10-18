@@ -4,7 +4,8 @@ class SearchesController < ApplicationController
   end
 
   def index
-    @searches = Search.all
+      @fitness_tests = FitnessTest.search(params[:search])
+      @current_jobs = CurrentJob.search(params[:search])
   end
 
   def create

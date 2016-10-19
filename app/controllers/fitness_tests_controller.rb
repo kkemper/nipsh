@@ -5,6 +5,5 @@ class FitnessTestsController < ApplicationController
 
   def index
     @fitness_tests = @FitnessTest.all
-    @patient.fname = Patient.fname
   end
 end

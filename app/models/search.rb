@@ -276,5 +276,12 @@ private
   end
 
   def find_physical_activities
+    physical_activities = PhysicalActivity.where(thirty_min: thirty_min) if thirty_min.present?
+    physical_activities = PhysicalActivity.where(cardio: cardio) if cardio.present?
+    physical_activities = PhysicalActivity.where(muscle: muscle) if muscle.present?
+    physical_activities = PhysicalActivity.where(sweat: sweat) if sweat.present?
+    physical_activities = PhysicalActivity.where(everyday: everyday) if everyday.present?
+    physical_activities
+  end
 end
 

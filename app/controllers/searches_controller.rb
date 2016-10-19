@@ -20,7 +20,7 @@ class SearchesController < ApplicationController
   private
 
   def search_params
-    params.require(:search).permit(:aerobic_test_type, :aerobic_capacity, :flex_sit_reach, :hand_strength, :leg_strength, :arm_strength, :vertical_jump, :endurance_push_ups, :plank)
+    params.require(:search).permit(:aerobic_test_type, :aerobic_capacity, :flex_sit_reach, :hand_strength, :leg_strength, :arm_strength, :vertical_jump, :endurance_push_ups, :plank, :currently_emp, :date_of_hire, :date_of_exit, :current_duties, :volunteer, :volunteer_hours, :other_employment)
   end
 end
 

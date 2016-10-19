@@ -242,4 +242,24 @@ private
     injury_illnesses = InjuryIllness.where(lt_alternative_duty: lt_alternative_duty) if lt_alternative_duty.present?
     injury_illnesses
   end
+
+  def find_lab_data
+    lab_data = LabDatum.where(lab_date: lab_date) if lab_date.present?
+    lab_data = LabDatum.where(wbc_count: wbc_count) if wbc_count.present?
+    lab_data = LabDatum.where(hemoglobin: hemoglobin) if hemoglobin.present?
+    lab_data = LabDatum.where(hematocrit: hematocrit) if hematocrit.present?
+    lab_data = LabDatum.where(sgot_ast: sgot_ast) if sgot_ast.present?
+    lab_data = LabDatum.where(sgpt_alt: sgpt_alt) if sgpt_alt.present?
+    lab_data = LabDatum.where(triglyceride: triglyceride) if triglyceride.present?
+    lab_data = LabDatum.where(cholesterol: cholesterol) if cholesterol.present?
+    lab_data = LabDatum.where(ldl: ldl) if ldl.present?
+    lab_data = LabDatum.where(hdl: hdl) if hdl.present?
+    lab_data = LabDatum.where(glucose: glucose) if glucose.present?
+    lab_data = LabDatum.where(bun: bun) if bun.present?
+    lab_data = LabDatum.where(creatinine: creatinine) if creatinine.present?
+    lab_data = LabDatum.where(urine_blood: urine_blood) if urine_blood.present?
+    lab_data = LabDatum.where(urine_glucose: urine_glucose) if urine_glucose.present?
+    lab_data = LabDatum.where(urine_protein: urine_protein) if urine_protein.present?
+    lab_data
+  end
 end

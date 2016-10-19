@@ -234,4 +234,12 @@ private
     immunizations = Immunization.where(hep_c: hep_c) if hep_c.present?
     immunizations
   end
+
+  def find_injury_illnesses
+    injury_illnesses = InjuryIllness.where(non_work_sick_days: non_work_sick_days) if non_work_sick_days.present?
+    injury_illnesses = InjuryIllness.where(injury_related_days: injury_related_days) if injury_related_days.present?
+    injury_illnesses = InjuryIllness.where(alternative_duty: alternative_duty) if alternative_duty.present?
+    injury_illnesses = InjuryIllness.where(lt_alternative_duty: lt_alternative_duty) if lt_alternative_duty.present?
+    injury_illnesses
+  end
 end

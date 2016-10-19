@@ -8,7 +8,59 @@ class Search < ActiveRecord::Base
   end
 
   def cancer_screenings
-    @cancer_screenings |= find_cancer_screenings
+    @cancer_screenings ||= find_cancer_screenings
+  end
+
+  def demographics
+    @demographics ||= find_demographics
+  end
+
+  def duties
+    @duties ||= find_duties
+  end
+
+  def family_histories
+    @family_histories ||= find_family_histories
+  end
+
+  def health_conditions
+    @health_conditions ||= find_health_conditions
+  end
+
+  def hearing_tests
+    @hearing_tests ||= find_hearing_tests
+  end
+
+  def immunizations
+    @immunixations ||= find_immunizations
+  end
+
+  def injury_illnesses
+    @injury_illnesses ||= find_injury_illnesses
+  end
+
+  def lab_data
+    @lab_data ||= find_lab_data
+  end
+
+  def other_employments
+    @other_employments ||= find_other_employments
+  end
+
+  def physical_activiites
+    @physical_activities ||= find_physical_activities
+  end
+
+  def physical_exams
+    @physical_exams ||= find_physical_exams
+  end
+
+  def surgeries
+    @surgeries ||= find_surgeries
+  end
+
+  def tobacco_and_alcohols
+    @tobacco_and_alcohols ||= find_tobacco_and_alcohols
   end
 
 
@@ -146,5 +198,24 @@ private
     health_conditions = HealthCondition.where(other_current: other_current) if other_current.present?
     health_conditions = HealthCondition.where(other_medication: other_medication) if other_medication.present?
     health_conditions
+  end
+
+  def find_hearing_tests
+    hearing_tests = HearingTest.where(hearing_date: hearing_date) if hearing_date.present?
+    hearing_tests = HearingTest.where(left_500: left_500) if left_500.present?
+    hearing_tests = HearingTest.where(right_500: right_500) if right_500.present?
+    hearing_tests = HearingTest.where(left_1000: left_1000) if left_1000.present?
+    hearing_tests = HearingTest.where(right_1000: right_1000) if right_1000.present?
+    hearing_tests = HearingTest.where(left_2000: left_2000) if left_2000.present?
+    hearing_tests = HearingTest.where(right_2000: right_2000) if right_2000.present?
+    hearing_tests = HearingTest.where(left_3000: left_3000) if left_3000.present?
+    hearing_tests = HearingTest.where(right_3000: right_3000) if right_3000.present?
+    hearing_tests = HearingTest.where(left_4000: left_4000) if left_4000.present?
+    hearing_tests = HearingTest.where(right_4000: right_4000) if right_4000.present?
+    hearing_tests = HearingTest.where(left_6000: left_6000) if left_6000.present?
+    hearing_tests = HearingTest.where(right_6000: right_6000) if right_6000.present?
+    hearing_tests = HearingTest.where(left_8000: left_8000) if left_8000.present?
+    hearing_tests = HearingTest.where(right_8000: right_8000) if right_8000.present?
+    hearing_tests
   end
 end

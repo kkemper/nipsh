@@ -300,5 +300,14 @@ private
     physical_exams = PhysicalExam.where(fev1_fvc: fev1_fvc) if fev1_fvc.present?
     physical_exams
   end
+
+  def find_surgeries
+    surgeries = Surgery.where(chest: chest) if chest.present?
+    surgeries = Surgery.where(back: back) if back.present?
+    surgeries = Surgery.where(neck: neck) if neck.present?
+    surgeries = Surgery.where(shoulder: shoulder) if shoulder.present?
+    surgeries = Surgery.where(leg: leg) if leg.present?
+    surgeries
+  end
 end
 

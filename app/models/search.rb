@@ -309,5 +309,19 @@ private
     surgeries = Surgery.where(leg: leg) if leg.present?
     surgeries
   end
+
+  def find_tobacco_and_alcohols
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(smoke: smoke) if smoke.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(start_smoke: start_smoke) if start_smoke.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(stop_smoke: stop_smoke) if stop_smoke.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(pack_count: pack_count) if pack_count.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(chew_tobacco: chew_tobacco) if chew_tobacco.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(smoke_cigar: smoke_cigar) if smoke_cigar.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(smoke_cessation: smoke_cessation) if smoke_cessation.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(cessation_success: cessation_success) if cessation_success.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(alcohol: alcohol) if alcohol.present?
+    tobacco_and_alcohols = TobaccoAndAlcohol.where(alcohol_count: alcohol_count) if alcohol_count.present?
+    tobacco_and_alcohols
+  end
 end
 

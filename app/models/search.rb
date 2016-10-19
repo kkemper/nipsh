@@ -262,4 +262,19 @@ private
     lab_data = LabDatum.where(urine_protein: urine_protein) if urine_protein.present?
     lab_data
   end
+
+  def find_other_employments
+    other_employment = OtherEmployment.where(construction_years: construction_years) if construction_years.present?
+    other_employment = OtherEmployment.where(other_ml_years: other_ml_years) if other_ml_years.present?
+    other_employment = OtherEmployment.where(retail_years: retail_years) if retail_years.present?
+    other_employment = OtherEmployment.where(lawn_years: lawn_years) if lawn_years.present?
+    other_employment = OtherEmployment.where(admin_years: admin_years) if admin_years.present?
+    other_employment = OtherEmployment.where(manf_years: manf_years) if manf_years.present?
+    other_employment = OtherEmployment.where(healthcare_years: healthcare_years) if healthcare_years.present?
+    other_employment = OtherEmployment.where(other_years: other_years) if other_years.present?
+    other_employment
+  end
+
+  def find_physical_activities
 end
+

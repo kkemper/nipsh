@@ -32,7 +32,7 @@ class Search < ActiveRecord::Base
   end
 
   def immunizations
-    @immunixations ||= find_immunizations
+    @immunizations ||= find_immunizations
   end
 
   def injury_illnesses
@@ -217,5 +217,21 @@ private
     hearing_tests = HearingTest.where(left_8000: left_8000) if left_8000.present?
     hearing_tests = HearingTest.where(right_8000: right_8000) if right_8000.present?
     hearing_tests
+  end
+
+  def find_immunizations
+    immunizations = Immunization.where(immunization_date: immunization_date) if immunization_date.present?
+    immunizations = Immunization.where(hepatitis_b: hepatitis_b) if hepatitis_b.present?
+    immunizations = Immunization.where(hep_b_titer_1: hep_b_titer_1) if hep_b_titer_1.present?
+    immunizations = Immunization.where(hep_b_titer_1_date: hep_b_titer_1_date) if hep_b_titer_1_date.present?
+    immunizations = Immunization.where(hep_b_titer_2: hep_b_titer_2) if hep_b_titer_2.present?
+    immunizations = Immunization.where(hep_b_titer_2_date: hep_b_titer_2_date) if hep_b_titer_2_date.present?
+    immunizations = Immunization.where(hep_a: hep_a) if hep_a.present?
+    immunizations = Immunization.where(influenza: influenza) if influenza.present?
+    immunizations = Immunization.where(tb_test: tb_test) if tb_test.present?
+    immunizations = Immunization.where(tb_test_date: tb_test_date) if tb_test_date.present?
+    immunizations = Immunization.where(tb_quantiferon: tb_quantiferon) if tb_quantiferon.present?
+    immunizations = Immunization.where(hep_c: hep_c) if hep_c.present?
+    immunizations
   end
 end

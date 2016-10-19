@@ -283,5 +283,22 @@ private
     physical_activities = PhysicalActivity.where(everyday: everyday) if everyday.present?
     physical_activities
   end
+
+  def find_physical_exams
+    physical_exams = PhysicalExam.where(exam_date: exam_date) if exam_date.present?
+    physical_exams = PhysicalExam.where(systolic: systolic) if systolic.present?
+    physical_exams = PhysicalExam.where(diastolic: diastolic) if diastolic.present?
+    physical_exams = PhysicalExam.where(pulse: pulse) if pulse.present?
+    physical_exams = PhysicalExam.where(weight: weight) if weight.present?
+    physical_exams = PhysicalExam.where(height: height) if height.present?
+    physical_exams = PhysicalExam.where(hip: hip) if hip.present?
+    physical_exams = PhysicalExam.where(waist: waist) if waist.present?
+    physical_exams = PhysicalExam.where(body_comp_method: body_comp_method) if body_comp_method.present?
+    physical_exams = PhysicalExam.where(body_fat: body_fat) if body_fat.present?
+    physical_exams = PhysicalExam.where(fvc: fvc) if fvc.present?
+    physical_exams = PhysicalExam.where(fev1: fev1) if fev1.present?
+    physical_exams = PhysicalExam.where(fev1_fvc: fev1_fvc) if fev1_fvc.present?
+    physical_exams
+  end
 end
 

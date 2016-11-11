@@ -24,6 +24,14 @@ test:
   <<: *default
   database: nipsh_test
 
+staging:
+  <<: *default
+  database: nipsh_staging
+  username: rails
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+
 production:
   <<: *default
   database: nipsh_production
+  username: rails
+  password: <%= ENV["DATABASE_PASSWORD"] %>

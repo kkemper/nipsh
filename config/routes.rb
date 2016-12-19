@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  resources :bsdi_measurements
+  resources :bsdi_hosps
+  resources :bsdi_smokings
+  resources :bsdi_exercises
+  resources :bsdi_blood_pressures
+  resources :bsdi_blood_chemistries
+  resources :bsdi_diseases
+  resources :bsdi_risks
+  resources :bsdi_current_jobs
+  resources :bsdi_patients
+  resources :bsdi_reports
   get 'demographics/new'
 
   get 'results' => 'results#new'

@@ -1,0 +1,53 @@
+<%= form_for(@bsdi_exercise) do |f| %>
+  <% if @bsdi_exercise.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_exercise.errors.count, "error") %> prohibited this bsdi_exercise from being saved:</h2>
+
+      <ul>
+      <% @bsdi_exercise.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_exercise %><br>
+    <%= f.number_field :bsdi_exercise %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_how_long_active %><br>
+    <%= f.number_field :bsdi_how_long_active %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_sedentary %><br>
+    <%= f.text_field :bsdi_sedentary %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hip_knee_problems %><br>
+    <%= f.text_field :bsdi_hip_knee_problems %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_other_reason_no_exercise %><br>
+    <%= f.text_field :bsdi_other_reason_no_exercise %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_activity_minutes_vigorous %><br>
+    <%= f.number_field :bsdi_activity_minutes_vigorous %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_activity_minutes_moderate %><br>
+    <%= f.number_field :bsdi_activity_minutes_moderate %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_physical_inactivity %><br>
+    <%= f.text_field :bsdi_physical_inactivity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

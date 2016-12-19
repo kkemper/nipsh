@@ -1,0 +1,2 @@
+module BsdiCurrentJobsHelper
+end

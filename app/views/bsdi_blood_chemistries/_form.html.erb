@@ -1,0 +1,77 @@
+<%= form_for(@bsdi_blood_chemistry) do |f| %>
+  <% if @bsdi_blood_chemistry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_blood_chemistry.errors.count, "error") %> prohibited this bsdi_blood_chemistry from being saved:</h2>
+
+      <ul>
+      <% @bsdi_blood_chemistry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_bchem_date %><br>
+    <%= f.date_select :bsdi_bchem_date %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_cholesterol %><br>
+    <%= f.number_field :bsdi_cholesterol %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_high_cholesterol %><br>
+    <%= f.text_field :bsdi_high_cholesterol %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_cholesterol_meds %><br>
+    <%= f.text_field :bsdi_cholesterol_meds %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hdl %><br>
+    <%= f.number_field :bsdi_hdl %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hdl_status %><br>
+    <%= f.number_field :bsdi_hdl_status %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_ldl %><br>
+    <%= f.number_field :bsdi_ldl %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_high_ldl %><br>
+    <%= f.text_field :bsdi_high_ldl %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_triglycerides %><br>
+    <%= f.number_field :bsdi_triglycerides %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_high_triglyceride %><br>
+    <%= f.text_field :bsdi_high_triglyceride %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_glucose %><br>
+    <%= f.number_field :bsdi_glucose %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_pre_diabetes %><br>
+    <%= f.text_field :bsdi_pre_diabetes %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_a1c %><br>
+    <%= f.number_field :bsdi_a1c %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_blood_chem_risk %><br>
+    <%= f.text_field :bsdi_blood_chem_risk %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

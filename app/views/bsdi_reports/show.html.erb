@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi patient:</strong>
+  <%= @bsdi_report.bsdi_patient_id %>
+</p>
+
+<p>
+  <strong>Bsdi date:</strong>
+  <%= @bsdi_report.bsdi_date %>
+</p>
+
+<p>
+  <strong>Bsdi newest:</strong>
+  <%= @bsdi_report.bsdi_newest %>
+</p>
+
+<p>
+  <strong>Bsdi valid year:</strong>
+  <%= @bsdi_report.bsdi_valid_year %>
+</p>
+
+<p>
+  <strong>Bsdi user defined flag:</strong>
+  <%= @bsdi_report.bsdi_user_defined_flag %>
+</p>
+
+<p>
+  <strong>Bsdi staff entry:</strong>
+  <%= @bsdi_report.bsdi_staff_entry %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_report_path(@bsdi_report) %> |
+<%= link_to 'Back', bsdi_reports_path %>

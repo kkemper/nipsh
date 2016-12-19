@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi report:</strong>
+  <%= @bsdi_hosp.bsdi_report_id %>
+</p>
+
+<p>
+  <strong>Bsdi hospitalization:</strong>
+  <%= @bsdi_hosp.bsdi_hospitalization %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_hosp_path(@bsdi_hosp) %> |
+<%= link_to 'Back', bsdi_hosps_path %>

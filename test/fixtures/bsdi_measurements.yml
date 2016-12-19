@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_weight: 1.5
+  bsdi_height: 1.5
+  bsdi_waist: 1.5
+  bsdi_waist_risk: 
+  bsdi_hips: 1.5
+  bsdi_weight_belief: 1
+  bsdi_bmi: 1.5
+  bsdi_bmi_category: 1
+  bsdi_high_risk_bmi: 
+  bsdi_hypertrophic: 
+  bsdi_disabled: 
+
+two:
+  bsdi_weight: 1.5
+  bsdi_height: 1.5
+  bsdi_waist: 1.5
+  bsdi_waist_risk: 
+  bsdi_hips: 1.5
+  bsdi_weight_belief: 1
+  bsdi_bmi: 1.5
+  bsdi_bmi_category: 1
+  bsdi_high_risk_bmi: 
+  bsdi_hypertrophic: 
+  bsdi_disabled: 

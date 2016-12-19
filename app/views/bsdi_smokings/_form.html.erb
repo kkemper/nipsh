@@ -1,0 +1,25 @@
+<%= form_for(@bsdi_smoking) do |f| %>
+  <% if @bsdi_smoking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_smoking.errors.count, "error") %> prohibited this bsdi_smoking from being saved:</h2>
+
+      <ul>
+      <% @bsdi_smoking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoking_status %><br>
+    <%= f.text_field :bsdi_smoking_status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

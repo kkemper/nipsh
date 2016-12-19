@@ -1,0 +1,33 @@
+<%= form_for(@bsdi_blood_pressure) do |f| %>
+  <% if @bsdi_blood_pressure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_blood_pressure.errors.count, "error") %> prohibited this bsdi_blood_pressure from being saved:</h2>
+
+      <ul>
+      <% @bsdi_blood_pressure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_systolic %><br>
+    <%= f.number_field :bsdi_systolic %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diastolic %><br>
+    <%= f.number_field :bsdi_diastolic %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_bp_medicine %><br>
+    <%= f.text_field :bsdi_bp_medicine %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

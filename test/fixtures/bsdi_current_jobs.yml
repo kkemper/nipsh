@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: 
+  bsdi_organization: MyString
+  bsdi_department: MyString
+  bsdi_service: 1
+  bsdi_job_title: MyString
+
+two:
+  bsdi_report_id: 
+  bsdi_organization: MyString
+  bsdi_department: MyString
+  bsdi_service: 1
+  bsdi_job_title: MyString

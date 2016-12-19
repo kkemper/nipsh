@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi report:</strong>
+  <%= @bsdi_current_job.bsdi_report_id %>
+</p>
+
+<p>
+  <strong>Bsdi organization:</strong>
+  <%= @bsdi_current_job.bsdi_organization %>
+</p>
+
+<p>
+  <strong>Bsdi department:</strong>
+  <%= @bsdi_current_job.bsdi_department %>
+</p>
+
+<p>
+  <strong>Bsdi service:</strong>
+  <%= @bsdi_current_job.bsdi_service %>
+</p>
+
+<p>
+  <strong>Bsdi job title:</strong>
+  <%= @bsdi_current_job.bsdi_job_title %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_current_job_path(@bsdi_current_job) %> |
+<%= link_to 'Back', bsdi_current_jobs_path %>

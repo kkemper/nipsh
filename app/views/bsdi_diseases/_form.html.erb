@@ -1,0 +1,165 @@
+<%= form_for(@bsdi_disease) do |f| %>
+  <% if @bsdi_disease.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_disease.errors.count, "error") %> prohibited this bsdi_disease from being saved:</h2>
+
+      <ul>
+      <% @bsdi_disease.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_has_disease %><br>
+    <%= f.text_field :bsdi_has_disease %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_heart_disease %><br>
+    <%= f.text_field :bsdi_heart_disease %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hypertension %><br>
+    <%= f.text_field :bsdi_hypertension %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diabetes %><br>
+    <%= f.text_field :bsdi_diabetes %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diabetes_type1 %><br>
+    <%= f.text_field :bsdi_diabetes_type1 %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_metabolic %><br>
+    <%= f.text_field :bsdi_metabolic %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_cancer %><br>
+    <%= f.text_field :bsdi_cancer %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_auto_immune %><br>
+    <%= f.text_field :bsdi_auto_immune %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_asthma %><br>
+    <%= f.text_field :bsdi_asthma %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_pulmonary %><br>
+    <%= f.text_field :bsdi_pulmonary %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_arthritis %><br>
+    <%= f.text_field :bsdi_arthritis %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_allergies %><br>
+    <%= f.text_field :bsdi_allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_digestive %><br>
+    <%= f.text_field :bsdi_digestive %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_mental %><br>
+    <%= f.text_field :bsdi_mental %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_neck_pain %><br>
+    <%= f.text_field :bsdi_neck_pain %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_back_pain %><br>
+    <%= f.text_field :bsdi_back_pain %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_respiratory %><br>
+    <%= f.text_field :bsdi_respiratory %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_migraines_headaches %><br>
+    <%= f.text_field :bsdi_migraines_headaches %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_depression %><br>
+    <%= f.text_field :bsdi_depression %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_anxiety %><br>
+    <%= f.text_field :bsdi_anxiety %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_musculoskeletal_problems %><br>
+    <%= f.text_field :bsdi_musculoskeletal_problems %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_periphvasc %><br>
+    <%= f.text_field :bsdi_periphvasc %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_seizures %><br>
+    <%= f.text_field :bsdi_seizures %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_stroke %><br>
+    <%= f.text_field :bsdi_stroke %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_pregnancy %><br>
+    <%= f.text_field :bsdi_pregnancy %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_chest_pain %><br>
+    <%= f.text_field :bsdi_chest_pain %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_leg_pain %><br>
+    <%= f.text_field :bsdi_leg_pain %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_dizziness %><br>
+    <%= f.text_field :bsdi_dizziness %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_shortbreath %><br>
+    <%= f.text_field :bsdi_shortbreath %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_orthopnea %><br>
+    <%= f.text_field :bsdi_orthopnea %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_heart_flutter %><br>
+    <%= f.text_field :bsdi_heart_flutter %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_heart_murmur %><br>
+    <%= f.text_field :bsdi_heart_murmur %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_ankle_edema %><br>
+    <%= f.text_field :bsdi_ankle_edema %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_heart_meds %><br>
+    <%= f.text_field :bsdi_heart_meds %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_chd %><br>
+    <%= f.number_field :bsdi_family_chd %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_chd_risk %><br>
+    <%= f.text_field :bsdi_chd_risk %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

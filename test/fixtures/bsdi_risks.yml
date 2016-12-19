@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_risk_stratification: 1
+  bsdi_risk_factor_count: 1
+  bsdi_self_rating: 1
+
+two:
+  bsdi_report_id: MyString
+  bsdi_risk_stratification: 1
+  bsdi_risk_factor_count: 1
+  bsdi_self_rating: 1

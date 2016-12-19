@@ -1,0 +1,2 @@
+module BsdiHospsHelper
+end

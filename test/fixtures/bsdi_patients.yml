@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_id: MyString
+  bsdi_psmid: MyString
+  bsdi_fname: MyString
+  bsdi_lname: MyString
+  bsdi_gender: 
+  bsdi_birthdate: 2016-12-19
+  bsdi_previous_id: MyString
+
+two:
+  bsdi_id: MyString
+  bsdi_psmid: MyString
+  bsdi_fname: MyString
+  bsdi_lname: MyString
+  bsdi_gender: 
+  bsdi_birthdate: 2016-12-19
+  bsdi_previous_id: MyString

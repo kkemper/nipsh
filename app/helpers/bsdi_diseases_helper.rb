@@ -1,0 +1,2 @@
+module BsdiDiseasesHelper
+end

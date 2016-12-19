@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bsdi Exercises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bsdi report</th>
+      <th>Bsdi exercise</th>
+      <th>Bsdi how long active</th>
+      <th>Bsdi sedentary</th>
+      <th>Bsdi hip knee problems</th>
+      <th>Bsdi other reason no exercise</th>
+      <th>Bsdi activity minutes vigorous</th>
+      <th>Bsdi activity minutes moderate</th>
+      <th>Bsdi physical inactivity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bsdi_exercises.each do |bsdi_exercise| %>
+      <tr>
+        <td><%= bsdi_exercise.bsdi_report_id %></td>
+        <td><%= bsdi_exercise.bsdi_exercise %></td>
+        <td><%= bsdi_exercise.bsdi_how_long_active %></td>
+        <td><%= bsdi_exercise.bsdi_sedentary %></td>
+        <td><%= bsdi_exercise.bsdi_hip_knee_problems %></td>
+        <td><%= bsdi_exercise.bsdi_other_reason_no_exercise %></td>
+        <td><%= bsdi_exercise.bsdi_activity_minutes_vigorous %></td>
+        <td><%= bsdi_exercise.bsdi_activity_minutes_moderate %></td>
+        <td><%= bsdi_exercise.bsdi_physical_inactivity %></td>
+        <td><%= link_to 'Show', bsdi_exercise %></td>
+        <td><%= link_to 'Edit', edit_bsdi_exercise_path(bsdi_exercise) %></td>
+        <td><%= link_to 'Destroy', bsdi_exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bsdi exercise', new_bsdi_exercise_path %>

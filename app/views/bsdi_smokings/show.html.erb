@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi report:</strong>
+  <%= @bsdi_smoking.bsdi_report_id %>
+</p>
+
+<p>
+  <strong>Bsdi smoking status:</strong>
+  <%= @bsdi_smoking.bsdi_smoking_status %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_smoking_path(@bsdi_smoking) %> |
+<%= link_to 'Back', bsdi_smokings_path %>

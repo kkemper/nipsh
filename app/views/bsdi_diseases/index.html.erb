@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bsdi Diseases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bsdi report</th>
+      <th>Bsdi has disease</th>
+      <th>Bsdi heart disease</th>
+      <th>Bsdi hypertension</th>
+      <th>Bsdi diabetes</th>
+      <th>Bsdi diabetes type1</th>
+      <th>Bsdi metabolic</th>
+      <th>Bsdi cancer</th>
+      <th>Bsdi auto immune</th>
+      <th>Bsdi asthma</th>
+      <th>Bsdi pulmonary</th>
+      <th>Bsdi arthritis</th>
+      <th>Bsdi allergies</th>
+      <th>Bsdi digestive</th>
+      <th>Bsdi mental</th>
+      <th>Bsdi neck pain</th>
+      <th>Bsdi back pain</th>
+      <th>Bsdi respiratory</th>
+      <th>Bsdi migraines headaches</th>
+      <th>Bsdi depression</th>
+      <th>Bsdi anxiety</th>
+      <th>Bsdi musculoskeletal problems</th>
+      <th>Bsdi periphvasc</th>
+      <th>Bsdi seizures</th>
+      <th>Bsdi stroke</th>
+      <th>Bsdi pregnancy</th>
+      <th>Bsdi chest pain</th>
+      <th>Bsdi leg pain</th>
+      <th>Bsdi dizziness</th>
+      <th>Bsdi shortbreath</th>
+      <th>Bsdi orthopnea</th>
+      <th>Bsdi heart flutter</th>
+      <th>Bsdi heart murmur</th>
+      <th>Bsdi ankle edema</th>
+      <th>Bsdi heart meds</th>
+      <th>Bsdi family chd</th>
+      <th>Bsdi chd risk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bsdi_diseases.each do |bsdi_disease| %>
+      <tr>
+        <td><%= bsdi_disease.bsdi_report_id %></td>
+        <td><%= bsdi_disease.bsdi_has_disease %></td>
+        <td><%= bsdi_disease.bsdi_heart_disease %></td>
+        <td><%= bsdi_disease.bsdi_hypertension %></td>
+        <td><%= bsdi_disease.bsdi_diabetes %></td>
+        <td><%= bsdi_disease.bsdi_diabetes_type1 %></td>
+        <td><%= bsdi_disease.bsdi_metabolic %></td>
+        <td><%= bsdi_disease.bsdi_cancer %></td>
+        <td><%= bsdi_disease.bsdi_auto_immune %></td>
+        <td><%= bsdi_disease.bsdi_asthma %></td>
+        <td><%= bsdi_disease.bsdi_pulmonary %></td>
+        <td><%= bsdi_disease.bsdi_arthritis %></td>
+        <td><%= bsdi_disease.bsdi_allergies %></td>
+        <td><%= bsdi_disease.bsdi_digestive %></td>
+        <td><%= bsdi_disease.bsdi_mental %></td>
+        <td><%= bsdi_disease.bsdi_neck_pain %></td>
+        <td><%= bsdi_disease.bsdi_back_pain %></td>
+        <td><%= bsdi_disease.bsdi_respiratory %></td>
+        <td><%= bsdi_disease.bsdi_migraines_headaches %></td>
+        <td><%= bsdi_disease.bsdi_depression %></td>
+        <td><%= bsdi_disease.bsdi_anxiety %></td>
+        <td><%= bsdi_disease.bsdi_musculoskeletal_problems %></td>
+        <td><%= bsdi_disease.bsdi_periphvasc %></td>
+        <td><%= bsdi_disease.bsdi_seizures %></td>
+        <td><%= bsdi_disease.bsdi_stroke %></td>
+        <td><%= bsdi_disease.bsdi_pregnancy %></td>
+        <td><%= bsdi_disease.bsdi_chest_pain %></td>
+        <td><%= bsdi_disease.bsdi_leg_pain %></td>
+        <td><%= bsdi_disease.bsdi_dizziness %></td>
+        <td><%= bsdi_disease.bsdi_shortbreath %></td>
+        <td><%= bsdi_disease.bsdi_orthopnea %></td>
+        <td><%= bsdi_disease.bsdi_heart_flutter %></td>
+        <td><%= bsdi_disease.bsdi_heart_murmur %></td>
+        <td><%= bsdi_disease.bsdi_ankle_edema %></td>
+        <td><%= bsdi_disease.bsdi_heart_meds %></td>
+        <td><%= bsdi_disease.bsdi_family_chd %></td>
+        <td><%= bsdi_disease.bsdi_chd_risk %></td>
+        <td><%= link_to 'Show', bsdi_disease %></td>
+        <td><%= link_to 'Edit', edit_bsdi_disease_path(bsdi_disease) %></td>
+        <td><%= link_to 'Destroy', bsdi_disease, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bsdi disease', new_bsdi_disease_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_exercise: 1
+  bsdi_how_long_active: 1
+  bsdi_sedentary: 
+  bsdi_hip_knee_problems: 
+  bsdi_other_reason_no_exercise: 
+  bsdi_activity_minutes_vigorous: 1
+  bsdi_activity_minutes_moderate: 1
+  bsdi_physical_inactivity: 
+
+two:
+  bsdi_report_id: MyString
+  bsdi_exercise: 1
+  bsdi_how_long_active: 1
+  bsdi_sedentary: 
+  bsdi_hip_knee_problems: 
+  bsdi_other_reason_no_exercise: 
+  bsdi_activity_minutes_vigorous: 1
+  bsdi_activity_minutes_moderate: 1
+  bsdi_physical_inactivity: 

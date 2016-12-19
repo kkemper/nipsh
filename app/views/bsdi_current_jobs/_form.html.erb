@@ -1,0 +1,37 @@
+<%= form_for(@bsdi_current_job) do |f| %>
+  <% if @bsdi_current_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_current_job.errors.count, "error") %> prohibited this bsdi_current_job from being saved:</h2>
+
+      <ul>
+      <% @bsdi_current_job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_organization %><br>
+    <%= f.text_field :bsdi_organization %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_department %><br>
+    <%= f.text_field :bsdi_department %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_service %><br>
+    <%= f.number_field :bsdi_service %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_job_title %><br>
+    <%= f.text_field :bsdi_job_title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

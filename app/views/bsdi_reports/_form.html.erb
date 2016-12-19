@@ -1,0 +1,41 @@
+<%= form_for(@bsdi_report) do |f| %>
+  <% if @bsdi_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_report.errors.count, "error") %> prohibited this bsdi_report from being saved:</h2>
+
+      <ul>
+      <% @bsdi_report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_patient_id %><br>
+    <%= f.text_field :bsdi_patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_date %><br>
+    <%= f.date_select :bsdi_date %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_newest %><br>
+    <%= f.text_field :bsdi_newest %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_valid_year %><br>
+    <%= f.number_field :bsdi_valid_year %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_user_defined_flag %><br>
+    <%= f.text_field :bsdi_user_defined_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_staff_entry %><br>
+    <%= f.text_field :bsdi_staff_entry %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

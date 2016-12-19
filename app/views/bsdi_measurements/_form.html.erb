@@ -1,0 +1,61 @@
+<%= form_for(@bsdi_measurement) do |f| %>
+  <% if @bsdi_measurement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_measurement.errors.count, "error") %> prohibited this bsdi_measurement from being saved:</h2>
+
+      <ul>
+      <% @bsdi_measurement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_weight %><br>
+    <%= f.text_field :bsdi_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_height %><br>
+    <%= f.text_field :bsdi_height %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_waist %><br>
+    <%= f.text_field :bsdi_waist %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_waist_risk %><br>
+    <%= f.text_field :bsdi_waist_risk %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hips %><br>
+    <%= f.text_field :bsdi_hips %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_weight_belief %><br>
+    <%= f.number_field :bsdi_weight_belief %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_bmi %><br>
+    <%= f.text_field :bsdi_bmi %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_bmi_category %><br>
+    <%= f.number_field :bsdi_bmi_category %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_high_risk_bmi %><br>
+    <%= f.text_field :bsdi_high_risk_bmi %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hypertrophic %><br>
+    <%= f.text_field :bsdi_hypertrophic %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_disabled %><br>
+    <%= f.text_field :bsdi_disabled %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

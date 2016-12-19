@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_patient_id: MyString
+  bsdi_date: 2016-12-19
+  bsdi_newest: 
+  bsdi_valid_year: 1
+  bsdi_user_defined_flag: 
+  bsdi_staff_entry: 
+
+two:
+  bsdi_patient_id: MyString
+  bsdi_date: 2016-12-19
+  bsdi_newest: 
+  bsdi_valid_year: 1
+  bsdi_user_defined_flag: 
+  bsdi_staff_entry: 

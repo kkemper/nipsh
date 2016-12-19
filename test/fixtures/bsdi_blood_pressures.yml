@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_systolic: 1
+  bsdi_diastolic: 1
+  bsdi_bp_medicine: 
+
+two:
+  bsdi_report_id: MyString
+  bsdi_systolic: 1
+  bsdi_diastolic: 1
+  bsdi_bp_medicine: 

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi report:</strong>
+  <%= @bsdi_blood_pressure.bsdi_report_id %>
+</p>
+
+<p>
+  <strong>Bsdi systolic:</strong>
+  <%= @bsdi_blood_pressure.bsdi_systolic %>
+</p>
+
+<p>
+  <strong>Bsdi diastolic:</strong>
+  <%= @bsdi_blood_pressure.bsdi_diastolic %>
+</p>
+
+<p>
+  <strong>Bsdi bp medicine:</strong>
+  <%= @bsdi_blood_pressure.bsdi_bp_medicine %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_blood_pressure_path(@bsdi_blood_pressure) %> |
+<%= link_to 'Back', bsdi_blood_pressures_path %>

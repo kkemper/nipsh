@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_bchem_date: 2016-12-19
+  bsdi_cholesterol: 1
+  bsdi_high_cholesterol: 
+  bsdi_cholesterol_meds: 
+  bsdi_hdl: 1
+  bsdi_hdl_status: 1
+  bsdi_ldl: 1
+  bsdi_high_ldl: 
+  bsdi_triglycerides: 1
+  bsdi_high_triglyceride: 
+  bsdi_glucose: 1
+  bsdi_pre_diabetes: 
+  bsdi_a1c: 1
+  bsdi_blood_chem_risk: 
+
+two:
+  bsdi_report_id: MyString
+  bsdi_bchem_date: 2016-12-19
+  bsdi_cholesterol: 1
+  bsdi_high_cholesterol: 
+  bsdi_cholesterol_meds: 
+  bsdi_hdl: 1
+  bsdi_hdl_status: 1
+  bsdi_ldl: 1
+  bsdi_high_ldl: 
+  bsdi_triglycerides: 1
+  bsdi_high_triglyceride: 
+  bsdi_glucose: 1
+  bsdi_pre_diabetes: 
+  bsdi_a1c: 1
+  bsdi_blood_chem_risk: 

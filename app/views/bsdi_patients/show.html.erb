@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi:</strong>
+  <%= @bsdi_patient.bsdi_id %>
+</p>
+
+<p>
+  <strong>Bsdi psmid:</strong>
+  <%= @bsdi_patient.bsdi_psmid %>
+</p>
+
+<p>
+  <strong>Bsdi fname:</strong>
+  <%= @bsdi_patient.bsdi_fname %>
+</p>
+
+<p>
+  <strong>Bsdi lname:</strong>
+  <%= @bsdi_patient.bsdi_lname %>
+</p>
+
+<p>
+  <strong>Bsdi gender:</strong>
+  <%= @bsdi_patient.bsdi_gender %>
+</p>
+
+<p>
+  <strong>Bsdi birthdate:</strong>
+  <%= @bsdi_patient.bsdi_birthdate %>
+</p>
+
+<p>
+  <strong>Bsdi previous:</strong>
+  <%= @bsdi_patient.bsdi_previous_id %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_patient_path(@bsdi_patient) %> |
+<%= link_to 'Back', bsdi_patients_path %>

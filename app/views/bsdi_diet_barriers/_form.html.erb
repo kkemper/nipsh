@@ -1,0 +1,49 @@
+<%= form_for(@bsdi_diet_barrier) do |f| %>
+  <% if @bsdi_diet_barrier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_diet_barrier.errors.count, "error") %> prohibited this bsdi_diet_barrier from being saved:</h2>
+
+      <ul>
+      <% @bsdi_diet_barrier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_rfc_diet %><br>
+    <%= f.number_field :bsdi_rfc_diet %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diet_barrier_unfamililar %><br>
+    <%= f.text_field :bsdi_diet_barrier_unfamililar %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diet_barrier_time %><br>
+    <%= f.text_field :bsdi_diet_barrier_time %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diet_barrier_people %><br>
+    <%= f.text_field :bsdi_diet_barrier_people %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diet_barrier_taste %><br>
+    <%= f.text_field :bsdi_diet_barrier_taste %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diet_barrier_other %><br>
+    <%= f.text_field :bsdi_diet_barrier_other %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_diet_barrier_expense %><br>
+    <%= f.text_field :bsdi_diet_barrier_expense %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

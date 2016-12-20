@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220172421) do
+ActiveRecord::Schema.define(version: 20161220183316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,36 @@ ActiveRecord::Schema.define(version: 20161220172421) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "bsdi_activities", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_rfc_activity"
+    t.binary   "bsdi_active_barrier_time"
+    t.binary   "bsdi_active_barrier_people"
+    t.binary   "bsdi_active_barrier_unfamiliar"
+    t.binary   "bsdi_active_barrier_resources"
+    t.binary   "bsdi_active_barrier_unpleasant"
+    t.binary   "bsdi_active_barrier_medical_worry"
+    t.binary   "bsdi_active_barrier_intimidating"
+    t.binary   "bsdi_active_barrier_embarrassed"
+    t.binary   "bsdi_active_barrier_other"
+    t.binary   "bsdi_active_barrier_injury"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  create_table "bsdi_alcohol_barriers", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_rfc_alcohol"
+    t.binary   "bsdi_alcohol_barrier_knowledge"
+    t.binary   "bsdi_alcohol_barrier_temptation"
+    t.binary   "bsdi_alcohol_barrier_friends"
+    t.binary   "bsdi_alcohol_barrier_perception"
+    t.binary   "bsdi_alcohol_barrier_stress"
+    t.binary   "bsdi_alcohol_barrier_other"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
 
   create_table "bsdi_annuals", force: :cascade do |t|
     t.string   "bsdi_report_id"
@@ -90,6 +120,19 @@ ActiveRecord::Schema.define(version: 20161220172421) do
     t.string   "bsdi_job_title"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "bsdi_diet_barriers", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_rfc_diet"
+    t.binary   "bsdi_diet_barrier_unfamililar"
+    t.binary   "bsdi_diet_barrier_time"
+    t.binary   "bsdi_diet_barrier_people"
+    t.binary   "bsdi_diet_barrier_taste"
+    t.binary   "bsdi_diet_barrier_other"
+    t.binary   "bsdi_diet_barrier_expense"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "bsdi_diets", force: :cascade do |t|
@@ -250,6 +293,19 @@ ActiveRecord::Schema.define(version: 20161220172421) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "bsdi_smoking_barriers", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_rfc_smoking"
+    t.binary   "bsdi_smoke_barrier_knowledge"
+    t.binary   "bsdi_smoke_barrier_temptation"
+    t.binary   "bsdi_smoke_barrier_friends"
+    t.binary   "bsdi_smoke_barrier_weight"
+    t.binary   "bsdi_smoke_barrier_stress"
+    t.binary   "bsdi_smoke_barrier_other"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
   create_table "bsdi_smokings", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.binary   "bsdi_smoking_status"
@@ -265,6 +321,18 @@ ActiveRecord::Schema.define(version: 20161220172421) do
     t.integer  "bsdi_medication_relax"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+  end
+
+  create_table "bsdi_weights", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "rfc_weight"
+    t.binary   "bsdi_weight_barrier_knowledge"
+    t.binary   "bsdi_weight_barrier_access"
+    t.binary   "bsdi_weight_barrier_social"
+    t.binary   "bsdi_weight_barrier_exercise"
+    t.binary   "bsdi_weight_barrier_stress"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "cancer_screenings", force: :cascade do |t|

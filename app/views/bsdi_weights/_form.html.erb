@@ -1,0 +1,45 @@
+<%= form_for(@bsdi_weight) do |f| %>
+  <% if @bsdi_weight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_weight.errors.count, "error") %> prohibited this bsdi_weight from being saved:</h2>
+
+      <ul>
+      <% @bsdi_weight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :rfc_weight %><br>
+    <%= f.number_field :rfc_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_weight_barrier_knowledge %><br>
+    <%= f.text_field :bsdi_weight_barrier_knowledge %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_weight_barrier_access %><br>
+    <%= f.text_field :bsdi_weight_barrier_access %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_weight_barrier_social %><br>
+    <%= f.text_field :bsdi_weight_barrier_social %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_weight_barrier_exercise %><br>
+    <%= f.text_field :bsdi_weight_barrier_exercise %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_weight_barrier_stress %><br>
+    <%= f.text_field :bsdi_weight_barrier_stress %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

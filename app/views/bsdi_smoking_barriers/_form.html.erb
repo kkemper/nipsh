@@ -1,0 +1,49 @@
+<%= form_for(@bsdi_smoking_barrier) do |f| %>
+  <% if @bsdi_smoking_barrier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_smoking_barrier.errors.count, "error") %> prohibited this bsdi_smoking_barrier from being saved:</h2>
+
+      <ul>
+      <% @bsdi_smoking_barrier.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_rfc_smoking %><br>
+    <%= f.number_field :bsdi_rfc_smoking %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoke_barrier_knowledge %><br>
+    <%= f.text_field :bsdi_smoke_barrier_knowledge %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoke_barrier_temptation %><br>
+    <%= f.text_field :bsdi_smoke_barrier_temptation %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoke_barrier_friends %><br>
+    <%= f.text_field :bsdi_smoke_barrier_friends %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoke_barrier_weight %><br>
+    <%= f.text_field :bsdi_smoke_barrier_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoke_barrier_stress %><br>
+    <%= f.text_field :bsdi_smoke_barrier_stress %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_smoke_barrier_other %><br>
+    <%= f.text_field :bsdi_smoke_barrier_other %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi report:</strong>
+  <%= @bsdi_weight.bsdi_report_id %>
+</p>
+
+<p>
+  <strong>Rfc weight:</strong>
+  <%= @bsdi_weight.rfc_weight %>
+</p>
+
+<p>
+  <strong>Bsdi weight barrier knowledge:</strong>
+  <%= @bsdi_weight.bsdi_weight_barrier_knowledge %>
+</p>
+
+<p>
+  <strong>Bsdi weight barrier access:</strong>
+  <%= @bsdi_weight.bsdi_weight_barrier_access %>
+</p>
+
+<p>
+  <strong>Bsdi weight barrier social:</strong>
+  <%= @bsdi_weight.bsdi_weight_barrier_social %>
+</p>
+
+<p>
+  <strong>Bsdi weight barrier exercise:</strong>
+  <%= @bsdi_weight.bsdi_weight_barrier_exercise %>
+</p>
+
+<p>
+  <strong>Bsdi weight barrier stress:</strong>
+  <%= @bsdi_weight.bsdi_weight_barrier_stress %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_weight_path(@bsdi_weight) %> |
+<%= link_to 'Back', bsdi_weights_path %>

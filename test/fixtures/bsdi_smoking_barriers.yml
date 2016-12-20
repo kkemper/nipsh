@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_rfc_smoking: 1
+  bsdi_smoke_barrier_knowledge: 
+  bsdi_smoke_barrier_temptation: 
+  bsdi_smoke_barrier_friends: 
+  bsdi_smoke_barrier_weight: 
+  bsdi_smoke_barrier_stress: 
+  bsdi_smoke_barrier_other: 
+
+two:
+  bsdi_report_id: MyString
+  bsdi_rfc_smoking: 1
+  bsdi_smoke_barrier_knowledge: 
+  bsdi_smoke_barrier_temptation: 
+  bsdi_smoke_barrier_friends: 
+  bsdi_smoke_barrier_weight: 
+  bsdi_smoke_barrier_stress: 
+  bsdi_smoke_barrier_other: 

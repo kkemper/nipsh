@@ -1,0 +1,1 @@
+json.extract! @bsdi_alcohol_barrier, :id, :bsdi_report_id, :bsdi_rfc_alcohol, :bsdi_alcohol_barrier_knowledge, :bsdi_alcohol_barrier_temptation, :bsdi_alcohol_barrier_friends, :bsdi_alcohol_barrier_perception, :bsdi_alcohol_barrier_stress, :bsdi_alcohol_barrier_other, :created_at, :updated_at

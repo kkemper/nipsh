@@ -1,0 +1,2 @@
+module BsdiAlcoholBarriersHelper
+end

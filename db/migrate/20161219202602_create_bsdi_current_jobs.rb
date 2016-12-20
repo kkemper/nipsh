@@ -1,7 +1,7 @@
 class CreateBsdiCurrentJobs < ActiveRecord::Migration
   def change
     create_table :bsdi_current_jobs do |t|
-      t.sting :bsdi_report_id
+      t.string :bsdi_report_id
       t.string :bsdi_organization
       t.string :bsdi_department
       t.integer :bsdi_service

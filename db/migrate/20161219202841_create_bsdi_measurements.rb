@@ -9,7 +9,7 @@ class CreateBsdiMeasurements < ActiveRecord::Migration
       t.integer :bsdi_weight_belief
       t.float :bsdi_bmi
       t.integer :bsdi_bmi_category
-      t.bmi :bsdi_high_risk_bmi
+      t.binary :bsdi_high_risk_bmi
       t.binary :bsdi_hypertrophic
       t.binary :bsdi_disabled
 

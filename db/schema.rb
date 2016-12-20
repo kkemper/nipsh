@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921103309) do
+ActiveRecord::Schema.define(version: 20161219202841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,163 @@ ActiveRecord::Schema.define(version: 20160921103309) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "bsdi_blood_chemistries", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.date     "bsdi_bchem_date"
+    t.integer  "bsdi_cholesterol"
+    t.binary   "bsdi_high_cholesterol"
+    t.binary   "bsdi_cholesterol_meds"
+    t.integer  "bsdi_hdl"
+    t.integer  "bsdi_hdl_status"
+    t.integer  "bsdi_ldl"
+    t.binary   "bsdi_high_ldl"
+    t.integer  "bsdi_triglycerides"
+    t.binary   "bsdi_high_triglyceride"
+    t.integer  "bsdi_glucose"
+    t.binary   "bsdi_pre_diabetes"
+    t.integer  "bsdi_a1c"
+    t.binary   "bsdi_blood_chem_risk"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "bsdi_blood_pressures", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_systolic"
+    t.integer  "bsdi_diastolic"
+    t.binary   "bsdi_bp_medicine"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "bsdi_current_jobs", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.string   "bsdi_organization"
+    t.string   "bsdi_department"
+    t.integer  "bsdi_service"
+    t.string   "bsdi_job_title"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "bsdi_diseases", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.binary   "bsdi_has_disease"
+    t.binary   "bsdi_heart_disease"
+    t.binary   "bsdi_hypertension"
+    t.binary   "bsdi_diabetes"
+    t.binary   "bsdi_diabetes_type1"
+    t.binary   "bsdi_metabolic"
+    t.binary   "bsdi_cancer"
+    t.binary   "bsdi_auto_immune"
+    t.binary   "bsdi_asthma"
+    t.binary   "bsdi_pulmonary"
+    t.binary   "bsdi_arthritis"
+    t.binary   "bsdi_allergies"
+    t.binary   "bsdi_digestive"
+    t.binary   "bsdi_mental"
+    t.binary   "bsdi_neck_pain"
+    t.binary   "bsdi_back_pain"
+    t.binary   "bsdi_respiratory"
+    t.binary   "bsdi_migraines_headaches"
+    t.binary   "bsdi_depression"
+    t.binary   "bsdi_anxiety"
+    t.binary   "bsdi_musculoskeletal_problems"
+    t.binary   "bsdi_periphvasc"
+    t.binary   "bsdi_seizures"
+    t.binary   "bsdi_stroke"
+    t.binary   "bsdi_pregnancy"
+    t.binary   "bsdi_chest_pain"
+    t.binary   "bsdi_leg_pain"
+    t.binary   "bsdi_dizziness"
+    t.binary   "bsdi_shortbreath"
+    t.binary   "bsdi_orthopnea"
+    t.binary   "bsdi_heart_flutter"
+    t.binary   "bsdi_heart_murmur"
+    t.binary   "bsdi_ankle_edema"
+    t.binary   "bsdi_heart_meds"
+    t.integer  "bsdi_family_chd"
+    t.binary   "bsdi_chd_risk"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "bsdi_exercises", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_exercise"
+    t.integer  "bsdi_how_long_active"
+    t.binary   "bsdi_sedentary"
+    t.binary   "bsdi_hip_knee_problems"
+    t.binary   "bsdi_other_reason_no_exercise"
+    t.integer  "bsdi_activity_minutes_vigorous"
+    t.integer  "bsdi_activity_minutes_moderate"
+    t.binary   "bsdi_physical_inactivity"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "bsdi_hosps", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.binary   "bsdi_hospitalization"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "bsdi_measurements", force: :cascade do |t|
+    t.float    "bsdi_weight"
+    t.float    "bsdi_height"
+    t.float    "bsdi_waist"
+    t.binary   "bsdi_waist_risk"
+    t.float    "bsdi_hips"
+    t.integer  "bsdi_weight_belief"
+    t.float    "bsdi_bmi"
+    t.integer  "bsdi_bmi_category"
+    t.binary   "bsdi_high_risk_bmi"
+    t.binary   "bsdi_hypertrophic"
+    t.binary   "bsdi_disabled"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "bsdi_patients", force: :cascade do |t|
+    t.string   "bsdi_id"
+    t.string   "bsdi_psmid"
+    t.string   "bsdi_fname"
+    t.string   "bsdi_lname"
+    t.binary   "bsdi_gender"
+    t.date     "bsdi_birthdate"
+    t.string   "bsdi_previous_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "bsdi_reports", force: :cascade do |t|
+    t.string   "bsdi_patient_id"
+    t.date     "bsdi_date"
+    t.binary   "bsdi_newest"
+    t.integer  "bsdi_valid_year"
+    t.binary   "bsdi_user_defined_flag"
+    t.binary   "bsdi_staff_entry"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "bsdi_risks", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_risk_stratification"
+    t.integer  "bsdi_risk_factor_count"
+    t.integer  "bsdi_self_rating"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "bsdi_smokings", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.binary   "bsdi_smoking_status"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "cancer_screenings", force: :cascade do |t|
     t.string   "report_id"

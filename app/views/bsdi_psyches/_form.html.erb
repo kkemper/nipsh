@@ -1,0 +1,61 @@
+<%= form_for(@bsdi_psych) do |f| %>
+  <% if @bsdi_psych.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_psych.errors.count, "error") %> prohibited this bsdi_psych from being saved:</h2>
+
+      <ul>
+      <% @bsdi_psych.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_psych_overall %><br>
+    <%= f.number_field :bsdi_psych_overall %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_life_satisfaction %><br>
+    <%= f.number_field :bsdi_life_satisfaction %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_satisfaction_job %><br>
+    <%= f.number_field :bsdi_satisfaction_job %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_stress_level %><br>
+    <%= f.number_field :bsdi_stress_level %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_psych_stress_effect %><br>
+    <%= f.number_field :bsdi_psych_stress_effect %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_sleep %><br>
+    <%= f.number_field :bsdi_sleep %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_insufficient_sleep %><br>
+    <%= f.number_field :bsdi_insufficient_sleep %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_friends %><br>
+    <%= f.number_field :bsdi_friends %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_social_ties %><br>
+    <%= f.number_field :bsdi_social_ties %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_spirit_health %><br>
+    <%= f.number_field :bsdi_spirit_health %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

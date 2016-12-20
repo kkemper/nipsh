@@ -1,0 +1,2 @@
+module BsdiDietsHelper
+end

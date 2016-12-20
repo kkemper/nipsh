@@ -1,0 +1,85 @@
+<%= form_for(@bsdi_annual) do |f| %>
+  <% if @bsdi_annual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_annual.errors.count, "error") %> prohibited this bsdi_annual from being saved:</h2>
+
+      <ul>
+      <% @bsdi_annual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_see_doctor %><br>
+    <%= f.number_field :bsdi_see_doctor %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_see_dentist %><br>
+    <%= f.number_field :bsdi_see_dentist %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_check_bp %><br>
+    <%= f.number_field :bsdi_check_bp %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_check_chol %><br>
+    <%= f.number_field :bsdi_check_chol %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_colonoscopy %><br>
+    <%= f.number_field :bsdi_colonoscopy %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_papsmear %><br>
+    <%= f.number_field :bsdi_papsmear %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_mammogram %><br>
+    <%= f.number_field :bsdi_mammogram %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_prostate %><br>
+    <%= f.number_field :bsdi_prostate %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_breast_exam %><br>
+    <%= f.number_field :bsdi_breast_exam %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_testicular_exam %><br>
+    <%= f.number_field :bsdi_testicular_exam %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_flu_shot %><br>
+    <%= f.number_field :bsdi_flu_shot %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_physician_visits %><br>
+    <%= f.number_field :bsdi_physician_visits %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_hospital_visits %><br>
+    <%= f.number_field :bsdi_hospital_visits %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_emergency_room %><br>
+    <%= f.number_field :bsdi_emergency_room %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_high_absenteeism %><br>
+    <%= f.number_field :bsdi_high_absenteeism %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_seat_belt %><br>
+    <%= f.number_field :bsdi_seat_belt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

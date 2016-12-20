@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_family_stroke: 1
+  bsdi_family_cancer: 1
+  bsdi_family_diabetes: 1
+  bsdi_family_cholesterol: 1
+  bsdi_family_hypertension: 1
+  bsdi_family_heart_only: 
+
+two:
+  bsdi_report_id: MyString
+  bsdi_family_stroke: 1
+  bsdi_family_cancer: 1
+  bsdi_family_diabetes: 1
+  bsdi_family_cholesterol: 1
+  bsdi_family_hypertension: 1
+  bsdi_family_heart_only: 

@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_see_doctor: 1
+  bsdi_see_dentist: 1
+  bsdi_check_bp: 1
+  bsdi_check_chol: 1
+  bsdi_colonoscopy: 1
+  bsdi_papsmear: 1
+  bsdi_mammogram: 1
+  bsdi_prostate: 1
+  bsdi_breast_exam: 1
+  bsdi_testicular_exam: 1
+  bsdi_flu_shot: 1
+  bsdi_physician_visits: 1
+  bsdi_hospital_visits: 1
+  bsdi_emergency_room: 1
+  bsdi_high_absenteeism: 1
+  bsdi_seat_belt: 1
+
+two:
+  bsdi_report_id: MyString
+  bsdi_see_doctor: 1
+  bsdi_see_dentist: 1
+  bsdi_check_bp: 1
+  bsdi_check_chol: 1
+  bsdi_colonoscopy: 1
+  bsdi_papsmear: 1
+  bsdi_mammogram: 1
+  bsdi_prostate: 1
+  bsdi_breast_exam: 1
+  bsdi_testicular_exam: 1
+  bsdi_flu_shot: 1
+  bsdi_physician_visits: 1
+  bsdi_hospital_visits: 1
+  bsdi_emergency_room: 1
+  bsdi_high_absenteeism: 1
+  bsdi_seat_belt: 1

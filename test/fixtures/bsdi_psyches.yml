@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_psych_overall: 1
+  bsdi_life_satisfaction: 1
+  bsdi_satisfaction_job: 1
+  bsdi_stress_level: 1
+  bsdi_psych_stress_effect: 1
+  bsdi_sleep: 1
+  bsdi_insufficient_sleep: 1
+  bsdi_friends: 1
+  bsdi_social_ties: 1
+  bsdi_spirit_health: 1
+
+two:
+  bsdi_report_id: MyString
+  bsdi_psych_overall: 1
+  bsdi_life_satisfaction: 1
+  bsdi_satisfaction_job: 1
+  bsdi_stress_level: 1
+  bsdi_psych_stress_effect: 1
+  bsdi_sleep: 1
+  bsdi_insufficient_sleep: 1
+  bsdi_friends: 1
+  bsdi_social_ties: 1
+  bsdi_spirit_health: 1

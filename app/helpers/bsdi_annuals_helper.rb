@@ -1,0 +1,2 @@
+module BsdiAnnualsHelper
+end

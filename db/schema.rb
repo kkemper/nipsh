@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219202841) do
+ActiveRecord::Schema.define(version: 20161220172421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,28 @@ ActiveRecord::Schema.define(version: 20161219202841) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+
+  create_table "bsdi_annuals", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_see_doctor"
+    t.integer  "bsdi_see_dentist"
+    t.integer  "bsdi_check_bp"
+    t.integer  "bsdi_check_chol"
+    t.integer  "bsdi_colonoscopy"
+    t.integer  "bsdi_papsmear"
+    t.integer  "bsdi_mammogram"
+    t.integer  "bsdi_prostate"
+    t.integer  "bsdi_breast_exam"
+    t.integer  "bsdi_testicular_exam"
+    t.integer  "bsdi_flu_shot"
+    t.integer  "bsdi_physician_visits"
+    t.integer  "bsdi_hospital_visits"
+    t.integer  "bsdi_emergency_room"
+    t.integer  "bsdi_high_absenteeism"
+    t.integer  "bsdi_seat_belt"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "bsdi_blood_chemistries", force: :cascade do |t|
     t.string   "bsdi_report_id"
@@ -68,6 +90,24 @@ ActiveRecord::Schema.define(version: 20161219202841) do
     t.string   "bsdi_job_title"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "bsdi_diets", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_breakfast"
+    t.integer  "bsdi_fruits"
+    t.integer  "bsdi_vegetables"
+    t.integer  "bsdi_grains"
+    t.integer  "bsdi_grain_emphasis"
+    t.integer  "bsdi_red_meat"
+    t.integer  "bsdi_lean_meat"
+    t.integer  "bsdi_dairy"
+    t.integer  "bsdi_dairy_emphasis"
+    t.integer  "bsdi_fats_and_oils"
+    t.integer  "bsdi_nutrition_status"
+    t.binary   "bsdi_nut_missing_values"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "bsdi_diseases", force: :cascade do |t|
@@ -126,6 +166,18 @@ ActiveRecord::Schema.define(version: 20161219202841) do
     t.datetime "updated_at",                     null: false
   end
 
+  create_table "bsdi_histories", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_family_stroke"
+    t.integer  "bsdi_family_cancer"
+    t.integer  "bsdi_family_diabetes"
+    t.integer  "bsdi_family_cholesterol"
+    t.integer  "bsdi_family_hypertension"
+    t.binary   "bsdi_family_heart_only"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
   create_table "bsdi_hosps", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.binary   "bsdi_hospitalization"
@@ -147,6 +199,7 @@ ActiveRecord::Schema.define(version: 20161219202841) do
     t.binary   "bsdi_disabled"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "bsdi_report_id"
   end
 
   create_table "bsdi_patients", force: :cascade do |t|
@@ -159,6 +212,22 @@ ActiveRecord::Schema.define(version: 20161219202841) do
     t.string   "bsdi_previous_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "bsdi_psyches", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_psych_overall"
+    t.integer  "bsdi_life_satisfaction"
+    t.integer  "bsdi_satisfaction_job"
+    t.integer  "bsdi_stress_level"
+    t.integer  "bsdi_psych_stress_effect"
+    t.integer  "bsdi_sleep"
+    t.integer  "bsdi_insufficient_sleep"
+    t.integer  "bsdi_friends"
+    t.integer  "bsdi_social_ties"
+    t.integer  "bsdi_spirit_health"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "bsdi_reports", force: :cascade do |t|
@@ -186,6 +255,16 @@ ActiveRecord::Schema.define(version: 20161219202841) do
     t.binary   "bsdi_smoking_status"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+  end
+
+  create_table "bsdi_tobacco_and_alcohols", force: :cascade do |t|
+    t.string   "bsdi_report_id"
+    t.integer  "bsdi_tobacco"
+    t.integer  "bsdi_alcohol"
+    t.integer  "bsdi_binge_drinking"
+    t.integer  "bsdi_medication_relax"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "cancer_screenings", force: :cascade do |t|

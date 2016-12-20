@@ -1,0 +1,69 @@
+<%= form_for(@bsdi_diet) do |f| %>
+  <% if @bsdi_diet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_diet.errors.count, "error") %> prohibited this bsdi_diet from being saved:</h2>
+
+      <ul>
+      <% @bsdi_diet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_breakfast %><br>
+    <%= f.number_field :bsdi_breakfast %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_fruits %><br>
+    <%= f.number_field :bsdi_fruits %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_vegetables %><br>
+    <%= f.number_field :bsdi_vegetables %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_grains %><br>
+    <%= f.number_field :bsdi_grains %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_grain_emphasis %><br>
+    <%= f.number_field :bsdi_grain_emphasis %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_red_meat %><br>
+    <%= f.number_field :bsdi_red_meat %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_lean_meat %><br>
+    <%= f.number_field :bsdi_lean_meat %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_dairy %><br>
+    <%= f.number_field :bsdi_dairy %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_dairy_emphasis %><br>
+    <%= f.number_field :bsdi_dairy_emphasis %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_fats_and_oils %><br>
+    <%= f.number_field :bsdi_fats_and_oils %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_nutrition_status %><br>
+    <%= f.number_field :bsdi_nutrition_status %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_nut_missing_values %><br>
+    <%= f.text_field :bsdi_nut_missing_values %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

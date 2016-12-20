@@ -1,0 +1,45 @@
+<%= form_for(@bsdi_history) do |f| %>
+  <% if @bsdi_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bsdi_history.errors.count, "error") %> prohibited this bsdi_history from being saved:</h2>
+
+      <ul>
+      <% @bsdi_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bsdi_report_id %><br>
+    <%= f.text_field :bsdi_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_stroke %><br>
+    <%= f.number_field :bsdi_family_stroke %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_cancer %><br>
+    <%= f.number_field :bsdi_family_cancer %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_diabetes %><br>
+    <%= f.number_field :bsdi_family_diabetes %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_cholesterol %><br>
+    <%= f.number_field :bsdi_family_cholesterol %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_hypertension %><br>
+    <%= f.number_field :bsdi_family_hypertension %>
+  </div>
+  <div class="field">
+    <%= f.label :bsdi_family_heart_only %><br>
+    <%= f.text_field :bsdi_family_heart_only %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

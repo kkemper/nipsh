@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bsdi report:</strong>
+  <%= @bsdi_history.bsdi_report_id %>
+</p>
+
+<p>
+  <strong>Bsdi family stroke:</strong>
+  <%= @bsdi_history.bsdi_family_stroke %>
+</p>
+
+<p>
+  <strong>Bsdi family cancer:</strong>
+  <%= @bsdi_history.bsdi_family_cancer %>
+</p>
+
+<p>
+  <strong>Bsdi family diabetes:</strong>
+  <%= @bsdi_history.bsdi_family_diabetes %>
+</p>
+
+<p>
+  <strong>Bsdi family cholesterol:</strong>
+  <%= @bsdi_history.bsdi_family_cholesterol %>
+</p>
+
+<p>
+  <strong>Bsdi family hypertension:</strong>
+  <%= @bsdi_history.bsdi_family_hypertension %>
+</p>
+
+<p>
+  <strong>Bsdi family heart only:</strong>
+  <%= @bsdi_history.bsdi_family_heart_only %>
+</p>
+
+<%= link_to 'Edit', edit_bsdi_history_path(@bsdi_history) %> |
+<%= link_to 'Back', bsdi_histories_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bsdi Tobacco And Alcohols</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bsdi report</th>
+      <th>Bsdi tobacco</th>
+      <th>Bsdi alcohol</th>
+      <th>Bsdi binge drinking</th>
+      <th>Bsdi medication relax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bsdi_tobacco_and_alcohols.each do |bsdi_tobacco_and_alcohol| %>
+      <tr>
+        <td><%= bsdi_tobacco_and_alcohol.bsdi_report_id %></td>
+        <td><%= bsdi_tobacco_and_alcohol.bsdi_tobacco %></td>
+        <td><%= bsdi_tobacco_and_alcohol.bsdi_alcohol %></td>
+        <td><%= bsdi_tobacco_and_alcohol.bsdi_binge_drinking %></td>
+        <td><%= bsdi_tobacco_and_alcohol.bsdi_medication_relax %></td>
+        <td><%= link_to 'Show', bsdi_tobacco_and_alcohol %></td>
+        <td><%= link_to 'Edit', edit_bsdi_tobacco_and_alcohol_path(bsdi_tobacco_and_alcohol) %></td>
+        <td><%= link_to 'Destroy', bsdi_tobacco_and_alcohol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bsdi tobacco and alcohol', new_bsdi_tobacco_and_alcohol_path %>

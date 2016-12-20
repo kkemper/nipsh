@@ -1,0 +1,1 @@
+json.extract! @bsdi_history, :id, :bsdi_report_id, :bsdi_family_stroke, :bsdi_family_cancer, :bsdi_family_diabetes, :bsdi_family_cholesterol, :bsdi_family_hypertension, :bsdi_family_heart_only, :created_at, :updated_at

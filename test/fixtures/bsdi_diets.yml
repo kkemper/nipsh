@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_breakfast: 1
+  bsdi_fruits: 1
+  bsdi_vegetables: 1
+  bsdi_grains: 1
+  bsdi_grain_emphasis: 1
+  bsdi_red_meat: 1
+  bsdi_lean_meat: 1
+  bsdi_dairy: 1
+  bsdi_dairy_emphasis: 1
+  bsdi_fats_and_oils: 1
+  bsdi_nutrition_status: 1
+  bsdi_nut_missing_values: 
+
+two:
+  bsdi_report_id: MyString
+  bsdi_breakfast: 1
+  bsdi_fruits: 1
+  bsdi_vegetables: 1
+  bsdi_grains: 1
+  bsdi_grain_emphasis: 1
+  bsdi_red_meat: 1
+  bsdi_lean_meat: 1
+  bsdi_dairy: 1
+  bsdi_dairy_emphasis: 1
+  bsdi_fats_and_oils: 1
+  bsdi_nutrition_status: 1
+  bsdi_nut_missing_values: 

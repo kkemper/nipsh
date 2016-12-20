@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bsdi_report_id: MyString
+  bsdi_tobacco: 1
+  bsdi_alcohol: 1
+  bsdi_binge_drinking: 1
+  bsdi_medication_relax: 1
+
+two:
+  bsdi_report_id: MyString
+  bsdi_tobacco: 1
+  bsdi_alcohol: 1
+  bsdi_binge_drinking: 1
+  bsdi_medication_relax: 1

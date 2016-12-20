@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bsdi Diets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bsdi report</th>
+      <th>Bsdi breakfast</th>
+      <th>Bsdi fruits</th>
+      <th>Bsdi vegetables</th>
+      <th>Bsdi grains</th>
+      <th>Bsdi grain emphasis</th>
+      <th>Bsdi red meat</th>
+      <th>Bsdi lean meat</th>
+      <th>Bsdi dairy</th>
+      <th>Bsdi dairy emphasis</th>
+      <th>Bsdi fats and oils</th>
+      <th>Bsdi nutrition status</th>
+      <th>Bsdi nut missing values</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bsdi_diets.each do |bsdi_diet| %>
+      <tr>
+        <td><%= bsdi_diet.bsdi_report_id %></td>
+        <td><%= bsdi_diet.bsdi_breakfast %></td>
+        <td><%= bsdi_diet.bsdi_fruits %></td>
+        <td><%= bsdi_diet.bsdi_vegetables %></td>
+        <td><%= bsdi_diet.bsdi_grains %></td>
+        <td><%= bsdi_diet.bsdi_grain_emphasis %></td>
+        <td><%= bsdi_diet.bsdi_red_meat %></td>
+        <td><%= bsdi_diet.bsdi_lean_meat %></td>
+        <td><%= bsdi_diet.bsdi_dairy %></td>
+        <td><%= bsdi_diet.bsdi_dairy_emphasis %></td>
+        <td><%= bsdi_diet.bsdi_fats_and_oils %></td>
+        <td><%= bsdi_diet.bsdi_nutrition_status %></td>
+        <td><%= bsdi_diet.bsdi_nut_missing_values %></td>
+        <td><%= link_to 'Show', bsdi_diet %></td>
+        <td><%= link_to 'Edit', edit_bsdi_diet_path(bsdi_diet) %></td>
+        <td><%= link_to 'Destroy', bsdi_diet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bsdi diet', new_bsdi_diet_path %>

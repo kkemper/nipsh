@@ -1,0 +1,2 @@
+module BsdiPsychesHelper
+end

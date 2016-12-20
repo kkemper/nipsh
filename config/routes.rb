@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :bsdi_annuals
+  resources :bsdi_psyches
+  resources :bsdi_tobacco_and_alcohols
+  resources :bsdi_diets
+  resources :bsdi_histories
   resources :bsdi_measurements
   resources :bsdi_hosps
   resources :bsdi_smokings

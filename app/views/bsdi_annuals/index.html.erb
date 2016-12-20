@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bsdi Annuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bsdi report</th>
+      <th>Bsdi see doctor</th>
+      <th>Bsdi see dentist</th>
+      <th>Bsdi check bp</th>
+      <th>Bsdi check chol</th>
+      <th>Bsdi colonoscopy</th>
+      <th>Bsdi papsmear</th>
+      <th>Bsdi mammogram</th>
+      <th>Bsdi prostate</th>
+      <th>Bsdi breast exam</th>
+      <th>Bsdi testicular exam</th>
+      <th>Bsdi flu shot</th>
+      <th>Bsdi physician visits</th>
+      <th>Bsdi hospital visits</th>
+      <th>Bsdi emergency room</th>
+      <th>Bsdi high absenteeism</th>
+      <th>Bsdi seat belt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bsdi_annuals.each do |bsdi_annual| %>
+      <tr>
+        <td><%= bsdi_annual.bsdi_report_id %></td>
+        <td><%= bsdi_annual.bsdi_see_doctor %></td>
+        <td><%= bsdi_annual.bsdi_see_dentist %></td>
+        <td><%= bsdi_annual.bsdi_check_bp %></td>
+        <td><%= bsdi_annual.bsdi_check_chol %></td>
+        <td><%= bsdi_annual.bsdi_colonoscopy %></td>
+        <td><%= bsdi_annual.bsdi_papsmear %></td>
+        <td><%= bsdi_annual.bsdi_mammogram %></td>
+        <td><%= bsdi_annual.bsdi_prostate %></td>
+        <td><%= bsdi_annual.bsdi_breast_exam %></td>
+        <td><%= bsdi_annual.bsdi_testicular_exam %></td>
+        <td><%= bsdi_annual.bsdi_flu_shot %></td>
+        <td><%= bsdi_annual.bsdi_physician_visits %></td>
+        <td><%= bsdi_annual.bsdi_hospital_visits %></td>
+        <td><%= bsdi_annual.bsdi_emergency_room %></td>
+        <td><%= bsdi_annual.bsdi_high_absenteeism %></td>
+        <td><%= bsdi_annual.bsdi_seat_belt %></td>
+        <td><%= link_to 'Show', bsdi_annual %></td>
+        <td><%= link_to 'Edit', edit_bsdi_annual_path(bsdi_annual) %></td>
+        <td><%= link_to 'Destroy', bsdi_annual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bsdi annual', new_bsdi_annual_path %>

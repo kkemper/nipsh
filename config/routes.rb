@@ -109,7 +109,10 @@ Rails.application.routes.draw do
 
   resources :access_denials, only: [:edit]
 
-  resources :searches
+  resources :searches, only: :index do
+    match 'advanced_search' => 'searches#advanced_search',
+          on: :collection, via: [:get, :post], as: :advanced_search
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

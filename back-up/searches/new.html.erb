@@ -1,0 +1,353 @@
+<% provide(:title, "Search") %>
+<div class="jumbotron">
+  <h1>Search the Data</h1>
+  <p>Use the form to search our database. Use the <%= link_to "Data Sources List", data_path %> as guidance with regard to where items may be found.</p>
+
+  <%= form_for @search do |f| %>
+    <div class="panel-group" id ="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Fitness Tests
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <div class="form_group">
+              <%= f.label :aerobic_test_type %>
+              <select class="form-control">
+              <%= options_for_select([['Select Aerobic Test Type', 0],['WFI sub maximal treadmill', 1], ['WFI sub maximal step mill', 2], ['Gerkin protocol treadmill sub maximal', 3], ['FDNY protocol stepmill sub maximal', 4], ['Medical Protocol treadmill maximal', 5], ['Bruce Protocol treadmill maximal', 6], ['Bruce Protocol treadmill sub maximal', 7], ['Modified Bruce treadmill maximal', 8], ['Modified Bruce treadmill sub maximal', 9]])%>
+              </select>
+            </div>
+
+
+
+            <div class="form_group">
+              <%= f.label :aerobic_capacity %>
+              <%=f.text_field :aerobic_capacity, class: 'form-control'%>
+            </div>
+
+
+            <div class="form_group">
+              <%= f.label :flex_sit_reach %>
+              <%=f.text_field :flex_sit_reach, class: 'form-control'%>
+            </div>
+
+
+            <div class="form_group">
+              <%= f.label :hand_strength %>
+              <%=f.text_field :hand_strength, class: 'form-control'%>
+            </div>
+
+
+            <div class="form_group">
+              <%= f.label :leg_strength %>
+              <%=f.text_field :leg_strength, class: 'form-control'%>
+            </div>
+
+
+            <div class="form_group">
+              <%= f.label :arm_strength %>
+              <%=f.text_field :arm_strength, class: 'form-control'%>
+            </div>
+
+
+            <div class="form_group">
+              <%= f.label :vertical_jump %>
+              <%=f.text_field :vertical_jump, class: 'form-control'%>
+            </div>
+
+
+            <div class="form_group">
+              <%= f.label :endurance_push_ups %>
+              <%=f.text_field :endurance_push_ups, class: 'form-control'%>
+            </div>
+
+              <div class="form_group">
+              <%= f.label :plank %>
+              <%=f.text_field :plank, class: 'form-control'%>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSixteen">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+            Current Employment
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+        <div class="panel-body">
+
+          <h5>Currently Employed</h5>
+
+          <div class="form_group">
+            <ul>
+              <li><%= radio_button_tag(:currently_emp, TRUE) %>
+              <%= label_tag(:currently_employed_y, "Currently Employed") %></li>
+              <li><%= radio_button_tag(:currently_emp, FALSE) %>
+              <%= label_tag(:currently_employed_n, "    Currently Unemployed") %></li>
+            </ul>
+          </div>
+
+          <div class="form_group">
+            <%=label_tag(:date_of_hire, "Date of Hire") %>
+            <%= date_field(:current_jobs, :date_of_hire) %>
+          </div>
+
+          <div class="form_group">
+            <%=label_tag(:date_of_exit, "Date of Exit") %>
+            <%= date_field(:current_jobs, :date_of_exit) %>
+          </div>
+
+          <h5>Current Duties</h5>
+          <div class="form_group">
+            <ul>
+              <li><%= radio_button_tag(:current_duties, 0) %>
+              <%= label_tag(:fire_suppression, "Fire Suppresssion") %></li>
+              <li><%= radio_button_tag(:current_duties, 1) %>
+              <%= label_tag(:EMS, "    EMS/Paramedic") %></li>
+              <li><%= radio_button_tag(:current_duties, 2) %>
+              <%= label_tag(:management, "    Management/Administration") %></li>
+            </ul>
+          </div>
+
+          <h5>Volunteer</h5>
+          <div class="form_group">
+            <ul>
+              <li><%= radio_button_tag(:volunteer, TRUE) %>
+              <%= label_tag(:volunteer_y, "Yes") %></li>
+              <li><%= radio_button_tag(:volunteer, FALSE) %>
+              <%= label_tag(:volunteer_n, "No") %></li>
+            </ul>
+          </div>
+
+          <h5>Other Employment</h5>
+          <div class="form_group">
+            <ul>
+              <li><%= radio_button_tag(:other_employment, TRUE) %>
+              <%= label_tag(:other_employment_y, "Yes") %></li>
+              <li><%= radio_button_tag(:other_employment, FALSE) %>
+              <%= label_tag(:other_employment_n, "No") %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Cancer Screenings
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Demographics
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Duties
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSix">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Family History
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSeven">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            Health Conditions
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingEight">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            Hearing Tests
+          </a>
+        </h4>
+      </div>
+      <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingNine">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            Immunizations
+          </a>
+        </h4>
+      </div>
+      <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTen">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            Injuries/Illnesses
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingEleven">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+            Lab Data
+          </a>
+        </h4>
+      </div>
+      <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwelve">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+            Other Employment
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThirteen">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+            Physical Activity
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFourteen">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+            Physical Exams
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFifteen">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+            Surgeries
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFifteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSixteen">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+            Tobacco and Alcohol
+          </a>
+        </h4>
+      </div>
+      <div id="collapseSixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+        <div class="panel-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form_group">
+   <%= f.submit 'Search', class: "btn btn-primary" %>
+  </div>
+
+  <% end %>
+
+</div>
+
+<div class="jumbotron">
+  
+<
+ </div> 

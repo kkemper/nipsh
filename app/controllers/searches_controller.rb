@@ -1,26 +1,20 @@
 class SearchesController < ApplicationController
-  def new
-    @search = Search.new
-  end
+  include SearchesHelper
 
   def index
-      @fitness_tests = FitnessTest.search(params[:search])
-      @current_jobs = CurrentJob.search(params[:search])
+    @search = Patient.ransack(params[:q])
+    @results = ransack_result.includes(:cancer_screenings, :current_jobs, :demographics, :duties, :family_histories, :fitness_tests, :health_conditions, :hearing_tests, :immunizations, :injury_illnesses, :lab_data, :mds_reports, :other_employments, :physical_activities, :surgeries, :tobacco_and_alcohols)
   end
 
-  def create
-    @search = Search.create!(search_params)
-    redirect_to @search
-  end
-
-  def show
-    @search = Search.find(params[:id])
+  def advanced_search
+    @search = ransack_params
+    @search.build_grouping unless @search.groupings.any?
+    @results = ransack_result
   end
 
   private
-
-  def search_params
-    params.require(:search).permit(:aerobic_test_type, :aerobic_capacity, :flex_sit_reach, :hand_strength, :leg_strength, :arm_strength, :vertical_jump, :endurance_push_ups, :plank, :currently_emp, :date_of_hire, :date_of_exit, :current_duties, :volunteer, :volunteer_hours, :other_employment)
+    def ransack_result
+      @search.result(distinct: user_wants_distinct_results?)
+    end
   end
-end
 

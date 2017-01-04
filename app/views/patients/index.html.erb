@@ -1,13 +1,33 @@
 <% provide(:title, "Patients") %>
 <div class="jumbotron">
+<%= search_form_for @s do |f| %>
+  <%= f.condition_fields do |c| %>
+    <div class="form_group">
+      <%= c.attribute_fields do |a| %>
+        <%= a.attribute_select %>
+      <% end %>
+      <%= c.predicate_select %>
+      <%= c.value_fields do |v| %>
+        <%= v.text_field :value %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="btn btn-primary"><%= f.submit "Search" %></div>
+<% end %>
+
 <h1>Patients</h1>
 <h3>Patients are listed below.</h3><br />
-<ul>
-<% @patients.each do |patient| %>
-  <div class="patient">
-    <ul>
-      <li><%= patient.fname %> <%= patient.lname %></li>
-  </div>
-</ul>
-<% end %>
+
+<table id="products">
+  <tr>
+    <th><%= sort_link @s, :fname, "First Name" %></th>
+    <th><%= sort_link @s, :lname, "Last Name" %></th>
+  </tr>
+  <% @patients.each do |patient| %>
+  <tr>
+    <td><%= patient.fname %></td>
+    <td><%= patient.lname %></td>
+  </tr>
+  <% end %>
+</table>
 </div>

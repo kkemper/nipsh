@@ -10,12 +10,9 @@ class PatientsController < ApplicationController
   end
 
   def index
-  	@patients = Patient.all
-  	if params[:search]
-  		@patients = Patient.search(params[:search]).order("lname DESC")
-  	else
-  		@patients = Patient.all.order('lname DESC')
-  	end
+    @s = Patient.ransack(params[:q])
+  	@patients = @s.result
+    @s.build_condition
   end
 
   def show

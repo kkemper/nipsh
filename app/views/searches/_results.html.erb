@@ -1,4 +1,6 @@
 
 <h2>Results</h2>
 
-<h4><%=display_results_header(@results) %></h4>
+<% if @results %>
+<span> <%= @results.count %> Results Found</span>
+<% end %>

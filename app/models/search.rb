@@ -1,4 +1,17 @@
 class Search < ActiveRecord::Base
+
+   def self.to_csv
+    attributes = %w{lname fname}
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |patient|
+        csv << attributes.map{ |attr| patient.send(attr) }
+      end
+    end
+  end
+
   def fitness_tests
     @fitness_tests ||= find_fitness_tests
   end

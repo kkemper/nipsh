@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fitness_patient_id: MyString
+  fitness_lname: MyString
+  fitness_fname: MyString
+  fitness_dept: MyString
+  fitness_gender: 
+
+two:
+  fitness_patient_id: MyString
+  fitness_lname: MyString
+  fitness_fname: MyString
+  fitness_dept: MyString
+  fitness_gender: 

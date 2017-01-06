@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fitness_report_id: MyString
+  fitness_patient_id: MyString
+  fitness_test_date: 2017-01-05
+
+two:
+  fitness_report_id: MyString
+  fitness_patient_id: MyString
+  fitness_test_date: 2017-01-05

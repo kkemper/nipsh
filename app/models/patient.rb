@@ -20,6 +20,6 @@ class Patient < ActiveRecord::Base
 private
 
 def self.ransackable_attributes(auth_object = nil)
-  %w(systolic diastolic lname) + _ransackers.keys
+  %w(lname fname date_of_birth) + _ransackers.keys
 end
 end

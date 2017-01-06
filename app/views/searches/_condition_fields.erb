@@ -1,6 +1,6 @@
 <div class="field">
   <%= f.attribute_fields do |a| %>
-    <%= a.attribute_select associations: [:category] %>
+    <%= a.attribute_select associations: [:physical_exams, :mds_report, :lab_data] %>
   <% end %>
   <%= f.predicate_select only: %i(cont not_cont eq not_eq blank null lt lteq gt gteq) %><br />
   <%= f.value_fields do |v| %>

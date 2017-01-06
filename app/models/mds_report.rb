@@ -10,7 +10,7 @@ class MDSReport < ActiveRecord::Base
 	has_one :hearing_test
 	has_one :immunization
 	has_one :injury_illness
-	has_one :lab_datumm, through: :patient
+	has_one :lab_datum, through: :patient
 	has_one :other_employment
 	has_one :physical_activity
 	has_one :physical_exam, through: :patient

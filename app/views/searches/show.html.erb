@@ -1,5 +1,7 @@
 <% provide(:title, "Search Results") %>
 <div class="jumbotron">
 <h1>Search Results</h1>
-
+<% if @searches %>
+<span> <%= @searches.count %> Results Found</span>
+<% end %>
 <%= render @search.fitness_tests %>

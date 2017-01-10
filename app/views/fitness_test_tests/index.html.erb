@@ -1,0 +1,165 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fitness Test Tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fitness report</th>
+      <th>Fitness age</th>
+      <th>Fitness ht</th>
+      <th>Fitness wt</th>
+      <th>Fitness bia-stnd</th>
+      <th>Fitness bia-ath</th>
+      <th>Fitness bia-p-f</th>
+      <th>Fitness bmi</th>
+      <th>Fitness tbw</th>
+      <th>Fitness skinfold</th>
+      <th>Fitness skn-p-f</th>
+      <th>Fitness bodpod</th>
+      <th>Fitness bod-p-f</th>
+      <th>Fitness accuflex</th>
+      <th>Fitness flex-p-fl</th>
+      <th>Fitness grip-l</th>
+      <th>Fitness grip-r</th>
+      <th>Fitness leg press</th>
+      <th>Fitness arm curl</th>
+      <th>Fitness push ups</th>
+      <th>Fitness crunches</th>
+      <th>Fitness q-1</th>
+      <th>Fitness q-2</th>
+      <th>Fitness q-3</th>
+      <th>Fitness q-4</th>
+      <th>Fitness rest hr</th>
+      <th>Fitness rest sbp</th>
+      <th>Fitness rest dbp</th>
+      <th>Fitness rest ecg</th>
+      <th>Fitness rest bp</th>
+      <th>Fitness max hr</th>
+      <th>Fitness max sbp</th>
+      <th>Fitness max dbp</th>
+      <th>Fitness percent max hr</th>
+      <th>Fitness max mets</th>
+      <th>Fitness max rpe</th>
+      <th>Fitness max vo2</th>
+      <th>Fitness vo2-pass-fail</th>
+      <th>Fitness swat</th>
+      <th>Fitness scuba</th>
+      <th>Fitness hazmat</th>
+      <th>Fitness canine</th>
+      <th>Fitness taskforce</th>
+      <th>Fitness reserve</th>
+      <th>Fitness merit</th>
+      <th>Fitness envir-oficr</th>
+      <th>Fitness recheck</th>
+      <th>Fitness ex rx offered</th>
+      <th>Fitness rx accepted</th>
+      <th>Fitness termination</th>
+      <th>Fitness bp response</th>
+      <th>Fitness impression</th>
+      <th>Fitness ref letter</th>
+      <th>Fitness overread</th>
+      <th>Fitness ectopy</th>
+      <th>Fitness pvcs</th>
+      <th>Fitness rtw</th>
+      <th>Fitness promo</th>
+      <th>Fitness arrestee</th>
+      <th>Fitness jco</th>
+      <th>Fitness social sec num</th>
+      <th>Fitness hip</th>
+      <th>Fitness waist</th>
+      <th>Fitness rx required</th>
+      <th>Fitness plank</th>
+      <th>Fitness test type</th>
+      <th>Fitness class start date</th>
+      <th>Fitness pre or post</th>
+      <th>Fitness fms</th>
+      <th>Fitness wfi incentive</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fitness_test_tests.each do |fitness_test_test| %>
+      <tr>
+        <td><%= fitness_test_test.fitness_report_id %></td>
+        <td><%= fitness_test_test.fitness_age %></td>
+        <td><%= fitness_test_test.fitness_ht %></td>
+        <td><%= fitness_test_test.fitness_wt %></td>
+        <td><%= fitness_test_test.fitness_bia-stnd %></td>
+        <td><%= fitness_test_test.fitness_bia-ath %></td>
+        <td><%= fitness_test_test.fitness_bia-p-f %></td>
+        <td><%= fitness_test_test.fitness_bmi %></td>
+        <td><%= fitness_test_test.fitness_tbw %></td>
+        <td><%= fitness_test_test.fitness_skinfold %></td>
+        <td><%= fitness_test_test.fitness_skn-p-f %></td>
+        <td><%= fitness_test_test.fitness_bodpod %></td>
+        <td><%= fitness_test_test.fitness_bod-p-f %></td>
+        <td><%= fitness_test_test.fitness_accuflex %></td>
+        <td><%= fitness_test_test.fitness_flex-p-fl %></td>
+        <td><%= fitness_test_test.fitness_grip-l %></td>
+        <td><%= fitness_test_test.fitness_grip-r %></td>
+        <td><%= fitness_test_test.fitness_leg_press %></td>
+        <td><%= fitness_test_test.fitness_arm_curl %></td>
+        <td><%= fitness_test_test.fitness_push_ups %></td>
+        <td><%= fitness_test_test.fitness_crunches %></td>
+        <td><%= fitness_test_test.fitness_q-1 %></td>
+        <td><%= fitness_test_test.fitness_q-2 %></td>
+        <td><%= fitness_test_test.fitness_q-3 %></td>
+        <td><%= fitness_test_test.fitness_q-4 %></td>
+        <td><%= fitness_test_test.fitness_rest_hr %></td>
+        <td><%= fitness_test_test.fitness_rest_sbp %></td>
+        <td><%= fitness_test_test.fitness_rest_dbp %></td>
+        <td><%= fitness_test_test.fitness_rest_ecg %></td>
+        <td><%= fitness_test_test.fitness_rest_bp %></td>
+        <td><%= fitness_test_test.fitness_max_hr %></td>
+        <td><%= fitness_test_test.fitness_max_sbp %></td>
+        <td><%= fitness_test_test.fitness_max_dbp %></td>
+        <td><%= fitness_test_test.fitness_percent_max_hr %></td>
+        <td><%= fitness_test_test.fitness_max_mets %></td>
+        <td><%= fitness_test_test.fitness_max_rpe %></td>
+        <td><%= fitness_test_test.fitness_max_vo2 %></td>
+        <td><%= fitness_test_test.fitness_vo2-pass-fail %></td>
+        <td><%= fitness_test_test.fitness_swat %></td>
+        <td><%= fitness_test_test.fitness_scuba %></td>
+        <td><%= fitness_test_test.fitness_hazmat %></td>
+        <td><%= fitness_test_test.fitness_canine %></td>
+        <td><%= fitness_test_test.fitness_taskforce %></td>
+        <td><%= fitness_test_test.fitness_reserve %></td>
+        <td><%= fitness_test_test.fitness_merit %></td>
+        <td><%= fitness_test_test.fitness_envir-oficr %></td>
+        <td><%= fitness_test_test.fitness_recheck %></td>
+        <td><%= fitness_test_test.fitness_ex_rx_offered %></td>
+        <td><%= fitness_test_test.fitness_rx_accepted %></td>
+        <td><%= fitness_test_test.fitness_termination %></td>
+        <td><%= fitness_test_test.fitness_bp_response %></td>
+        <td><%= fitness_test_test.fitness_impression %></td>
+        <td><%= fitness_test_test.fitness_ref_letter %></td>
+        <td><%= fitness_test_test.fitness_overread %></td>
+        <td><%= fitness_test_test.fitness_ectopy %></td>
+        <td><%= fitness_test_test.fitness_pvcs %></td>
+        <td><%= fitness_test_test.fitness_rtw %></td>
+        <td><%= fitness_test_test.fitness_promo %></td>
+        <td><%= fitness_test_test.fitness_arrestee %></td>
+        <td><%= fitness_test_test.fitness_jco %></td>
+        <td><%= fitness_test_test.fitness_social_sec_num %></td>
+        <td><%= fitness_test_test.fitness_hip %></td>
+        <td><%= fitness_test_test.fitness_waist %></td>
+        <td><%= fitness_test_test.fitness_rx_required %></td>
+        <td><%= fitness_test_test.fitness_plank %></td>
+        <td><%= fitness_test_test.fitness_test_type %></td>
+        <td><%= fitness_test_test.fitness_class_start_date %></td>
+        <td><%= fitness_test_test.fitness_pre_or_post %></td>
+        <td><%= fitness_test_test.fitness_fms %></td>
+        <td><%= fitness_test_test.fitness_wfi_incentive %></td>
+        <td><%= link_to 'Show', fitness_test_test %></td>
+        <td><%= link_to 'Edit', edit_fitness_test_test_path(fitness_test_test) %></td>
+        <td><%= link_to 'Destroy', fitness_test_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fitness test test', new_fitness_test_test_path %>

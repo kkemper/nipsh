@@ -1,0 +1,2 @@
+module FitnessTestTestsHelper
+end

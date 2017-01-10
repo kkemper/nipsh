@@ -1,0 +1,145 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fitness_report_id: MyString
+  fitness_age: 1
+  fitness_ht: 1.5
+  fitness_wt: 1.5
+  fitness_bia-stnd: 1.5
+  fitness_bia-ath: 1.5
+  fitness_bia-p-f: MyString
+  fitness_bmi: 1.5
+  fitness_tbw: 1.5
+  fitness_skinfold: 1.5
+  fitness_skn-p-f: MyString
+  fitness_bodpod: 1.5
+  fitness_bod-p-f: MyString
+  fitness_accuflex: 1.5
+  fitness_flex-p-fl: MyString
+  fitness_grip-l: 1.5
+  fitness_grip-r: 1.5
+  fitness_leg_press: 1.5
+  fitness_arm_curl: 1.5
+  fitness_push_ups: 1
+  fitness_crunches: 1
+  fitness_q-1: 1
+  fitness_q-2: 1
+  fitness_q-3: 1
+  fitness_q-4: 1
+  fitness_rest_hr: 1
+  fitness_rest_sbp: 1
+  fitness_rest_dbp: 1
+  fitness_rest_ecg: 1
+  fitness_rest_bp: 1
+  fitness_max_hr: 1
+  fitness_max_sbp: 1
+  fitness_max_dbp: 1
+  fitness_percent_max_hr: 1
+  fitness_max_mets: 1.5
+  fitness_max_rpe: 1.5
+  fitness_max_vo2: 1.5
+  fitness_vo2-pass-fail: MyString
+  fitness_swat: 
+  fitness_scuba: 
+  fitness_hazmat: 
+  fitness_canine: 
+  fitness_taskforce: 
+  fitness_reserve: 
+  fitness_merit: 
+  fitness_envir-oficr: 
+  fitness_recheck: 
+  fitness_ex_rx_offered: 
+  fitness_rx_accepted: 
+  fitness_termination: 
+  fitness_bp_response: 1
+  fitness_impression: 1
+  fitness_ref_letter: 
+  fitness_overread: 
+  fitness_ectopy: 
+  fitness_pvcs: 
+  fitness_rtw: 
+  fitness_promo: 
+  fitness_arrestee: 
+  fitness_jco: 
+  fitness_social_sec_num: MyString
+  fitness_hip: 1.5
+  fitness_waist: 1.5
+  fitness_rx_required: 
+  fitness_plank: 1
+  fitness_test_type: 1
+  fitness_class_start_date: 2017-01-10
+  fitness_pre_or_post: 1
+  fitness_fms: 1
+  fitness_wfi_incentive: 
+
+two:
+  fitness_report_id: MyString
+  fitness_age: 1
+  fitness_ht: 1.5
+  fitness_wt: 1.5
+  fitness_bia-stnd: 1.5
+  fitness_bia-ath: 1.5
+  fitness_bia-p-f: MyString
+  fitness_bmi: 1.5
+  fitness_tbw: 1.5
+  fitness_skinfold: 1.5
+  fitness_skn-p-f: MyString
+  fitness_bodpod: 1.5
+  fitness_bod-p-f: MyString
+  fitness_accuflex: 1.5
+  fitness_flex-p-fl: MyString
+  fitness_grip-l: 1.5
+  fitness_grip-r: 1.5
+  fitness_leg_press: 1.5
+  fitness_arm_curl: 1.5
+  fitness_push_ups: 1
+  fitness_crunches: 1
+  fitness_q-1: 1
+  fitness_q-2: 1
+  fitness_q-3: 1
+  fitness_q-4: 1
+  fitness_rest_hr: 1
+  fitness_rest_sbp: 1
+  fitness_rest_dbp: 1
+  fitness_rest_ecg: 1
+  fitness_rest_bp: 1
+  fitness_max_hr: 1
+  fitness_max_sbp: 1
+  fitness_max_dbp: 1
+  fitness_percent_max_hr: 1
+  fitness_max_mets: 1.5
+  fitness_max_rpe: 1.5
+  fitness_max_vo2: 1.5
+  fitness_vo2-pass-fail: MyString
+  fitness_swat: 
+  fitness_scuba: 
+  fitness_hazmat: 
+  fitness_canine: 
+  fitness_taskforce: 
+  fitness_reserve: 
+  fitness_merit: 
+  fitness_envir-oficr: 
+  fitness_recheck: 
+  fitness_ex_rx_offered: 
+  fitness_rx_accepted: 
+  fitness_termination: 
+  fitness_bp_response: 1
+  fitness_impression: 1
+  fitness_ref_letter: 
+  fitness_overread: 
+  fitness_ectopy: 
+  fitness_pvcs: 
+  fitness_rtw: 
+  fitness_promo: 
+  fitness_arrestee: 
+  fitness_jco: 
+  fitness_social_sec_num: MyString
+  fitness_hip: 1.5
+  fitness_waist: 1.5
+  fitness_rx_required: 
+  fitness_plank: 1
+  fitness_test_type: 1
+  fitness_class_start_date: 2017-01-10
+  fitness_pre_or_post: 1
+  fitness_fms: 1
+  fitness_wfi_incentive: 

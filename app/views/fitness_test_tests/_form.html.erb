@@ -1,0 +1,297 @@
+<%= form_for(@fitness_test_test) do |f| %>
+  <% if @fitness_test_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fitness_test_test.errors.count, "error") %> prohibited this fitness_test_test from being saved:</h2>
+
+      <ul>
+      <% @fitness_test_test.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fitness_report_id %><br>
+    <%= f.text_field :fitness_report_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_age %><br>
+    <%= f.number_field :fitness_age %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_ht %><br>
+    <%= f.text_field :fitness_ht %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_wt %><br>
+    <%= f.text_field :fitness_wt %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bia-stnd %><br>
+    <%= f.text_field :fitness_bia-stnd %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bia-ath %><br>
+    <%= f.text_field :fitness_bia-ath %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bia-p-f %><br>
+    <%= f.text_field :fitness_bia-p-f %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bmi %><br>
+    <%= f.text_field :fitness_bmi %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_tbw %><br>
+    <%= f.text_field :fitness_tbw %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_skinfold %><br>
+    <%= f.text_field :fitness_skinfold %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_skn-p-f %><br>
+    <%= f.text_field :fitness_skn-p-f %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bodpod %><br>
+    <%= f.text_field :fitness_bodpod %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bod-p-f %><br>
+    <%= f.text_field :fitness_bod-p-f %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_accuflex %><br>
+    <%= f.text_field :fitness_accuflex %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_flex-p-fl %><br>
+    <%= f.text_field :fitness_flex-p-fl %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_grip-l %><br>
+    <%= f.text_field :fitness_grip-l %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_grip-r %><br>
+    <%= f.text_field :fitness_grip-r %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_leg_press %><br>
+    <%= f.text_field :fitness_leg_press %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_arm_curl %><br>
+    <%= f.text_field :fitness_arm_curl %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_push_ups %><br>
+    <%= f.number_field :fitness_push_ups %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_crunches %><br>
+    <%= f.number_field :fitness_crunches %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_q-1 %><br>
+    <%= f.number_field :fitness_q-1 %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_q-2 %><br>
+    <%= f.number_field :fitness_q-2 %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_q-3 %><br>
+    <%= f.number_field :fitness_q-3 %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_q-4 %><br>
+    <%= f.number_field :fitness_q-4 %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rest_hr %><br>
+    <%= f.number_field :fitness_rest_hr %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rest_sbp %><br>
+    <%= f.number_field :fitness_rest_sbp %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rest_dbp %><br>
+    <%= f.number_field :fitness_rest_dbp %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rest_ecg %><br>
+    <%= f.number_field :fitness_rest_ecg %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rest_bp %><br>
+    <%= f.number_field :fitness_rest_bp %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_max_hr %><br>
+    <%= f.number_field :fitness_max_hr %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_max_sbp %><br>
+    <%= f.number_field :fitness_max_sbp %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_max_dbp %><br>
+    <%= f.number_field :fitness_max_dbp %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_percent_max_hr %><br>
+    <%= f.number_field :fitness_percent_max_hr %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_max_mets %><br>
+    <%= f.text_field :fitness_max_mets %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_max_rpe %><br>
+    <%= f.text_field :fitness_max_rpe %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_max_vo2 %><br>
+    <%= f.text_field :fitness_max_vo2 %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_vo2-pass-fail %><br>
+    <%= f.text_field :fitness_vo2-pass-fail %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_swat %><br>
+    <%= f.text_field :fitness_swat %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_scuba %><br>
+    <%= f.text_field :fitness_scuba %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_hazmat %><br>
+    <%= f.text_field :fitness_hazmat %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_canine %><br>
+    <%= f.text_field :fitness_canine %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_taskforce %><br>
+    <%= f.text_field :fitness_taskforce %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_reserve %><br>
+    <%= f.text_field :fitness_reserve %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_merit %><br>
+    <%= f.text_field :fitness_merit %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_envir-oficr %><br>
+    <%= f.text_field :fitness_envir-oficr %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_recheck %><br>
+    <%= f.text_field :fitness_recheck %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_ex_rx_offered %><br>
+    <%= f.text_field :fitness_ex_rx_offered %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rx_accepted %><br>
+    <%= f.text_field :fitness_rx_accepted %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_termination %><br>
+    <%= f.text_field :fitness_termination %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_bp_response %><br>
+    <%= f.number_field :fitness_bp_response %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_impression %><br>
+    <%= f.number_field :fitness_impression %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_ref_letter %><br>
+    <%= f.text_field :fitness_ref_letter %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_overread %><br>
+    <%= f.text_field :fitness_overread %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_ectopy %><br>
+    <%= f.text_field :fitness_ectopy %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_pvcs %><br>
+    <%= f.text_field :fitness_pvcs %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rtw %><br>
+    <%= f.text_field :fitness_rtw %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_promo %><br>
+    <%= f.text_field :fitness_promo %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_arrestee %><br>
+    <%= f.text_field :fitness_arrestee %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_jco %><br>
+    <%= f.text_field :fitness_jco %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_social_sec_num %><br>
+    <%= f.text_field :fitness_social_sec_num %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_hip %><br>
+    <%= f.text_field :fitness_hip %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_waist %><br>
+    <%= f.text_field :fitness_waist %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_rx_required %><br>
+    <%= f.text_field :fitness_rx_required %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_plank %><br>
+    <%= f.number_field :fitness_plank %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_test_type %><br>
+    <%= f.number_field :fitness_test_type %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_class_start_date %><br>
+    <%= f.date_select :fitness_class_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_pre_or_post %><br>
+    <%= f.number_field :fitness_pre_or_post %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_fms %><br>
+    <%= f.number_field :fitness_fms %>
+  </div>
+  <div class="field">
+    <%= f.label :fitness_wfi_incentive %><br>
+    <%= f.text_field :fitness_wfi_incentive %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

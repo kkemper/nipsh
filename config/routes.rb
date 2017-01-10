@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :fitness_test_tests
   resources :fitness_reports
   resources :fitness_departments
   resources :fitness_patients

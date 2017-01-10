@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fitness dept:</strong>
+  <%= @fitness_department.fitness_dept_id %>
+</p>
+
+<p>
+  <strong>Fitness dept name:</strong>
+  <%= @fitness_department.fitness_dept_name %>
+</p>
+
+<%= link_to 'Edit', edit_fitness_department_path(@fitness_department) %> |
+<%= link_to 'Back', fitness_departments_path %>

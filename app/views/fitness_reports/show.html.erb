@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fitness report:</strong>
+  <%= @fitness_report.fitness_report_id %>
+</p>
+
+<p>
+  <strong>Fitness patient:</strong>
+  <%= @fitness_report.fitness_patient_id %>
+</p>
+
+<p>
+  <strong>Fitness test date:</strong>
+  <%= @fitness_report.fitness_test_date %>
+</p>
+
+<%= link_to 'Edit', edit_fitness_report_path(@fitness_report) %> |
+<%= link_to 'Back', fitness_reports_path %>

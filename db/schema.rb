@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220183316) do
+ActiveRecord::Schema.define(version: 20170105221047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -392,6 +392,31 @@ ActiveRecord::Schema.define(version: 20161220183316) do
     t.boolean  "female_hypertension"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "fitness_departments", force: :cascade do |t|
+    t.string   "fitness_dept_id"
+    t.string   "fitness_dept_name"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "fitness_patients", force: :cascade do |t|
+    t.string   "fitness_patient_id"
+    t.string   "fitness_lname"
+    t.string   "fitness_fname"
+    t.string   "fitness_dept"
+    t.binary   "fitness_gender"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "fitness_reports", force: :cascade do |t|
+    t.string   "fitness_report_id"
+    t.string   "fitness_patient_id"
+    t.date     "fitness_test_date"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "fitness_tests", force: :cascade do |t|

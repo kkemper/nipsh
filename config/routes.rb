@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :fitness_reports
+  resources :fitness_departments
+  resources :fitness_patients
   resources :bsdi_alcohol_barriers
   resources :bsdi_smoking_barriers
   resources :bsdi_diet_barriers
@@ -93,6 +96,8 @@ Rails.application.routes.draw do
 
   get 'searches/index'
 
+  get 'searches/advanced_search'
+
   resources :users, only: [:new, :create, :show]
 
   resources :user_sessions, only: [:create, :destroy]
@@ -109,7 +114,9 @@ Rails.application.routes.draw do
 
   resources :access_denials, only: [:edit]
 
-  resources :searches
+  resources :searches do
+    collection { post :search, to: 'searches#index' }
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

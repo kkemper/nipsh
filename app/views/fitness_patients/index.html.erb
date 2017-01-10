@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fitness Patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fitness patient</th>
+      <th>Fitness lname</th>
+      <th>Fitness fname</th>
+      <th>Fitness dept</th>
+      <th>Fitness gender</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fitness_patients.each do |fitness_patient| %>
+      <tr>
+        <td><%= fitness_patient.fitness_patient_id %></td>
+        <td><%= fitness_patient.fitness_lname %></td>
+        <td><%= fitness_patient.fitness_fname %></td>
+        <td><%= fitness_patient.fitness_dept %></td>
+        <td><%= fitness_patient.fitness_gender %></td>
+        <td><%= link_to 'Show', fitness_patient %></td>
+        <td><%= link_to 'Edit', edit_fitness_patient_path(fitness_patient) %></td>
+        <td><%= link_to 'Destroy', fitness_patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fitness patient', new_fitness_patient_path %>

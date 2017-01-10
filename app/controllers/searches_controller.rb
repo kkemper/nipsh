@@ -1,26 +1,26 @@
 class SearchesController < ApplicationController
-  def new
-    @search = Search.new
-  end
+  include SearchesHelper
 
   def index
-      @fitness_tests = FitnessTest.search(params[:search])
-      @current_jobs = CurrentJob.search(params[:search])
+    @search = Patient.includes(:physical_exams, :tobacco_and_alcohols, :surgeries, :physical_activities, :patients, :other_employments, :mds_reports, :lab_data, :injury_illnesses, :immunizations, :hearing_tests, :health_conditions, :fitness_tests, :family_histories, :duties, :demographics, :current_jobs, :cancer_screenings).ransack(params[:q])
+    @results = @search.result(distinct: true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
+
+     respond_to do |format|
+      format.html
+      format.csv { send_data @results.to_csv, filename: "results-#{Date.today}.csv" }
+    end
   end
 
-  def create
-    @search = Search.create!(search_params)
-    redirect_to @search
-  end
-
-  def show
-    @search = Search.find(params[:id])
+  def advanced_search
+   @search = Patient.ransack(params[:q])
+    @search.build_grouping unless @search.groupings.any?
+    @results = @search_result
   end
 
   private
 
-  def search_params
-    params.require(:search).permit(:aerobic_test_type, :aerobic_capacity, :flex_sit_reach, :hand_strength, :leg_strength, :arm_strength, :vertical_jump, :endurance_push_ups, :plank, :currently_emp, :date_of_hire, :date_of_exit, :current_duties, :volunteer, :volunteer_hours, :other_employment)
+   
   end
-end
 

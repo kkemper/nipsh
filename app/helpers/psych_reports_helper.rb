@@ -1,0 +1,2 @@
+module PsychReportsHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Research:</strong>
+  <%= @psych_report.research_id %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @psych_report.grade %>
+</p>
+
+<p>
+  <strong>Examiner:</strong>
+  <%= @psych_report.examiner %>
+</p>
+
+<p>
+  <strong>Date of evaluation:</strong>
+  <%= @psych_report.date_of_evaluation %>
+</p>
+
+<p>
+  <strong>Gave consent:</strong>
+  <%= @psych_report.gave_consent %>
+</p>
+
+<%= link_to 'Edit', edit_psych_report_path(@psych_report) %> |
+<%= link_to 'Back', psych_reports_path %>

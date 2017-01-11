@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Psych Reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Research</th>
+      <th>Grade</th>
+      <th>Examiner</th>
+      <th>Date of evaluation</th>
+      <th>Gave consent</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psych_reports.each do |psych_report| %>
+      <tr>
+        <td><%= psych_report.research_id %></td>
+        <td><%= psych_report.grade %></td>
+        <td><%= psych_report.examiner %></td>
+        <td><%= psych_report.date_of_evaluation %></td>
+        <td><%= psych_report.gave_consent %></td>
+        <td><%= link_to 'Show', psych_report %></td>
+        <td><%= link_to 'Edit', edit_psych_report_path(psych_report) %></td>
+        <td><%= link_to 'Destroy', psych_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Psych report', new_psych_report_path %>

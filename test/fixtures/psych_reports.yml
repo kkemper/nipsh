@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  research_id: MyString
+  grade: false
+  examiner: 1
+  date_of_evaluation: 2017-01-10
+  gave_consent: false
+
+two:
+  research_id: MyString
+  grade: false
+  examiner: 1
+  date_of_evaluation: 2017-01-10
+  gave_consent: false

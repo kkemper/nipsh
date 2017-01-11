@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Psych Employments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Research</th>
+      <th>Department</th>
+      <th>Position</th>
+      <th>Prior pub saf exprnce</th>
+      <th>Yrs exprnce pub saf</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psych_employments.each do |psych_employment| %>
+      <tr>
+        <td><%= psych_employment.research_id %></td>
+        <td><%= psych_employment.department %></td>
+        <td><%= psych_employment.position %></td>
+        <td><%= psych_employment.prior_pub_saf_exprnce %></td>
+        <td><%= psych_employment.yrs_exprnce_pub_saf %></td>
+        <td><%= link_to 'Show', psych_employment %></td>
+        <td><%= link_to 'Edit', edit_psych_employment_path(psych_employment) %></td>
+        <td><%= link_to 'Destroy', psych_employment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Psych employment', new_psych_employment_path %>

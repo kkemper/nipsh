@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111000320) do
+ActiveRecord::Schema.define(version: 20170111000449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -720,6 +720,16 @@ ActiveRecord::Schema.define(version: 20170111000320) do
     t.integer  "ethnicity"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "psych_employments", force: :cascade do |t|
+    t.string   "research_id"
+    t.string   "department"
+    t.string   "position"
+    t.boolean  "prior_pub_saf_exprnce"
+    t.integer  "yrs_exprnce_pub_saf"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "psych_reports", force: :cascade do |t|

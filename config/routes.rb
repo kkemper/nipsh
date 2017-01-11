@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :psych_employments
   resources :psych_demographics
   resources :psych_reports
   resources :fitness_test_tests

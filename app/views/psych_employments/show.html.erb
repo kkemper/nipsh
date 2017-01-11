@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Research:</strong>
+  <%= @psych_employment.research_id %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @psych_employment.department %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @psych_employment.position %>
+</p>
+
+<p>
+  <strong>Prior pub saf exprnce:</strong>
+  <%= @psych_employment.prior_pub_saf_exprnce %>
+</p>
+
+<p>
+  <strong>Yrs exprnce pub saf:</strong>
+  <%= @psych_employment.yrs_exprnce_pub_saf %>
+</p>
+
+<%= link_to 'Edit', edit_psych_employment_path(@psych_employment) %> |
+<%= link_to 'Back', psych_employments_path %>

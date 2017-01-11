@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  research_id: MyString
+  department: MyString
+  position: MyString
+  prior_pub_saf_exprnce: false
+  yrs_exprnce_pub_saf: 1
+
+two:
+  research_id: MyString
+  department: MyString
+  position: MyString
+  prior_pub_saf_exprnce: false
+  yrs_exprnce_pub_saf: 1

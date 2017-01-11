@@ -1,0 +1,135 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Psych Calcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Research</th>
+      <th>L</th>
+      <th>K</th>
+      <th>S</th>
+      <th>Scale 1</th>
+      <th>Scale 2</th>
+      <th>Scale 3</th>
+      <th>Scale 4</th>
+      <th>Scale 6</th>
+      <th>Scale 7</th>
+      <th>Scale 8</th>
+      <th>Scale 9</th>
+      <th>Scale 0</th>
+      <th>Rcd</th>
+      <th>Rc1</th>
+      <th>Rc2</th>
+      <th>Rc3</th>
+      <th>Rc4</th>
+      <th>Rc6</th>
+      <th>Rc7</th>
+      <th>Rc8</th>
+      <th>Rc9</th>
+      <th>Anx</th>
+      <th>Frs</th>
+      <th>Obs</th>
+      <th>Dep</th>
+      <th>Hea</th>
+      <th>Biz</th>
+      <th>Ang</th>
+      <th>Cyn</th>
+      <th>Asp</th>
+      <th>Tpa</th>
+      <th>Lse</th>
+      <th>Sod</th>
+      <th>Fam</th>
+      <th>Wrk</th>
+      <th>Trt</th>
+      <th>A</th>
+      <th>R</th>
+      <th>Es</th>
+      <th>Do</th>
+      <th>Re</th>
+      <th>Mt</th>
+      <th>Pk</th>
+      <th>Mds</th>
+      <th>Ho</th>
+      <th>O h</th>
+      <th>Mac r</th>
+      <th>Aas</th>
+      <th>Aps</th>
+      <th>Aggr</th>
+      <th>Psyc</th>
+      <th>Disc</th>
+      <th>Nege</th>
+      <th>Intr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psych_calcs.each do |psych_calc| %>
+      <tr>
+        <td><%= psych_calc.research_id %></td>
+        <td><%= psych_calc.l %></td>
+        <td><%= psych_calc.k %></td>
+        <td><%= psych_calc.s %></td>
+        <td><%= psych_calc.scale_1 %></td>
+        <td><%= psych_calc.scale_2 %></td>
+        <td><%= psych_calc.scale_3 %></td>
+        <td><%= psych_calc.scale_4 %></td>
+        <td><%= psych_calc.scale_6 %></td>
+        <td><%= psych_calc.scale_7 %></td>
+        <td><%= psych_calc.scale_8 %></td>
+        <td><%= psych_calc.scale_9 %></td>
+        <td><%= psych_calc.scale_0 %></td>
+        <td><%= psych_calc.rcd %></td>
+        <td><%= psych_calc.rc1 %></td>
+        <td><%= psych_calc.rc2 %></td>
+        <td><%= psych_calc.rc3 %></td>
+        <td><%= psych_calc.rc4 %></td>
+        <td><%= psych_calc.rc6 %></td>
+        <td><%= psych_calc.rc7 %></td>
+        <td><%= psych_calc.rc8 %></td>
+        <td><%= psych_calc.rc9 %></td>
+        <td><%= psych_calc.anx %></td>
+        <td><%= psych_calc.frs %></td>
+        <td><%= psych_calc.obs %></td>
+        <td><%= psych_calc.dep %></td>
+        <td><%= psych_calc.hea %></td>
+        <td><%= psych_calc.biz %></td>
+        <td><%= psych_calc.ang %></td>
+        <td><%= psych_calc.cyn %></td>
+        <td><%= psych_calc.asp %></td>
+        <td><%= psych_calc.tpa %></td>
+        <td><%= psych_calc.lse %></td>
+        <td><%= psych_calc.sod %></td>
+        <td><%= psych_calc.fam %></td>
+        <td><%= psych_calc.wrk %></td>
+        <td><%= psych_calc.trt %></td>
+        <td><%= psych_calc.a %></td>
+        <td><%= psych_calc.r %></td>
+        <td><%= psych_calc.es %></td>
+        <td><%= psych_calc.do %></td>
+        <td><%= psych_calc.re %></td>
+        <td><%= psych_calc.mt %></td>
+        <td><%= psych_calc.pk %></td>
+        <td><%= psych_calc.mds %></td>
+        <td><%= psych_calc.ho %></td>
+        <td><%= psych_calc.o_h %></td>
+        <td><%= psych_calc.mac_r %></td>
+        <td><%= psych_calc.aas %></td>
+        <td><%= psych_calc.aps %></td>
+        <td><%= psych_calc.aggr %></td>
+        <td><%= psych_calc.psyc %></td>
+        <td><%= psych_calc.disc %></td>
+        <td><%= psych_calc.nege %></td>
+        <td><%= psych_calc.intr %></td>
+        <td><%= link_to 'Show', psych_calc %></td>
+        <td><%= link_to 'Edit', edit_psych_calc_path(psych_calc) %></td>
+        <td><%= link_to 'Destroy', psych_calc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Psych calc', new_psych_calc_path %>

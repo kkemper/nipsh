@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Research:</strong>
+  <%= @psych_demographic.research_id %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @psych_demographic.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @psych_demographic.age %>
+</p>
+
+<p>
+  <strong>Ethnicity:</strong>
+  <%= @psych_demographic.ethnicity %>
+</p>
+
+<%= link_to 'Edit', edit_psych_demographic_path(@psych_demographic) %> |
+<%= link_to 'Back', psych_demographics_path %>

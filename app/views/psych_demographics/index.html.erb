@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Psych Demographics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Research</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Ethnicity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psych_demographics.each do |psych_demographic| %>
+      <tr>
+        <td><%= psych_demographic.research_id %></td>
+        <td><%= psych_demographic.gender %></td>
+        <td><%= psych_demographic.age %></td>
+        <td><%= psych_demographic.ethnicity %></td>
+        <td><%= link_to 'Show', psych_demographic %></td>
+        <td><%= link_to 'Edit', edit_psych_demographic_path(psych_demographic) %></td>
+        <td><%= link_to 'Destroy', psych_demographic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Psych demographic', new_psych_demographic_path %>

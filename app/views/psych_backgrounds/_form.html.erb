@@ -1,0 +1,249 @@
+<%= form_for(@psych_background) do |f| %>
+  <% if @psych_background.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@psych_background.errors.count, "error") %> prohibited this psych_background from being saved:</h2>
+
+      <ul>
+      <% @psych_background.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :research_id %><br>
+    <%= f.text_field :research_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hgh_sch_susp %><br>
+    <%= f.number_field :hgh_sch_susp %>
+  </div>
+  <div class="field">
+    <%= f.label :college_degree %><br>
+    <%= f.text_field :college_degree %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_military_service %><br>
+    <%= f.number_field :yrs_military_service %>
+  </div>
+  <div class="field">
+    <%= f.label :dscpln_military %><br>
+    <%= f.check_box :dscpln_military %>
+  </div>
+  <div class="field">
+    <%= f.label :fired %><br>
+    <%= f.check_box :fired %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_fired %><br>
+    <%= f.number_field :yrs_fired %>
+  </div>
+  <div class="field">
+    <%= f.label :wrk_suspensions %><br>
+    <%= f.number_field :wrk_suspensions %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_wrk_suspension %><br>
+    <%= f.number_field :yrs_wrk_suspension %>
+  </div>
+  <div class="field">
+    <%= f.label :write_work %><br>
+    <%= f.number_field :write_work %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_write_up_wrk %><br>
+    <%= f.number_field :yrs_write_up_wrk %>
+  </div>
+  <div class="field">
+    <%= f.label :times_married %><br>
+    <%= f.number_field :times_married %>
+  </div>
+  <div class="field">
+    <%= f.label :times_divorced %><br>
+    <%= f.number_field :times_divorced %>
+  </div>
+  <div class="field">
+    <%= f.label :arrests %><br>
+    <%= f.number_field :arrests %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_arrest %><br>
+    <%= f.number_field :yrs_arrest %>
+  </div>
+  <div class="field">
+    <%= f.label :alcohol_drug_related_arrests %><br>
+    <%= f.number_field :alcohol_drug_related_arrests %>
+  </div>
+  <div class="field">
+    <%= f.label :drv_suspensions %><br>
+    <%= f.number_field :drv_suspensions %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_lic_susp %><br>
+    <%= f.number_field :yrs_lic_susp %>
+  </div>
+  <div class="field">
+    <%= f.label :sex_with_minor %><br>
+    <%= f.check_box :sex_with_minor %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_minor %><br>
+    <%= f.number_field :yrs_minor %>
+  </div>
+  <div class="field">
+    <%= f.label :times_paying_for_sex %><br>
+    <%= f.number_field :times_paying_for_sex %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_paid_sex %><br>
+    <%= f.number_field :yrs_paid_sex %>
+  </div>
+  <div class="field">
+    <%= f.label :bankruptcies %><br>
+    <%= f.number_field :bankruptcies %>
+  </div>
+  <div class="field">
+    <%= f.label :last_bankruptcy %><br>
+    <%= f.number_field :last_bankruptcy %>
+  </div>
+  <div class="field">
+    <%= f.label :currnt_rx_meds %><br>
+    <%= f.number_field :currnt_rx_meds %>
+  </div>
+  <div class="field">
+    <%= f.label :mh_hosptlztions %><br>
+    <%= f.number_field :mh_hosptlztions %>
+  </div>
+  <div class="field">
+    <%= f.label :last_mh_hosptlztion %><br>
+    <%= f.number_field :last_mh_hosptlztion %>
+  </div>
+  <div class="field">
+    <%= f.label :self_harm %><br>
+    <%= f.check_box :self_harm %>
+  </div>
+  <div class="field">
+    <%= f.label :last_sh %><br>
+    <%= f.number_field :last_sh %>
+  </div>
+  <div class="field">
+    <%= f.label :current_psych_meds %><br>
+    <%= f.number_field :current_psych_meds %>
+  </div>
+  <div class="field">
+    <%= f.label :psych_meds_lifetime %><br>
+    <%= f.number_field :psych_meds_lifetime %>
+  </div>
+  <div class="field">
+    <%= f.label :mh_dxs %><br>
+    <%= f.number_field :mh_dxs %>
+  </div>
+  <div class="field">
+    <%= f.label :last_dx %><br>
+    <%= f.number_field :last_dx %>
+  </div>
+  <div class="field">
+    <%= f.label :mood_do %><br>
+    <%= f.check_box :mood_do %>
+  </div>
+  <div class="field">
+    <%= f.label :anx_do %><br>
+    <%= f.check_box :anx_do %>
+  </div>
+  <div class="field">
+    <%= f.label :adhd %><br>
+    <%= f.check_box :adhd %>
+  </div>
+  <div class="field">
+    <%= f.label :longest_period_dep %><br>
+    <%= f.number_field :longest_period_dep %>
+  </div>
+  <div class="field">
+    <%= f.label :dep_episodes %><br>
+    <%= f.number_field :dep_episodes %>
+  </div>
+  <div class="field">
+    <%= f.label :yrs_since_mst_recnt_dep_episd %><br>
+    <%= f.number_field :yrs_since_mst_recnt_dep_episd %>
+  </div>
+  <div class="field">
+    <%= f.label :illegal_drugs_used %><br>
+    <%= f.number_field :illegal_drugs_used %>
+  </div>
+  <div class="field">
+    <%= f.label :last_illegal_drug_use %><br>
+    <%= f.number_field :last_illegal_drug_use %>
+  </div>
+  <div class="field">
+    <%= f.label :marijuana_use %><br>
+    <%= f.number_field :marijuana_use %>
+  </div>
+  <div class="field">
+    <%= f.label :last_marijuana_use %><br>
+    <%= f.number_field :last_marijuana_use %>
+  </div>
+  <div class="field">
+    <%= f.label :drink_per_week %><br>
+    <%= f.number_field :drink_per_week %>
+  </div>
+  <div class="field">
+    <%= f.label :drinks_setting %><br>
+    <%= f.number_field :drinks_setting %>
+  </div>
+  <div class="field">
+    <%= f.label :intox_month %><br>
+    <%= f.number_field :intox_month %>
+  </div>
+  <div class="field">
+    <%= f.label :intox_year %><br>
+    <%= f.number_field :intox_year %>
+  </div>
+  <div class="field">
+    <%= f.label :last_intox %><br>
+    <%= f.number_field :last_intox %>
+  </div>
+  <div class="field">
+    <%= f.label :intox_year %><br>
+    <%= f.number_field :intox_year %>
+  </div>
+  <div class="field">
+    <%= f.label :times_intox_driving %><br>
+    <%= f.number_field :times_intox_driving %>
+  </div>
+  <div class="field">
+    <%= f.label :last_intox_driving %><br>
+    <%= f.number_field :last_intox_driving %>
+  </div>
+  <div class="field">
+    <%= f.label :drnks_effcts %><br>
+    <%= f.number_field :drnks_effcts %>
+  </div>
+  <div class="field">
+    <%= f.label :fights_drinking %><br>
+    <%= f.check_box :fights_drinking %>
+  </div>
+  <div class="field">
+    <%= f.label :fights_adult %><br>
+    <%= f.number_field :fights_adult %>
+  </div>
+  <div class="field">
+    <%= f.label :last_fight %><br>
+    <%= f.number_field :last_fight %>
+  </div>
+  <div class="field">
+    <%= f.label :stole %><br>
+    <%= f.check_box :stole %>
+  </div>
+  <div class="field">
+    <%= f.label :last_stolen %><br>
+    <%= f.number_field :last_stolen %>
+  </div>
+  <div class="field">
+    <%= f.label :drinks_per_week %><br>
+    <%= f.number_field :drinks_per_week %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

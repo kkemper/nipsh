@@ -1,0 +1,141 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Psych Backgrounds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Research</th>
+      <th>Hgh sch susp</th>
+      <th>College degree</th>
+      <th>Yrs military service</th>
+      <th>Dscpln military</th>
+      <th>Fired</th>
+      <th>Yrs fired</th>
+      <th>Wrk suspensions</th>
+      <th>Yrs wrk suspension</th>
+      <th>Write work</th>
+      <th>Yrs write up wrk</th>
+      <th>Times married</th>
+      <th>Times divorced</th>
+      <th>Arrests</th>
+      <th>Yrs arrest</th>
+      <th>Alcohol drug related arrests</th>
+      <th>Drv suspensions</th>
+      <th>Yrs lic susp</th>
+      <th>Sex with minor</th>
+      <th>Yrs minor</th>
+      <th>Times paying for sex</th>
+      <th>Yrs paid sex</th>
+      <th>Bankruptcies</th>
+      <th>Last bankruptcy</th>
+      <th>Currnt rx meds</th>
+      <th>Mh hosptlztions</th>
+      <th>Last mh hosptlztion</th>
+      <th>Self harm</th>
+      <th>Last sh</th>
+      <th>Current psych meds</th>
+      <th>Psych meds lifetime</th>
+      <th>Mh dxs</th>
+      <th>Last dx</th>
+      <th>Mood do</th>
+      <th>Anx do</th>
+      <th>Adhd</th>
+      <th>Longest period dep</th>
+      <th>Dep episodes</th>
+      <th>Yrs since mst recnt dep episd</th>
+      <th>Illegal drugs used</th>
+      <th>Last illegal drug use</th>
+      <th>Marijuana use</th>
+      <th>Last marijuana use</th>
+      <th>Drink per week</th>
+      <th>Drinks setting</th>
+      <th>Intox month</th>
+      <th>Intox year</th>
+      <th>Last intox</th>
+      <th>Intox year</th>
+      <th>Times intox driving</th>
+      <th>Last intox driving</th>
+      <th>Drnks effcts</th>
+      <th>Fights drinking</th>
+      <th>Fights adult</th>
+      <th>Last fight</th>
+      <th>Stole</th>
+      <th>Last stolen</th>
+      <th>Drinks per week</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @psych_backgrounds.each do |psych_background| %>
+      <tr>
+        <td><%= psych_background.research_id %></td>
+        <td><%= psych_background.hgh_sch_susp %></td>
+        <td><%= psych_background.college_degree %></td>
+        <td><%= psych_background.yrs_military_service %></td>
+        <td><%= psych_background.dscpln_military %></td>
+        <td><%= psych_background.fired %></td>
+        <td><%= psych_background.yrs_fired %></td>
+        <td><%= psych_background.wrk_suspensions %></td>
+        <td><%= psych_background.yrs_wrk_suspension %></td>
+        <td><%= psych_background.write_work %></td>
+        <td><%= psych_background.yrs_write_up_wrk %></td>
+        <td><%= psych_background.times_married %></td>
+        <td><%= psych_background.times_divorced %></td>
+        <td><%= psych_background.arrests %></td>
+        <td><%= psych_background.yrs_arrest %></td>
+        <td><%= psych_background.alcohol_drug_related_arrests %></td>
+        <td><%= psych_background.drv_suspensions %></td>
+        <td><%= psych_background.yrs_lic_susp %></td>
+        <td><%= psych_background.sex_with_minor %></td>
+        <td><%= psych_background.yrs_minor %></td>
+        <td><%= psych_background.times_paying_for_sex %></td>
+        <td><%= psych_background.yrs_paid_sex %></td>
+        <td><%= psych_background.bankruptcies %></td>
+        <td><%= psych_background.last_bankruptcy %></td>
+        <td><%= psych_background.currnt_rx_meds %></td>
+        <td><%= psych_background.mh_hosptlztions %></td>
+        <td><%= psych_background.last_mh_hosptlztion %></td>
+        <td><%= psych_background.self_harm %></td>
+        <td><%= psych_background.last_sh %></td>
+        <td><%= psych_background.current_psych_meds %></td>
+        <td><%= psych_background.psych_meds_lifetime %></td>
+        <td><%= psych_background.mh_dxs %></td>
+        <td><%= psych_background.last_dx %></td>
+        <td><%= psych_background.mood_do %></td>
+        <td><%= psych_background.anx_do %></td>
+        <td><%= psych_background.adhd %></td>
+        <td><%= psych_background.longest_period_dep %></td>
+        <td><%= psych_background.dep_episodes %></td>
+        <td><%= psych_background.yrs_since_mst_recnt_dep_episd %></td>
+        <td><%= psych_background.illegal_drugs_used %></td>
+        <td><%= psych_background.last_illegal_drug_use %></td>
+        <td><%= psych_background.marijuana_use %></td>
+        <td><%= psych_background.last_marijuana_use %></td>
+        <td><%= psych_background.drink_per_week %></td>
+        <td><%= psych_background.drinks_setting %></td>
+        <td><%= psych_background.intox_month %></td>
+        <td><%= psych_background.intox_year %></td>
+        <td><%= psych_background.last_intox %></td>
+        <td><%= psych_background.intox_year %></td>
+        <td><%= psych_background.times_intox_driving %></td>
+        <td><%= psych_background.last_intox_driving %></td>
+        <td><%= psych_background.drnks_effcts %></td>
+        <td><%= psych_background.fights_drinking %></td>
+        <td><%= psych_background.fights_adult %></td>
+        <td><%= psych_background.last_fight %></td>
+        <td><%= psych_background.stole %></td>
+        <td><%= psych_background.last_stolen %></td>
+        <td><%= psych_background.drinks_per_week %></td>
+        <td><%= link_to 'Show', psych_background %></td>
+        <td><%= link_to 'Edit', edit_psych_background_path(psych_background) %></td>
+        <td><%= link_to 'Destroy', psych_background, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Psych background', new_psych_background_path %>

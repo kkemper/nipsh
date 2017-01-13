@@ -1,0 +1,10 @@
+<div class="field">
+  <%= f.attribute_fields do |a| %>
+    <%= a.attribute_select associations: [:bsdi_activities, :bsdi_alcohol_barriers, :bsdi_annuals, :bsdi_blood_chemistries, :bsdi_blood_pressures, :bsdi_current_jobs, :bsdi_diet_barriers, :bsdi_diets, :bsdi_diseases, :bsdi_exercises, :bsdi_histories, :bsdi_hosps, :bsdi_measurements, :bsdi_psyches, :bsdi_risks, :bsdi_smoking_barriers, :bsdi_smokings, :bsdi_tobacco_and_alcohols, :bsdi_weights, :bsdi_reports] %>
+  <% end %>
+  <%= f.predicate_select only: %i(cont not_cont eq not_eq blank null lt lteq gt gteq) %><br />
+  <%= f.value_fields do |v| %>
+    <%= v.text_field :value %>
+  <% end %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</div>

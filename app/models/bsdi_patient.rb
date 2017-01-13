@@ -19,4 +19,10 @@ class BsdiPatient < ActiveRecord::Base
   has_many :bsdi_smoking_barriers, through: :bsdi_reports
   has_many :bsdi_tobacco_and_alcohols, through: :bsdi_reports
   has_many :bsdi_weights, through: :bsdi_reports
+
+private
+
+def self.ransackable_attributes(auth_object = nil)
+  %w(lname fname date_of_birth) + _ransackers.keys
+end
 end

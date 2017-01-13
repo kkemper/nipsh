@@ -34,16 +34,16 @@ ActiveRecord::Schema.define(version: 20170111000637) do
   create_table "bsdi_activities", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.integer  "bsdi_rfc_activity"
-    t.binary   "bsdi_active_barrier_time"
-    t.binary   "bsdi_active_barrier_people"
-    t.binary   "bsdi_active_barrier_unfamiliar"
-    t.binary   "bsdi_active_barrier_resources"
-    t.binary   "bsdi_active_barrier_unpleasant"
-    t.binary   "bsdi_active_barrier_medical_worry"
-    t.binary   "bsdi_active_barrier_intimidating"
-    t.binary   "bsdi_active_barrier_embarrassed"
-    t.binary   "bsdi_active_barrier_other"
-    t.binary   "bsdi_active_barrier_injury"
+    t.boolean   "bsdi_active_barrier_time"
+    t.boolean   "bsdi_active_barrier_people"
+    t.boolean   "bsdi_active_barrier_unfamiliar"
+    t.boolean   "bsdi_active_barrier_resources"
+    t.boolean   "bsdi_active_barrier_unpleasant"
+    t.boolean   "bsdi_active_barrier_medical_worry"
+    t.boolean   "bsdi_active_barrier_intimidating"
+    t.boolean   "bsdi_active_barrier_embarrassed"
+    t.boolean   "bsdi_active_barrier_other"
+    t.boolean   "bsdi_active_barrier_injury"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
   end
@@ -51,12 +51,12 @@ ActiveRecord::Schema.define(version: 20170111000637) do
   create_table "bsdi_alcohol_barriers", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.integer  "bsdi_rfc_alcohol"
-    t.binary   "bsdi_alcohol_barrier_knowledge"
-    t.binary   "bsdi_alcohol_barrier_temptation"
-    t.binary   "bsdi_alcohol_barrier_friends"
-    t.binary   "bsdi_alcohol_barrier_perception"
-    t.binary   "bsdi_alcohol_barrier_stress"
-    t.binary   "bsdi_alcohol_barrier_other"
+    t.boolean   "bsdi_alcohol_barrier_knowledge"
+    t.boolean   "bsdi_alcohol_barrier_temptation"
+    t.boolean   "bsdi_alcohol_barrier_friends"
+    t.boolean   "bsdi_alcohol_barrier_perception"
+    t.boolean   "bsdi_alcohol_barrier_stress"
+    t.boolean   "bsdi_alcohol_barrier_other"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end
@@ -87,18 +87,18 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.string   "bsdi_report_id"
     t.date     "bsdi_bchem_date"
     t.integer  "bsdi_cholesterol"
-    t.binary   "bsdi_high_cholesterol"
-    t.binary   "bsdi_cholesterol_meds"
+    t.boolean   "bsdi_high_cholesterol"
+    t.boolean   "bsdi_cholesterol_meds"
     t.integer  "bsdi_hdl"
     t.integer  "bsdi_hdl_status"
     t.integer  "bsdi_ldl"
-    t.binary   "bsdi_high_ldl"
+    t.boolean   "bsdi_high_ldl"
     t.integer  "bsdi_triglycerides"
-    t.binary   "bsdi_high_triglyceride"
+    t.boolean   "bsdi_high_triglyceride"
     t.integer  "bsdi_glucose"
-    t.binary   "bsdi_pre_diabetes"
+    t.boolean   "bsdi_pre_diabetes"
     t.integer  "bsdi_a1c"
-    t.binary   "bsdi_blood_chem_risk"
+    t.boolean   "bsdi_blood_chem_risk"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.string   "bsdi_report_id"
     t.integer  "bsdi_systolic"
     t.integer  "bsdi_diastolic"
-    t.binary   "bsdi_bp_medicine"
+    t.boolean   "bsdi_bp_medicine"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -125,12 +125,12 @@ ActiveRecord::Schema.define(version: 20170111000637) do
   create_table "bsdi_diet_barriers", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.integer  "bsdi_rfc_diet"
-    t.binary   "bsdi_diet_barrier_unfamililar"
-    t.binary   "bsdi_diet_barrier_time"
-    t.binary   "bsdi_diet_barrier_people"
-    t.binary   "bsdi_diet_barrier_taste"
-    t.binary   "bsdi_diet_barrier_other"
-    t.binary   "bsdi_diet_barrier_expense"
+    t.boolean   "bsdi_diet_barrier_unfamililar"
+    t.boolean   "bsdi_diet_barrier_time"
+    t.boolean   "bsdi_diet_barrier_people"
+    t.boolean   "bsdi_diet_barrier_taste"
+    t.boolean   "bsdi_diet_barrier_other"
+    t.boolean   "bsdi_diet_barrier_expense"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
@@ -148,49 +148,49 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.integer  "bsdi_dairy_emphasis"
     t.integer  "bsdi_fats_and_oils"
     t.integer  "bsdi_nutrition_status"
-    t.binary   "bsdi_nut_missing_values"
+    t.boolean   "bsdi_nut_missing_values"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
 
   create_table "bsdi_diseases", force: :cascade do |t|
     t.string   "bsdi_report_id"
-    t.binary   "bsdi_has_disease"
-    t.binary   "bsdi_heart_disease"
-    t.binary   "bsdi_hypertension"
-    t.binary   "bsdi_diabetes"
-    t.binary   "bsdi_diabetes_type1"
-    t.binary   "bsdi_metabolic"
-    t.binary   "bsdi_cancer"
-    t.binary   "bsdi_auto_immune"
-    t.binary   "bsdi_asthma"
-    t.binary   "bsdi_pulmonary"
-    t.binary   "bsdi_arthritis"
-    t.binary   "bsdi_allergies"
-    t.binary   "bsdi_digestive"
-    t.binary   "bsdi_mental"
-    t.binary   "bsdi_neck_pain"
-    t.binary   "bsdi_back_pain"
-    t.binary   "bsdi_respiratory"
-    t.binary   "bsdi_migraines_headaches"
-    t.binary   "bsdi_depression"
-    t.binary   "bsdi_anxiety"
-    t.binary   "bsdi_musculoskeletal_problems"
-    t.binary   "bsdi_periphvasc"
-    t.binary   "bsdi_seizures"
-    t.binary   "bsdi_stroke"
-    t.binary   "bsdi_pregnancy"
-    t.binary   "bsdi_chest_pain"
-    t.binary   "bsdi_leg_pain"
-    t.binary   "bsdi_dizziness"
-    t.binary   "bsdi_shortbreath"
-    t.binary   "bsdi_orthopnea"
-    t.binary   "bsdi_heart_flutter"
-    t.binary   "bsdi_heart_murmur"
-    t.binary   "bsdi_ankle_edema"
-    t.binary   "bsdi_heart_meds"
+    t.boolean   "bsdi_has_disease"
+    t.boolean   "bsdi_heart_disease"
+    t.boolean   "bsdi_hypertension"
+    t.boolean   "bsdi_diabetes"
+    t.boolean   "bsdi_diabetes_type1"
+    t.boolean   "bsdi_metabolic"
+    t.boolean   "bsdi_cancer"
+    t.boolean   "bsdi_auto_immune"
+    t.boolean   "bsdi_asthma"
+    t.boolean   "bsdi_pulmonary"
+    t.boolean   "bsdi_arthritis"
+    t.boolean   "bsdi_allergies"
+    t.boolean   "bsdi_digestive"
+    t.boolean   "bsdi_mental"
+    t.boolean   "bsdi_neck_pain"
+    t.boolean   "bsdi_back_pain"
+    t.boolean   "bsdi_respiratory"
+    t.boolean   "bsdi_migraines_headaches"
+    t.boolean   "bsdi_depression"
+    t.boolean   "bsdi_anxiety"
+    t.boolean   "bsdi_musculoskeletal_problems"
+    t.boolean   "bsdi_periphvasc"
+    t.boolean   "bsdi_seizures"
+    t.boolean   "bsdi_stroke"
+    t.boolean   "bsdi_pregnancy"
+    t.boolean   "bsdi_chest_pain"
+    t.boolean   "bsdi_leg_pain"
+    t.boolean   "bsdi_dizziness"
+    t.boolean   "bsdi_shortbreath"
+    t.boolean   "bsdi_orthopnea"
+    t.boolean   "bsdi_heart_flutter"
+    t.boolean   "bsdi_heart_murmur"
+    t.boolean   "bsdi_ankle_edema"
+    t.boolean   "bsdi_heart_meds"
     t.integer  "bsdi_family_chd"
-    t.binary   "bsdi_chd_risk"
+    t.boolean   "bsdi_chd_risk"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
@@ -199,12 +199,12 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.string   "bsdi_report_id"
     t.integer  "bsdi_exercise"
     t.integer  "bsdi_how_long_active"
-    t.binary   "bsdi_sedentary"
-    t.binary   "bsdi_hip_knee_problems"
-    t.binary   "bsdi_other_reason_no_exercise"
+    t.boolean   "bsdi_sedentary"
+    t.boolean   "bsdi_hip_knee_problems"
+    t.boolean   "bsdi_other_reason_no_exercise"
     t.integer  "bsdi_activity_minutes_vigorous"
     t.integer  "bsdi_activity_minutes_moderate"
-    t.binary   "bsdi_physical_inactivity"
+    t.boolean   "bsdi_physical_inactivity"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
@@ -216,14 +216,14 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.integer  "bsdi_family_diabetes"
     t.integer  "bsdi_family_cholesterol"
     t.integer  "bsdi_family_hypertension"
-    t.binary   "bsdi_family_heart_only"
+    t.boolean   "bsdi_family_heart_only"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
   create_table "bsdi_hosps", force: :cascade do |t|
     t.string   "bsdi_report_id"
-    t.binary   "bsdi_hospitalization"
+    t.boolean   "bsdi_hospitalization"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -232,14 +232,14 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.float    "bsdi_weight"
     t.float    "bsdi_height"
     t.float    "bsdi_waist"
-    t.binary   "bsdi_waist_risk"
+    t.boolean   "bsdi_waist_risk"
     t.float    "bsdi_hips"
     t.integer  "bsdi_weight_belief"
     t.float    "bsdi_bmi"
     t.integer  "bsdi_bmi_category"
-    t.binary   "bsdi_high_risk_bmi"
-    t.binary   "bsdi_hypertrophic"
-    t.binary   "bsdi_disabled"
+    t.boolean   "bsdi_high_risk_bmi"
+    t.boolean   "bsdi_hypertrophic"
+    t.boolean   "bsdi_disabled"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "bsdi_report_id"
@@ -250,7 +250,7 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.string   "bsdi_psmid"
     t.string   "bsdi_fname"
     t.string   "bsdi_lname"
-    t.binary   "bsdi_gender"
+    t.boolean   "bsdi_gender"
     t.date     "bsdi_birthdate"
     t.string   "bsdi_previous_id"
     t.datetime "created_at",       null: false
@@ -276,10 +276,10 @@ ActiveRecord::Schema.define(version: 20170111000637) do
   create_table "bsdi_reports", force: :cascade do |t|
     t.string   "bsdi_patient_id"
     t.date     "bsdi_date"
-    t.binary   "bsdi_newest"
+    t.boolean   "bsdi_newest"
     t.integer  "bsdi_valid_year"
-    t.binary   "bsdi_user_defined_flag"
-    t.binary   "bsdi_staff_entry"
+    t.boolean   "bsdi_user_defined_flag"
+    t.boolean   "bsdi_staff_entry"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -296,24 +296,24 @@ ActiveRecord::Schema.define(version: 20170111000637) do
   create_table "bsdi_smoking_barriers", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.integer  "bsdi_rfc_smoking"
-    t.binary   "bsdi_smoke_barrier_knowledge"
-    t.binary   "bsdi_smoke_barrier_temptation"
-    t.binary   "bsdi_smoke_barrier_friends"
-    t.binary   "bsdi_smoke_barrier_weight"
-    t.binary   "bsdi_smoke_barrier_stress"
-    t.binary   "bsdi_smoke_barrier_other"
+    t.boolean   "bsdi_smoke_barrier_knowledge"
+    t.boolean   "bsdi_smoke_barrier_temptation"
+    t.boolean   "bsdi_smoke_barrier_friends"
+    t.boolean   "bsdi_smoke_barrier_weight"
+    t.boolean   "bsdi_smoke_barrier_stress"
+    t.boolean   "bsdi_smoke_barrier_other"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
 
   create_table "bsdi_smokings", force: :cascade do |t|
     t.string   "bsdi_report_id"
-    t.binary   "bsdi_smoking_status"
+    t.boolean   "bsdi_smoking_status"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end
 
-  create_table "bsdi_tobacco_and_alcohols", force: :cascade do |t|
+  create_table "bids_tobacco_and_alcohols", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.integer  "bsdi_tobacco"
     t.integer  "bsdi_alcohol"
@@ -326,11 +326,11 @@ ActiveRecord::Schema.define(version: 20170111000637) do
   create_table "bsdi_weights", force: :cascade do |t|
     t.string   "bsdi_report_id"
     t.integer  "rfc_weight"
-    t.binary   "bsdi_weight_barrier_knowledge"
-    t.binary   "bsdi_weight_barrier_access"
-    t.binary   "bsdi_weight_barrier_social"
-    t.binary   "bsdi_weight_barrier_exercise"
-    t.binary   "bsdi_weight_barrier_stress"
+    t.boolean   "bsdi_weight_barrier_knowledge"
+    t.boolean   "bsdi_weight_barrier_access"
+    t.boolean   "bsdi_weight_barrier_social"
+    t.boolean   "bsdi_weight_barrier_exercise"
+    t.boolean   "bsdi_weight_barrier_stress"
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
@@ -406,7 +406,7 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.string   "fitness_lname"
     t.string   "fitness_fname"
     t.string   "fitness_dept"
-    t.binary   "fitness_gender"
+    t.boolean   "fitness_gender"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
@@ -458,38 +458,38 @@ ActiveRecord::Schema.define(version: 20170111000637) do
     t.float    "fitness_max_rpe"
     t.float    "fitness_max_vo2"
     t.string   "fitness_vo2_pass_fail"
-    t.binary   "fitness_swat"
-    t.binary   "fitness_scuba"
-    t.binary   "fitness_hazmat"
-    t.binary   "fitness_canine"
-    t.binary   "fitness_taskforce"
-    t.binary   "fitness_reserve"
-    t.binary   "fitness_merit"
-    t.binary   "fitness_envir_oficr"
-    t.binary   "fitness_recheck"
-    t.binary   "fitness_ex_rx_offered"
-    t.binary   "fitness_rx_accepted"
-    t.binary   "fitness_termination"
+    t.boolean   "fitness_swat"
+    t.boolean   "fitness_scuba"
+    t.boolean   "fitness_hazmat"
+    t.boolean   "fitness_canine"
+    t.boolean   "fitness_taskforce"
+    t.boolean   "fitness_reserve"
+    t.boolean   "fitness_merit"
+    t.boolean   "fitness_envir_oficr"
+    t.boolean   "fitness_recheck"
+    t.boolean   "fitness_ex_rx_offered"
+    t.boolean   "fitness_rx_accepted"
+    t.boolean   "fitness_termination"
     t.integer  "fitness_bp_response"
     t.integer  "fitness_impression"
-    t.binary   "fitness_ref_letter"
-    t.binary   "fitness_overread"
-    t.binary   "fitness_ectopy"
-    t.binary   "fitness_pvcs"
-    t.binary   "fitness_rtw"
-    t.binary   "fitness_promo"
-    t.binary   "fitness_arrestee"
-    t.binary   "fitness_jco"
+    t.boolean   "fitness_ref_letter"
+    t.boolean   "fitness_overread"
+    t.boolean   "fitness_ectopy"
+    t.boolean   "fitness_pvcs"
+    t.boolean   "fitness_rtw"
+    t.boolean   "fitness_promo"
+    t.boolean   "fitness_arrestee"
+    t.boolean   "fitness_jco"
     t.string   "fitness_social_sec_num"
     t.float    "fitness_hip"
     t.float    "fitness_waist"
-    t.binary   "fitness_rx_required"
+    t.boolean   "fitness_rx_required"
     t.integer  "fitness_plank"
     t.integer  "fitness_test_type"
     t.date     "fitness_class_start_date"
     t.integer  "fitness_pre_or_post"
     t.integer  "fitness_fms"
-    t.binary   "fitness_wfi_incentive"
+    t.boolean   "fitness_wfi_incentive"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

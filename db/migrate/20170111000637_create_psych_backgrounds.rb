@@ -1,4 +1,4 @@
-class CreatePsychBackgrounds < ActiveRecord::Migration
+ class CreatePsychBackgrounds < ActiveRecord::Migration
   def change
     create_table :psych_backgrounds do |t|
       t.string :research_id

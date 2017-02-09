@@ -19,6 +19,7 @@ class BsdiPatient < ActiveRecord::Base
   has_many :bsdi_smoking_barriers, through: :bsdi_reports
   has_many :bsdi_tobacco_and_alcohols, through: :bsdi_reports
   has_many :bsdi_weights, through: :bsdi_reports
+  belongs_to :patients, foreign_key: "psmsid"
 
 private
 

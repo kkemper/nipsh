@@ -1,6 +1,8 @@
 <h2>Results</h2>
 
 <% if @results %>
-<span> <%= @results.count %> Results Found</span>
+<span> <%= @results.count %> Results Found</span><br />
+<%= link_to "Download CSV", searches_path(params.merge(format: "csv")) %>
 <% end %>
+
 

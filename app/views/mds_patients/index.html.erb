@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mds Patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lname</th>
+      <th>Fname</th>
+      <th>Mname</th>
+      <th>Gender</th>
+      <th>Employeeid</th>
+      <th>Ssn</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mds_patients.each do |mds_patient| %>
+      <tr>
+        <td><%= mds_patient.lname %></td>
+        <td><%= mds_patient.fname %></td>
+        <td><%= mds_patient.mname %></td>
+        <td><%= mds_patient.gender %></td>
+        <td><%= mds_patient.employeeid %></td>
+        <td><%= mds_patient.ssn %></td>
+        <td><%= link_to 'Show', mds_patient %></td>
+        <td><%= link_to 'Edit', edit_mds_patient_path(mds_patient) %></td>
+        <td><%= link_to 'Destroy', mds_patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mds patient', new_mds_patient_path %>

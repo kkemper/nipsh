@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201170615) do
+ActiveRecord::Schema.define(version: 20170210181649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -245,16 +245,15 @@ ActiveRecord::Schema.define(version: 20170201170615) do
     t.string   "bsdi_report_id"
   end
 
-  create_table "bsdi_patients", id: false, force: :cascade do |t|
-    t.integer  "id",               default: "nextval('bsdi_patients_id_seq'::regclass)", null: false
-    t.string   "bsdi_psmid",                                                             null: false
+  create_table "bsdi_patients", force: :cascade do |t|
+    t.string   "bsdi_psmid",                         null: false
     t.string   "bsdi_fname"
     t.string   "bsdi_lname"
     t.boolean  "bsdi_gender"
     t.date     "bsdi_birthdate"
     t.string   "bsdi_previous_id"
-    t.datetime "created_at",       default: "now()",                                     null: false
-    t.datetime "updated_at",       default: "now()",                                     null: false
+    t.datetime "created_at",       default: "now()", null: false
+    t.datetime "updated_at",       default: "now()", null: false
   end
 
   create_table "bsdi_psyches", force: :cascade do |t|
@@ -658,6 +657,17 @@ ActiveRecord::Schema.define(version: 20170201170615) do
     t.integer  "urine_protein"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "mds_patients", force: :cascade do |t|
+    t.string   "lname"
+    t.string   "fname"
+    t.string   "mname"
+    t.integer  "gender"
+    t.string   "employeeid"
+    t.string   "ssn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "mds_reports", id: false, force: :cascade do |t|

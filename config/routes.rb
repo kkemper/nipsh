@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :mds_patients
   resources :psych_backgrounds
   resources :psych_calcs
   resources :psych_employments

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223200303) do
+ActiveRecord::Schema.define(version: 20170309200706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -246,7 +246,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "bsdi_patients", force: :cascade do |t|
-    t.string   "bsdi_psmid",                         null: false
+    t.string   "patient_id",                         null: false
     t.string   "bsdi_fname"
     t.string   "bsdi_lname"
     t.boolean  "bsdi_gender"
@@ -335,7 +335,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "cancer_screenings", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.integer  "psa"
     t.integer  "dre"
     t.integer  "fob"
@@ -360,7 +360,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "current_jobs", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.boolean  "currently_emp"
     t.integer  "current_duties"
     t.boolean  "volunteer"
@@ -373,7 +373,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "demographics", force: :cascade do |t|
-    t.string  "report_id"
+    t.string  "mds_report_id"
     t.integer "gender"
     t.integer "ethnicity"
     t.integer "race"
@@ -382,7 +382,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "duties", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.integer  "fire_suppression_years"
     t.integer  "ems_years"
     t.integer  "mgmt_years"
@@ -391,7 +391,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "family_histories", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.boolean  "male_heart_disease"
     t.boolean  "female_heart_disease"
     t.boolean  "male_alcohol"
@@ -410,13 +410,13 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "fitness_patients", force: :cascade do |t|
-    t.string   "fitness_patient_id"
+    t.string   "patient_id"
     t.string   "fitness_lname"
     t.string   "fitness_fname"
     t.string   "fitness_dept"
     t.boolean  "fitness_gender"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "fitness_reports", force: :cascade do |t|
@@ -503,7 +503,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "fitness_tests", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.date     "fit_test_date"
     t.integer  "aerobic_test_type"
     t.float    "aerobic_capacity"
@@ -519,7 +519,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "health_conditions", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.boolean  "diabetes"
     t.boolean  "diabetes_ty"
     t.boolean  "diabetes_current"
@@ -589,7 +589,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "hearing_tests", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.date     "hearing_date"
     t.integer  "left_500"
     t.integer  "right_500"
@@ -605,12 +605,12 @@ ActiveRecord::Schema.define(version: 20170223200303) do
     t.integer  "right_6000"
     t.integer  "left_8000"
     t.integer  "right_8000"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "immunizations", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.date     "immunization_date"
     t.integer  "hepatitis_b"
     t.integer  "hep_b_titer_1"
@@ -628,7 +628,7 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "injury_illnesses", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.integer  "non_work_sick_days"
     t.integer  "injury_related_days"
     t.integer  "alternative_duty"
@@ -668,12 +668,12 @@ ActiveRecord::Schema.define(version: 20170223200303) do
     t.string   "ssn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "patient_id"
   end
 
-  create_table "mds_reports", id: false, force: :cascade do |t|
-    t.string   "id",         default: "nextval('mds_reports_id_seq'::regclass)", null: false
-    t.datetime "created_at", default: "now()",                                   null: false
-    t.datetime "updated_at", default: "now()",                                   null: false
+  create_table "mds_reports", force: :cascade do |t|
+    t.datetime "created_at", default: "now()", null: false
+    t.datetime "updated_at", default: "now()", null: false
     t.string   "patient_id"
   end
 
@@ -688,11 +688,10 @@ ActiveRecord::Schema.define(version: 20170223200303) do
     t.integer  "other_years"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "report_id"
+    t.string   "mds_report_id"
   end
 
-  create_table "patients", id: false, force: :cascade do |t|
-    t.integer  "id",            default: 0,       null: false
+  create_table "patients", force: :cascade do |t|
     t.string   "lname"
     t.string   "fname"
     t.string   "mname"
@@ -705,14 +704,14 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "physical_activities", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.integer  "thirty_min"
     t.integer  "cardio"
     t.integer  "muscle"
     t.integer  "sweat"
     t.integer  "everyday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "physical_exams", force: :cascade do |t|
@@ -919,18 +918,18 @@ ActiveRecord::Schema.define(version: 20170223200303) do
   end
 
   create_table "surgeries", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.integer  "chest"
     t.integer  "back"
     t.integer  "neck"
     t.integer  "shoulder"
     t.integer  "leg"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "tobacco_and_alcohols", force: :cascade do |t|
-    t.string   "report_id"
+    t.string   "mds_report_id"
     t.boolean  "smoke"
     t.integer  "pack_count"
     t.boolean  "chew_tobacco"

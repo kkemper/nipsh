@@ -16,7 +16,7 @@ class Patient < ActiveRecord::Base
   has_many :physical_activities, through: :mds_reports
   has_many :surgeries, through: :mds_reports
   has_many :tobacco_and_alcohols, through: :mds_reports
-  has_one :bsdi_patient, foreign_key: "bsdi_psmid"
+  has_one :bsdi_patient
   has_many :bsdi_reports, through: :bsdi_patient
   has_many :bsdi_blood_pressures, through: :bsdi_reports
   has_many :bsdi_blood_chemistries, through: :bsdi_reports

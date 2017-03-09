@@ -1,5 +1,5 @@
 class MdsReport < ActiveRecord::Base
-	belongs_to :patient
+	belongs_to :mds_patient
 	has_one :cancer_screening
 	has_one :current_job
 	has_one :demographic

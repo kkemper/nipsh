@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309200706) do
+ActiveRecord::Schema.define(version: 20170327194713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -638,7 +638,7 @@ ActiveRecord::Schema.define(version: 20170309200706) do
   end
 
   create_table "lab_data", force: :cascade do |t|
-    t.string   "patient_id"
+    t.string   "mds_patient_id"
     t.date     "lab_date"
     t.integer  "wbc_count"
     t.integer  "hemoglobin"
@@ -655,8 +655,8 @@ ActiveRecord::Schema.define(version: 20170309200706) do
     t.integer  "urine_blood"
     t.integer  "urine_glucose"
     t.integer  "urine_protein"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "mds_patients", force: :cascade do |t|
@@ -715,7 +715,7 @@ ActiveRecord::Schema.define(version: 20170309200706) do
   end
 
   create_table "physical_exams", force: :cascade do |t|
-    t.string   "patient_id"
+    t.string   "mds_patient_id"
     t.date     "exam_date"
     t.integer  "systolic"
     t.integer  "diastolic"

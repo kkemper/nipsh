@@ -13,6 +13,10 @@ class PatientsController < ApplicationController
     @s = Patient.ransack(params[:q])
   	@patients = @s.result
     @s.build_condition
+    respond_to do |format|
+      format.html
+      format.csv { render text: Patient.to_csv(@patients)}\
+    end
   end
 
   def show

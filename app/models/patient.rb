@@ -39,6 +39,15 @@ class Patient < ActiveRecord::Base
   has_many :surgeries, through: :mds_reports
   has_many :tobacco_and_alcohols, through: :mds_reports
 
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      all.each do |patient|
+        csv << patient.attributes.values_at(*column_names)
+      end
+    end
+  end
+
 private
 
 def self.ransackable_attributes(auth_object = nil)

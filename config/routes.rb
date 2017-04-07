@@ -125,6 +125,8 @@ Rails.application.routes.draw do
     collection { post :search, to: 'searches#index' }
   end
 
+  get 'searches/csv', to: 'searches#csv', as: :searches_csv
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

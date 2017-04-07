@@ -1,14 +1,14 @@
 FROM ruby:2.2.1
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apt-get update -qq && apt-get install -y build-essential
         postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /usr/src/app
+RUN mkdir /nipsh
+WORKDIR /nipsh
 COPY Gemfile* ./
 RUN bundle install
-COPY . .
+ADD . /nipsh
 
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]

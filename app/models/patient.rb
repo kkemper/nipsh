@@ -40,7 +40,7 @@ class Patient < ActiveRecord::Base
   has_many :tobacco_and_alcohols, through: :mds_reports
 
 
-  def self.to_csv(all)
+  def self.to_csv(patient)
       CSV.generate do |csv|
       csv << column_names
       all.each do |patient|

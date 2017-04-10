@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327205527) do
+ActiveRecord::Schema.define(version: 20170410110101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -414,17 +414,17 @@ ActiveRecord::Schema.define(version: 20170327205527) do
     t.string   "fitness_lname"
     t.string   "fitness_fname"
     t.string   "fitness_dept"
-    t.boolean  "fitness_gender"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "fitness_gender"
+    t.datetime "created_at",     default: "now()", null: false
+    t.datetime "updated_at",     default: "now()", null: false
   end
 
   create_table "fitness_reports", force: :cascade do |t|
     t.string   "fitness_report_id"
     t.string   "fitness_patient_id"
     t.date     "fitness_test_date"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",         default: "now()", null: false
+    t.datetime "updated_at",         default: "now()", null: false
   end
 
   create_table "fitness_test_tests", force: :cascade do |t|
@@ -461,7 +461,7 @@ ActiveRecord::Schema.define(version: 20170327205527) do
     t.integer  "fitness_max_hr"
     t.integer  "fitness_max_sbp"
     t.integer  "fitness_max_dbp"
-    t.integer  "fitness_percent_max_hr"
+    t.float    "fitness_percent_max_hr"
     t.float    "fitness_max_mets"
     t.float    "fitness_max_rpe"
     t.float    "fitness_max_vo2"
@@ -477,12 +477,10 @@ ActiveRecord::Schema.define(version: 20170327205527) do
     t.boolean  "fitness_recheck"
     t.boolean  "fitness_ex_rx_offered"
     t.boolean  "fitness_rx_accepted"
-    t.boolean  "fitness_termination"
     t.integer  "fitness_bp_response"
     t.integer  "fitness_impression"
     t.boolean  "fitness_ref_letter"
     t.boolean  "fitness_overread"
-    t.boolean  "fitness_ectopy"
     t.boolean  "fitness_pvcs"
     t.boolean  "fitness_rtw"
     t.boolean  "fitness_promo"
@@ -498,8 +496,10 @@ ActiveRecord::Schema.define(version: 20170327205527) do
     t.integer  "fitness_pre_or_post"
     t.integer  "fitness_fms"
     t.boolean  "fitness_wfi_incentive"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",               default: "now()", null: false
+    t.datetime "updated_at",               default: "now()", null: false
+    t.float    "fitness_termination"
+    t.float    "fitness_ectopy"
   end
 
   create_table "fitness_tests", force: :cascade do |t|

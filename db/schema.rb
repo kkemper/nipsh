@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410170909) do
+ActiveRecord::Schema.define(version: 20170410171106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -481,7 +481,6 @@ ActiveRecord::Schema.define(version: 20170410170909) do
     t.boolean  "fitness_rx_required"
     t.integer  "fitness_plank"
     t.date     "fitness_class_start_date"
-    t.integer  "fitness_pre_or_post"
     t.integer  "fitness_fms"
     t.boolean  "fitness_wfi_incentive"
     t.datetime "created_at",               default: "now()", null: false
@@ -500,6 +499,7 @@ ActiveRecord::Schema.define(version: 20170410170909) do
     t.float    "fitness_rest_dbp"
     t.float    "fitness_crunches"
     t.string   "fitness_test_type"
+    t.string   "fitness_pre_or_post"
   end
 
   create_table "fitness_tests", force: :cascade do |t|

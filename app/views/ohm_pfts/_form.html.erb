@@ -1,0 +1,57 @@
+<%= form_for(@ohm_pft) do |f| %>
+  <% if @ohm_pft.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ohm_pft.errors.count, "error") %> prohibited this ohm_pft from being saved:</h2>
+
+      <ul>
+      <% @ohm_pft.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :moddate %><br>
+    <%= f.text_field :moddate %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br>
+    <%= f.text_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_height %><br>
+    <%= f.text_field :ohm_height %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_weight %><br>
+    <%= f.text_field :ohm_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_bp %><br>
+    <%= f.text_field :ohm_bp %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_fvc %><br>
+    <%= f.text_field :ohm_fvc %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_fev1 %><br>
+    <%= f.number_field :ohm_fev1 %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_fev1fvc %><br>
+    <%= f.text_field :ohm_fev1fvc %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_fvcpr %><br>
+    <%= f.text_field :ohm_fvcpr %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_fev1pr %><br>
+    <%= f.number_field :ohm_fev1pr %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

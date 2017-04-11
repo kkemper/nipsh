@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ohm Bchems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moddate</th>
+      <th>Ssn</th>
+      <th>Ohm sgot</th>
+      <th>Ohm sgpt</th>
+      <th>Ohm trigly</th>
+      <th>Ohm chol</th>
+      <th>Ohm ldl</th>
+      <th>Ohm ldh</th>
+      <th>Ohm hdl</th>
+      <th>Ohm glucose</th>
+      <th>Ohm bun</th>
+      <th>Ohm creatinine</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ohm_bchems.each do |ohm_bchem| %>
+      <tr>
+        <td><%= ohm_bchem.moddate %></td>
+        <td><%= ohm_bchem.ssn %></td>
+        <td><%= ohm_bchem.ohm_sgot %></td>
+        <td><%= ohm_bchem.ohm_sgpt %></td>
+        <td><%= ohm_bchem.ohm_trigly %></td>
+        <td><%= ohm_bchem.ohm_chol %></td>
+        <td><%= ohm_bchem.ohm_ldl %></td>
+        <td><%= ohm_bchem.ohm_ldh %></td>
+        <td><%= ohm_bchem.ohm_hdl %></td>
+        <td><%= ohm_bchem.ohm_glucose %></td>
+        <td><%= ohm_bchem.ohm_bun %></td>
+        <td><%= ohm_bchem.ohm_creatinine %></td>
+        <td><%= link_to 'Show', ohm_bchem %></td>
+        <td><%= link_to 'Edit', edit_ohm_bchem_path(ohm_bchem) %></td>
+        <td><%= link_to 'Destroy', ohm_bchem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ohm bchem', new_ohm_bchem_path %>

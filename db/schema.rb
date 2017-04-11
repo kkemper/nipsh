@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410172023) do
+ActiveRecord::Schema.define(version: 20170411001256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -442,7 +442,6 @@ ActiveRecord::Schema.define(version: 20170410172023) do
     t.string   "fitness_bod_p_f"
     t.float    "fitness_accuflex"
     t.string   "fitness_flex_p_fl"
-    t.float    "fitness_grip_l"
     t.float    "fitness_grip_r"
     t.float    "fitness_leg_press"
     t.float    "fitness_arm_curl"
@@ -500,6 +499,7 @@ ActiveRecord::Schema.define(version: 20170410172023) do
     t.float    "fitness_max_hr"
     t.float    "fitness_max_sbp"
     t.float    "fitness_rest_bp"
+    t.string   "fitness_grip_l"
   end
 
   create_table "fitness_tests", force: :cascade do |t|
@@ -675,6 +675,48 @@ ActiveRecord::Schema.define(version: 20170410172023) do
     t.datetime "created_at",     default: "now()", null: false
     t.datetime "updated_at",     default: "now()", null: false
     t.string   "mds_patient_id"
+  end
+
+  create_table "ohm_bchems", force: :cascade do |t|
+    t.datetime "moddate"
+    t.string   "ssn"
+    t.integer  "ohm_sgot"
+    t.integer  "ohm_sgpt"
+    t.integer  "ohm_trigly"
+    t.integer  "ohm_chol"
+    t.integer  "ohm_ldl"
+    t.integer  "ohm_ldh"
+    t.integer  "ohm_hdl"
+    t.integer  "ohm_glucose"
+    t.integer  "ohm_bun"
+    t.integer  "ohm_creatinine"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "ohm_pfts", force: :cascade do |t|
+    t.datetime "moddate"
+    t.string   "ssn"
+    t.integer  "ohm_height"
+    t.integer  "ohm_weight"
+    t.integer  "ohm_bp"
+    t.integer  "ohm_fvc"
+    t.integer  "ohm_fev1"
+    t.integer  "ohm_fev1fvc"
+    t.integer  "ohm_fvcpr"
+    t.integer  "ohm_fev1pr"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "ohm_urins", force: :cascade do |t|
+    t.datetime "moddate"
+    t.string   "ssn"
+    t.string   "ohm_occblood"
+    t.string   "ohm_uringlucose"
+    t.string   "ohm_protein"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "other_employments", force: :cascade do |t|

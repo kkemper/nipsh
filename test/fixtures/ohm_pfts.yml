@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  moddate: 
+  ssn: 
+  ohm_height: 
+  ohm_weight: 
+  ohm_bp: 
+  ohm_fvc: 
+  ohm_fev1: 1
+  ohm_fev1fvc: 
+  ohm_fvcpr: 
+  ohm_fev1pr: 1
+
+two:
+  moddate: 
+  ssn: 
+  ohm_height: 
+  ohm_weight: 
+  ohm_bp: 
+  ohm_fvc: 
+  ohm_fev1: 1
+  ohm_fev1fvc: 
+  ohm_fvcpr: 
+  ohm_fev1pr: 1

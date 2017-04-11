@@ -1,0 +1,65 @@
+<%= form_for(@ohm_bchem) do |f| %>
+  <% if @ohm_bchem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ohm_bchem.errors.count, "error") %> prohibited this ohm_bchem from being saved:</h2>
+
+      <ul>
+      <% @ohm_bchem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :moddate %><br>
+    <%= f.datetime_select :moddate %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br>
+    <%= f.text_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_sgot %><br>
+    <%= f.number_field :ohm_sgot %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_sgpt %><br>
+    <%= f.number_field :ohm_sgpt %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_trigly %><br>
+    <%= f.number_field :ohm_trigly %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_chol %><br>
+    <%= f.number_field :ohm_chol %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_ldl %><br>
+    <%= f.number_field :ohm_ldl %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_ldh %><br>
+    <%= f.number_field :ohm_ldh %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_hdl %><br>
+    <%= f.number_field :ohm_hdl %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_glucose %><br>
+    <%= f.number_field :ohm_glucose %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_bun %><br>
+    <%= f.number_field :ohm_bun %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_creatinine %><br>
+    <%= f.number_field :ohm_creatinine %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

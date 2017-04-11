@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ohm Pfts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moddate</th>
+      <th>Ssn</th>
+      <th>Ohm height</th>
+      <th>Ohm weight</th>
+      <th>Ohm bp</th>
+      <th>Ohm fvc</th>
+      <th>Ohm fev1</th>
+      <th>Ohm fev1fvc</th>
+      <th>Ohm fvcpr</th>
+      <th>Ohm fev1pr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ohm_pfts.each do |ohm_pft| %>
+      <tr>
+        <td><%= ohm_pft.moddate %></td>
+        <td><%= ohm_pft.ssn %></td>
+        <td><%= ohm_pft.ohm_height %></td>
+        <td><%= ohm_pft.ohm_weight %></td>
+        <td><%= ohm_pft.ohm_bp %></td>
+        <td><%= ohm_pft.ohm_fvc %></td>
+        <td><%= ohm_pft.ohm_fev1 %></td>
+        <td><%= ohm_pft.ohm_fev1fvc %></td>
+        <td><%= ohm_pft.ohm_fvcpr %></td>
+        <td><%= ohm_pft.ohm_fev1pr %></td>
+        <td><%= link_to 'Show', ohm_pft %></td>
+        <td><%= link_to 'Edit', edit_ohm_pft_path(ohm_pft) %></td>
+        <td><%= link_to 'Destroy', ohm_pft, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ohm pft', new_ohm_pft_path %>

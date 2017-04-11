@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Moddate:</strong>
+  <%= @ohm_urin.moddate %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @ohm_urin.ssn %>
+</p>
+
+<p>
+  <strong>Ohm occblood:</strong>
+  <%= @ohm_urin.ohm_occblood %>
+</p>
+
+<p>
+  <strong>Ohm uringlucose:</strong>
+  <%= @ohm_urin.ohm_uringlucose %>
+</p>
+
+<p>
+  <strong>Ohm protein:</strong>
+  <%= @ohm_urin.ohm_protein %>
+</p>
+
+<%= link_to 'Edit', edit_ohm_urin_path(@ohm_urin) %> |
+<%= link_to 'Back', ohm_urins_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@ohm_urin) do |f| %>
+  <% if @ohm_urin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ohm_urin.errors.count, "error") %> prohibited this ohm_urin from being saved:</h2>
+
+      <ul>
+      <% @ohm_urin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :moddate %><br>
+    <%= f.datetime_select :moddate %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br>
+    <%= f.text_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_occblood %><br>
+    <%= f.text_field :ohm_occblood %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_uringlucose %><br>
+    <%= f.text_field :ohm_uringlucose %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_protein %><br>
+    <%= f.text_field :ohm_protein %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

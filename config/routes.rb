@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :ohm_urins
+  resources :ohm_bchems
+  resources :ohm_pfts
   resources :mds_patients
   resources :psych_backgrounds
   resources :psych_calcs

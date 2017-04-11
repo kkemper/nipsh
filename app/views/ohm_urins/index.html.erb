@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ohm Urins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moddate</th>
+      <th>Ssn</th>
+      <th>Ohm occblood</th>
+      <th>Ohm uringlucose</th>
+      <th>Ohm protein</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ohm_urins.each do |ohm_urin| %>
+      <tr>
+        <td><%= ohm_urin.moddate %></td>
+        <td><%= ohm_urin.ssn %></td>
+        <td><%= ohm_urin.ohm_occblood %></td>
+        <td><%= ohm_urin.ohm_uringlucose %></td>
+        <td><%= ohm_urin.ohm_protein %></td>
+        <td><%= link_to 'Show', ohm_urin %></td>
+        <td><%= link_to 'Edit', edit_ohm_urin_path(ohm_urin) %></td>
+        <td><%= link_to 'Destroy', ohm_urin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ohm urin', new_ohm_urin_path %>

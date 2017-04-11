@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411001256) do
+ActiveRecord::Schema.define(version: 20170411011636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -692,6 +692,25 @@ ActiveRecord::Schema.define(version: 20170411001256) do
     t.integer  "ohm_creatinine"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "ohm_cbcs", force: :cascade do |t|
+    t.datetime "moddate"
+    t.string   "ssn"
+    t.integer  "ohm_wbc"
+    t.integer  "ohm_hemo"
+    t.string   "ohm_hema"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ohm_immunes", force: :cascade do |t|
+    t.datetime "moddate"
+    t.string   "ssn"
+    t.string   "ohm_immune_type"
+    t.string   "ohm_immune_note"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "ohm_pfts", force: :cascade do |t|

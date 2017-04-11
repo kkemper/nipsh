@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ohm Immunes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moddate</th>
+      <th>Ssn</th>
+      <th>Ohm immune type</th>
+      <th>Ohm immune note</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ohm_immunes.each do |ohm_immune| %>
+      <tr>
+        <td><%= ohm_immune.moddate %></td>
+        <td><%= ohm_immune.ssn %></td>
+        <td><%= ohm_immune.ohm_immune_type %></td>
+        <td><%= ohm_immune.ohm_immune_note %></td>
+        <td><%= link_to 'Show', ohm_immune %></td>
+        <td><%= link_to 'Edit', edit_ohm_immune_path(ohm_immune) %></td>
+        <td><%= link_to 'Destroy', ohm_immune, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ohm immune', new_ohm_immune_path %>

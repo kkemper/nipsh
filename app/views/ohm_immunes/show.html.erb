@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Moddate:</strong>
+  <%= @ohm_immune.moddate %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @ohm_immune.ssn %>
+</p>
+
+<p>
+  <strong>Ohm immune type:</strong>
+  <%= @ohm_immune.ohm_immune_type %>
+</p>
+
+<p>
+  <strong>Ohm immune note:</strong>
+  <%= @ohm_immune.ohm_immune_note %>
+</p>
+
+<%= link_to 'Edit', edit_ohm_immune_path(@ohm_immune) %> |
+<%= link_to 'Back', ohm_immunes_path %>

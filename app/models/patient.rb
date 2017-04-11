@@ -27,7 +27,7 @@ class Patient < ActiveRecord::Base
   has_many :fitness_tests, through: :mds_reports
   has_many :cancer_screenings, through: :mds_reports
   has_many :current_jobs, through: :mds_reports
-  has_many :demographics, through: :mds_reports
+  has_many :demographics, through: :mds_patient
   has_many :duties, through: :mds_reports
   has_many :family_histories, through: :mds_reports
   has_many :health_conditions, through: :mds_reports
@@ -37,7 +37,7 @@ class Patient < ActiveRecord::Base
   has_many :other_employments, through: :mds_reports
   has_many :physical_activities, through: :mds_reports
   has_many :surgeries, through: :mds_reports
-  has_many :tobacco_and_alcohols, through: :mds_reports
+  has_many :tobacco_and_alcohols, through: :mds_patient
 
 
   def self.to_csv

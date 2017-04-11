@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ohm Hearings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moddate</th>
+      <th>Ssn</th>
+      <th>Ohm l500k</th>
+      <th>Ohm r500k</th>
+      <th>Ohm l1k</th>
+      <th>Ohm r1k</th>
+      <th>Ohm l2k</th>
+      <th>Ohm r2k</th>
+      <th>Ohm l3k</th>
+      <th>Ohm r3k</th>
+      <th>Ohm l4k</th>
+      <th>Ohm r4k</th>
+      <th>Ohm l6k</th>
+      <th>Ohm r6k</th>
+      <th>Ohm l8k</th>
+      <th>Ohm r8k</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ohm_hearings.each do |ohm_hearing| %>
+      <tr>
+        <td><%= ohm_hearing.moddate %></td>
+        <td><%= ohm_hearing.ssn %></td>
+        <td><%= ohm_hearing.ohm_L500k %></td>
+        <td><%= ohm_hearing.ohm_R500k %></td>
+        <td><%= ohm_hearing.ohm_l1k %></td>
+        <td><%= ohm_hearing.ohm_r1k %></td>
+        <td><%= ohm_hearing.ohm_l2k %></td>
+        <td><%= ohm_hearing.ohm_r2k %></td>
+        <td><%= ohm_hearing.ohm_l3k %></td>
+        <td><%= ohm_hearing.ohm_r3k %></td>
+        <td><%= ohm_hearing.ohm_l4k %></td>
+        <td><%= ohm_hearing.ohm_r4k %></td>
+        <td><%= ohm_hearing.ohm_l6k %></td>
+        <td><%= ohm_hearing.ohm_r6k %></td>
+        <td><%= ohm_hearing.ohm_l8k %></td>
+        <td><%= ohm_hearing.ohm_r8k %></td>
+        <td><%= link_to 'Show', ohm_hearing %></td>
+        <td><%= link_to 'Edit', edit_ohm_hearing_path(ohm_hearing) %></td>
+        <td><%= link_to 'Destroy', ohm_hearing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ohm hearing', new_ohm_hearing_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411011636) do
+ActiveRecord::Schema.define(version: 20170411012436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -700,6 +700,27 @@ ActiveRecord::Schema.define(version: 20170411011636) do
     t.integer  "ohm_wbc"
     t.integer  "ohm_hemo"
     t.string   "ohm_hema"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ohm_hearings", force: :cascade do |t|
+    t.datetime "moddate"
+    t.string   "ssn"
+    t.string   "ohm_L500k"
+    t.string   "ohm_R500k"
+    t.string   "ohm_l1k"
+    t.string   "ohm_r1k"
+    t.string   "ohm_l2k"
+    t.string   "ohm_r2k"
+    t.string   "ohm_l3k"
+    t.string   "ohm_r3k"
+    t.string   "ohm_l4k"
+    t.string   "ohm_r4k"
+    t.string   "ohm_l6k"
+    t.string   "ohm_r6k"
+    t.string   "ohm_l8k"
+    t.string   "ohm_r8k"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

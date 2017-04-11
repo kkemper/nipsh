@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ohm Cbcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Moddate</th>
+      <th>Ssn</th>
+      <th>Ohm wbc</th>
+      <th>Ohm hemo</th>
+      <th>Ohm hema</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ohm_cbcs.each do |ohm_cbc| %>
+      <tr>
+        <td><%= ohm_cbc.moddate %></td>
+        <td><%= ohm_cbc.ssn %></td>
+        <td><%= ohm_cbc.ohm_wbc %></td>
+        <td><%= ohm_cbc.ohm_hemo %></td>
+        <td><%= ohm_cbc.ohm_hema %></td>
+        <td><%= link_to 'Show', ohm_cbc %></td>
+        <td><%= link_to 'Edit', edit_ohm_cbc_path(ohm_cbc) %></td>
+        <td><%= link_to 'Destroy', ohm_cbc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ohm cbc', new_ohm_cbc_path %>

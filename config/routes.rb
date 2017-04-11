@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :ohm_cbcs
   resources :ohm_urins
   resources :ohm_bchems
   resources :ohm_pfts

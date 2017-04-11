@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  moddate: 2017-04-10 21:06:50
+  ssn: MyString
+  ohm_wbc: 1
+  ohm_hemo: 1
+  ohm_hema: MyString
+
+two:
+  moddate: 2017-04-10 21:06:50
+  ssn: MyString
+  ohm_wbc: 1
+  ohm_hemo: 1
+  ohm_hema: MyString

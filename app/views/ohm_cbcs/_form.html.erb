@@ -1,0 +1,37 @@
+<%= form_for(@ohm_cbc) do |f| %>
+  <% if @ohm_cbc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ohm_cbc.errors.count, "error") %> prohibited this ohm_cbc from being saved:</h2>
+
+      <ul>
+      <% @ohm_cbc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :moddate %><br>
+    <%= f.datetime_select :moddate %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br>
+    <%= f.text_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_wbc %><br>
+    <%= f.number_field :ohm_wbc %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_hemo %><br>
+    <%= f.number_field :ohm_hemo %>
+  </div>
+  <div class="field">
+    <%= f.label :ohm_hema %><br>
+    <%= f.text_field :ohm_hema %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

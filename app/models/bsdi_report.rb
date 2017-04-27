@@ -7,7 +7,7 @@ class BsdiReport < ActiveRecord::Base
   has_one :bsdi_blood_pressure
   has_one :bsdi_current_job
   has_one :bsdi_diet
-  has_one :bsdi_diet_barriewr
+  has_one :bsdi_diet_barrier
   has_one :bsdi_disease
   has_one :bsdi_exercise
   has_one :bsdi_history

@@ -16,5 +16,6 @@ class MdsPatient < ActiveRecord::Base
   has_many :other_employments, through: :mds_reports
   has_many :physical_activities, through: :mds_reports
   has_many :surgeries, through: :mds_reports
+  has_many :tobaccos_and_alcohols, through: :mds_reports
   
 end

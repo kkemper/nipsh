@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411012436) do
+ActiveRecord::Schema.define(version: 20170427203454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -666,8 +666,8 @@ ActiveRecord::Schema.define(version: 20170411012436) do
     t.integer  "gender"
     t.string   "employeeid"
     t.string   "ssn"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: "now()", null: false
+    t.datetime "updated_at", default: "now()", null: false
     t.string   "patient_id"
   end
 
@@ -678,7 +678,7 @@ ActiveRecord::Schema.define(version: 20170411012436) do
   end
 
   create_table "ohm_bchems", force: :cascade do |t|
-    t.datetime "moddate"
+    t.string   "moddate"
     t.string   "ssn"
     t.integer  "ohm_sgot"
     t.integer  "ohm_sgpt"
@@ -690,25 +690,25 @@ ActiveRecord::Schema.define(version: 20170411012436) do
     t.integer  "ohm_glucose"
     t.integer  "ohm_bun"
     t.integer  "ohm_creatinine"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",     default: "now()", null: false
+    t.datetime "updated_at",     default: "now()", null: false
   end
 
   create_table "ohm_cbcs", force: :cascade do |t|
-    t.datetime "moddate"
+    t.string   "moddate"
     t.string   "ssn"
     t.integer  "ohm_wbc"
     t.integer  "ohm_hemo"
     t.string   "ohm_hema"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: "now()", null: false
+    t.datetime "updated_at", default: "now()", null: false
   end
 
   create_table "ohm_hearings", force: :cascade do |t|
-    t.datetime "moddate"
+    t.string   "moddate"
     t.string   "ssn"
-    t.string   "ohm_L500k"
-    t.string   "ohm_R500k"
+    t.string   "ohm_l500k"
+    t.string   "ohm_r500k"
     t.string   "ohm_l1k"
     t.string   "ohm_r1k"
     t.string   "ohm_l2k"
@@ -721,21 +721,21 @@ ActiveRecord::Schema.define(version: 20170411012436) do
     t.string   "ohm_r6k"
     t.string   "ohm_l8k"
     t.string   "ohm_r8k"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: "now()", null: false
+    t.datetime "updated_at", default: "now()", null: false
   end
 
   create_table "ohm_immunes", force: :cascade do |t|
-    t.datetime "moddate"
+    t.string   "moddate"
     t.string   "ssn"
     t.string   "ohm_immune_type"
     t.string   "ohm_immune_note"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",      default: "now()", null: false
+    t.datetime "updated_at",      default: "now()", null: false
   end
 
   create_table "ohm_pfts", force: :cascade do |t|
-    t.datetime "moddate"
+    t.string   "moddate"
     t.string   "ssn"
     t.integer  "ohm_height"
     t.integer  "ohm_weight"
@@ -745,18 +745,18 @@ ActiveRecord::Schema.define(version: 20170411012436) do
     t.integer  "ohm_fev1fvc"
     t.integer  "ohm_fvcpr"
     t.integer  "ohm_fev1pr"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",  default: "now()", null: false
+    t.datetime "updated_at",  default: "now()", null: false
   end
 
   create_table "ohm_urins", force: :cascade do |t|
-    t.datetime "moddate"
+    t.string   "moddate"
     t.string   "ssn"
     t.string   "ohm_occblood"
     t.string   "ohm_uringlucose"
     t.string   "ohm_protein"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",      default: "now()", null: false
+    t.datetime "updated_at",      default: "now()", null: false
   end
 
   create_table "other_employments", force: :cascade do |t|
@@ -1011,7 +1011,7 @@ ActiveRecord::Schema.define(version: 20170411012436) do
   end
 
   create_table "tobacco_and_alcohols", force: :cascade do |t|
-    t.string   "employee_id"
+    t.string   "mds_report_id"
     t.boolean  "smoke"
     t.integer  "pack_count"
     t.boolean  "chew_tobacco"

@@ -10,7 +10,7 @@ class BsdiReport < ActiveRecord::Base
   has_one :bsdi_diet_barriewr
   has_one :bsdi_disease
   has_one :bsdi_exercise
-  has_one :bsdi_heistory
+  has_one :bsdi_history
   has_one :bsdi_hosp
   has_one :bsdi_measurement
   has_one :bsdi_psych

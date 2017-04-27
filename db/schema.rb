@@ -373,7 +373,7 @@ ActiveRecord::Schema.define(version: 20170411012436) do
   end
 
   create_table "demographics", force: :cascade do |t|
-    t.string  "mds_report_id"
+    t.string  "mds_patient_id"
     t.integer "gender"
     t.integer "ethnicity"
     t.integer "race"
@@ -1011,7 +1011,7 @@ ActiveRecord::Schema.define(version: 20170411012436) do
   end
 
   create_table "tobacco_and_alcohols", force: :cascade do |t|
-    t.string   "mds_report_id"
+    t.string   "employee_id"
     t.boolean  "smoke"
     t.integer  "pack_count"
     t.boolean  "chew_tobacco"

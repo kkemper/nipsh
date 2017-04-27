@@ -4,7 +4,6 @@ class MdsPatient < ActiveRecord::Base
   has_many :demographics
   has_many :lab_data
   has_many :physical_exams
-  has_many :tobacco_and_alcohols, foreign_key:"employee_id"
   has_many :fitness_tests, through: :mds_reports
   has_many :cancer_screenings, through: :mds_reports
   has_many :current_jobs, through: :mds_reports

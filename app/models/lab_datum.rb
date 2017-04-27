@@ -1,3 +1,3 @@
 class LabDatum < ActiveRecord::Base
-	belongs_to :patient
+	belongs_to :mds_patient
 end

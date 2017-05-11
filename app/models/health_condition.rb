@@ -1,3 +1,9 @@
 class HealthCondition < ActiveRecord::Base
 	belongs_to :mds_report
+
+    private
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w( diabetes diabetes_ty diabetes_current diabetes_medication hypertension hypertension_ty hypertension_current hypertension_medicatio hyperlipidemia hyperlipidemia_ty hyperlipidemia_current hyperlipidemia_medicat cancer cancer_ty cancer_current cancer_medication heart_disease heart_disease_ty heart_disease_current heart_disease_medicati resp_disease resp_disease_ty resp_disease_current resp_disease_medicatio gastro_disease gastro_disease_ty gastro_disease_current gastro_disease_medicat repro_health repro_health_ty repro_health_current repro_health_medicatio neuro_disease neuro_disease_ty neuro_disease_current neuro_disease_medicati hepatitis hepatitis_ty hepatitis_current hepatitis_medication psych psych_ty psych_current psych_medication shoulder shoulder_ty shoulder_current shoulder_medication knee knee_ty knee_current knee_medication back back_ty back_current back_medication arthritis arthritis_ty arthritis_current arthritis_medication other_text other_current other_medication           other_ty) + _ransackers.keys
+  end
 end

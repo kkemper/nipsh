@@ -1,6 +1,6 @@
 <div class="field">
   <%= f.attribute_fields do |a| %>
-    <%= a.attribute_select associations: [:bsdi_blood_pressures, :bsdi_blood_chemistries, :bsdi_smokings] %>
+    <%= a.attribute_select associations: [:bsdi_blood_pressures, :bsdi_blood_chemistries, :bsdi_smokings, :bsdi_current_jobs, :bsdi_diseases, :bsdi_histories, :bsdi_measurements] %>
   <% end %>
   <%= f.predicate_select only: %i(cont not_cont eq not_eq blank null lt lteq gt gteq) %><br />
   <%= f.value_fields do |v| %>

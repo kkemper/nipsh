@@ -1,3 +1,9 @@
 class FitnessTestTest < ActiveRecord::Base
   belongs_to :fitness_report
+
+    private
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w(fitness_ht fitness_wt fitness_bia_stnd fitness_bia_ath fitness_bia_p_f fitness_bmi fitness_tbw fitness_skinfold fitness_skn_p_f fitness_bodpod fitness_bod_p_f fitness_accuflex fitness_flex_p_fl fitness_grip_r fitness_leg_press fitness_arm_curl fitness_q_3 fitness_q_4 fitness_rest_ecg fitness_percent_max_hr fitness_max_mets fitness_max_rpe fitness_max_vo2 fitness_vo2_pass_fail fitness_swat fitness_scuba fitness_hazmat fitness_canine fitness_taskforce fitness_reserve fitness_merit fitness_envir_oficr fitness_recheck fitness_ex_rx_offered fitness_rx_accepted fitness_impression fitness_rtw fitness_promo fitness_arrestee fitness_jco fitness_social_sec_num fitness_hip fitness_waist fitness_rx_required fitness_class_start_date fitness_fms fitness_wfi_incentive               fitness_termination fitness_q_1 fitness_q_2 fitness_ectopy fitness_ref_letter fitness_bp_response fitness_pvcs fitness_age fitness_max_dbp fitness_overread fitness_rest_hr fitness_rest_dbp fitness_crunches fitness_test_type fitness_pre_or_post fitness_push_ups fitness_plank fitness_rest_sbp fitness_max_hr fitness_max_sbp fitness_rest_bp fitness_grip_l) + _ransackers.keys
+  end
 end

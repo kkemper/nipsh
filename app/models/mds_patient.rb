@@ -17,5 +17,11 @@ class MdsPatient < ActiveRecord::Base
   has_many :physical_activities, through: :mds_reports
   has_many :surgeries, through: :mds_reports
   has_many :tobaccos_and_alcohols, through: :mds_reports
+
+    private
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w(lname fname mname gender) + _ransackers.keys
+  end
   
 end

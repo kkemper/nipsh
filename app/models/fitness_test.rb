@@ -46,5 +46,11 @@ class FitnessTest < ActiveRecord::Base
     where(:plank => plank)
   }
 
+    private
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w(mds_report_id fit_test_date aerobic_test_type aerobic_capacity flex_sit_reach hand_strength leg_strength arm_strength vertical_jump endurance_push_ups plank) + _ransackers.keys
+  end
+
 
 end

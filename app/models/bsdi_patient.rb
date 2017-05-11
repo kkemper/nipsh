@@ -24,6 +24,6 @@ class BsdiPatient < ActiveRecord::Base
 private
 
 def self.ransackable_attributes(auth_object = nil)
-  %w(lname fname date_of_birth) + _ransackers.keys
+  %w(bsdi_lname bsdi_fname bsdi_birthdate bsdi_gender) + _ransackers.keys
 end
 end

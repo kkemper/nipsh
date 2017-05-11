@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427203454) do
+ActiveRecord::Schema.define(version: 20170511165850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -378,7 +378,7 @@ ActiveRecord::Schema.define(version: 20170427203454) do
     t.integer "ethnicity"
     t.integer "race"
     t.integer "marital_status"
-    t.string  "ed_level"
+    t.integer "ed_level"
   end
 
   create_table "duties", force: :cascade do |t|

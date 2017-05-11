@@ -2,8 +2,8 @@
 FROM ruby:2.2.1
 
 #Set-up postgresql
-RUN apt-get update -qq && apt-get install -y \
-    build-essential \
+RUN apt-get update -qq && apt-get install -y build-essential
+        postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
 #Create rails app in the container

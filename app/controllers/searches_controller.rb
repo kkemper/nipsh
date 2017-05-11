@@ -2,7 +2,7 @@ class SearchesController < ApplicationController
   include SearchesHelper
 
   def index
-    @search = Patient.includes(:bsdi_blood_chemistries, :bsdi_blood_pressures, :bsdi_smokings).ransack(params[:q])
+    @search = Patient.includes(:bsdi_blood_chemistries, :bsdi_blood_pressures, :bsdi_smokings, :bsdi_current_jobs, :bsdi_histories, :bsdi_diseases, :bsdi_measurements).ransack(params[:q])
     @results = @search.result(distinct: true)
     @search.build_condition if @search.conditions.empty?
     @search.build_sort if @search.sorts.empty?

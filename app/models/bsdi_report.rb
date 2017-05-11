@@ -19,4 +19,10 @@ class BsdiReport < ActiveRecord::Base
   has_one :bsdi_smoking_barrier
   has_one :bsdi_tobacco_and_alcohol
   has_one :bsdi_weight
+
+    private
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w(bsdi_date) + _ransackers.keys
+  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511172122) do
+ActiveRecord::Schema.define(version: 20170601210843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -362,7 +362,6 @@ ActiveRecord::Schema.define(version: 20170511172122) do
   create_table "current_jobs", force: :cascade do |t|
     t.string   "mds_report_id"
     t.boolean  "currently_emp"
-    t.integer  "current_duties"
     t.boolean  "volunteer"
     t.integer  "volunteer_hours"
     t.boolean  "other_employment"
@@ -586,6 +585,12 @@ ActiveRecord::Schema.define(version: 20170511172122) do
     t.datetime "created_at",                default: "now()", null: false
     t.datetime "updated_at",                default: "now()", null: false
     t.string   "other_ty"
+    t.boolean  "other"
+    t.string   "cancer_type"
+    t.boolean  "hernia"
+    t.boolean  "hernia_ty"
+    t.boolean  "hernia_current"
+    t.boolean  "hernia_medication"
   end
 
   create_table "hearing_tests", force: :cascade do |t|
@@ -631,10 +636,10 @@ ActiveRecord::Schema.define(version: 20170511172122) do
     t.string   "mds_report_id"
     t.integer  "non_work_sick_days"
     t.integer  "injury_related_days"
-    t.integer  "alternative_duty"
     t.datetime "created_at",          default: "now()", null: false
     t.datetime "updated_at",          default: "now()", null: false
-    t.integer  "lt_alternative_duty"
+    t.boolean  "alternative_duty"
+    t.boolean  "lt_alternative_duty"
   end
 
   create_table "lab_data", force: :cascade do |t|
@@ -766,8 +771,8 @@ ActiveRecord::Schema.define(version: 20170511172122) do
     t.integer  "manf_years"
     t.integer  "healthcare_years"
     t.integer  "other_years"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",         default: "now()", null: false
+    t.datetime "updated_at",         default: "now()", null: false
     t.string   "mds_report_id"
   end
 
@@ -999,21 +1004,19 @@ ActiveRecord::Schema.define(version: 20170511172122) do
 
   create_table "surgeries", force: :cascade do |t|
     t.string   "mds_report_id"
+    t.datetime "created_at",    default: "now()", null: false
+    t.datetime "updated_at",    default: "now()", null: false
     t.integer  "chest"
     t.integer  "back"
     t.integer  "neck"
     t.integer  "shoulder"
     t.integer  "leg"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
   end
 
   create_table "tobacco_and_alcohols", force: :cascade do |t|
     t.string   "mds_report_id"
     t.boolean  "smoke"
     t.integer  "pack_count"
-    t.boolean  "chew_tobacco"
-    t.boolean  "smoke_cigar"
     t.boolean  "smoke_cessation"
     t.boolean  "cessation_success"
     t.boolean  "alcohol"
@@ -1022,6 +1025,12 @@ ActiveRecord::Schema.define(version: 20170511172122) do
     t.integer  "start_smoke"
     t.integer  "stop_smoke"
     t.integer  "alcohol_count"
+    t.integer  "chew_tobacco"
+    t.integer  "chew_years"
+    t.integer  "chew_count"
+    t.integer  "cigar_years"
+    t.integer  "cigar_count"
+    t.integer  "smoke_cigar"
   end
 
   create_table "users", force: :cascade do |t|

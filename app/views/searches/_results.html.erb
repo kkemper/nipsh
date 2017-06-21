@@ -3,6 +3,7 @@
 <% if @results %>
    
 <span> <%= @results.count('id', :distinct => true) %> Results Found</span><br /> 
+<%= @results %>
 <%= link_to "Download CSV", searches_path(params.merge(format: "csv"))%>
 <% end %>
 

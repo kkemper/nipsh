@@ -218,7 +218,7 @@
 	fev1_fvc = fev1/fvc
 
 	#Create mds_reports
-	MDSReport.create!(report_id: report_id, demographic_id: demographic_id, report_date: report_date)
+	MdsReport.create!(report_id: report_id, demographic_id: demographic_id, report_date: report_date)
 	#Create patients
 	Patient.create!(patient_id: patient_id, lname: lname, fname: fname, mname: mname, date_of_birth: date_of_birth)
 	#Create demographics

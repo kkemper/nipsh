@@ -1,4 +1,4 @@
-class MDSReportsController < ApplicationController
+class MdsReportsController < ApplicationController
   def new
   end
 

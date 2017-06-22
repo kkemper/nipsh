@@ -6,6 +6,7 @@ ruby '2.2.1'
 gem 'rails', '4.2.5.1'
 gem 'bcrypt', '3.1.7'
 gem 'puma', '3.4.0'
+gem 'json'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -27,8 +28,8 @@ gem 'jbuilder', '~> 2.4.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
 gem 'bootstrap-sass'
-gem 'authlogic', '3.4.6'
-gem 'activeadmin', github: 'activeadmin'
+#gem 'authlogic', '3.4.6'
+#sgem 'activeadmin', github: 'activeadmin'
 gem 'faker'
 gem 'ransack'
 gem 'chartkick'
@@ -49,12 +50,12 @@ group :development, :test do
   gem 'capistrano', '~> 3.4.0'
   gem 'capistrano-passenger'
 end
- 
+
 
 group :test do
   gem 'minitest-reporters', '1.0.5'
-  gem 'mini_backtrace', '0.1.3'
-  gem 'guard-minitest', '2.3.1' 
+  #gem 'mini_backtrace', '0.1.3'
+  gem 'guard-minitest', '2.3.1'
 
 end
 
@@ -72,5 +73,3 @@ end
 group :production do
   gem 'rails_12factor'
  end
-
-

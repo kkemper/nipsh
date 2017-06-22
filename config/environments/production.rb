@@ -80,8 +80,8 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
   :address      =>  'smtp.sendgrid.net',
   :domain       =>  'NIPSH',
-  :user_name    =>  ENV[“EMAILUSERNAME”],
-  :password     =>  ENV[“EMAILPASSWORD”],
+  :user_name    =>  ENV['EMAILUSERNAME'],
+  :password     =>  ENV['EMAILPASSWORD'],
   :port         =>  '587',
   :authentication  =>  :plain,
   :enable_starttls_auto => true  

@@ -1,20 +1,18 @@
 <% provide(:title, "Search") %>
 <div class="jumbotron">
 
-<h3>Search the Data</h3>
+<h3>Data Definitions</h3>
 
-<%= search_form_for @search, url: search_searches_path, method: :post do |f| %>
+<p>The data in the repository is derived from a number of sources including fitness tests, lab tests, physical examinations, and surveys.  To better understand the data sources and view a full list of the available data, use the buttons below.</p>
 
-  <%= f.condition_fields do |c| %>
-    <%= render "condition_fields", f: c %>
-  <% end %>
-   <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
- 
-  <div class="form_group">
+<div class="center block">
+<div class="btn-group" role="group">
+  <%= link_to 'Available Data', data_path, class: 'btn btn-primary btn-lg no-underline' %>
+  <%= link_to 'Download PDF', asset_path('NIPSH_data_sources.pdf'), class: 'btn btn-primary btn-lg center-block no-underline' %>
+</div>
+</div>
 
-
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+<%= render "search" %>
 
 <%= render 'results' %>
 

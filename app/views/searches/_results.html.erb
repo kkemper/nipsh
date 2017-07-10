@@ -3,8 +3,8 @@
 <% if @results %>
    
 <span> <%= @results.count('id', :distinct => true) %> Results Found</span><br /> 
-<%= @results %><br />
-<%= link_to "Download CSV", searches_path({:format => :csv}.merge(params)),  :class => "btn btn-info" %>
+<br />
+<%= link_to "Download CSV", searches_path({:format => :csv}.merge(params)),  :class => "btn btn-success btn-lg no-underline" %>
 <% end %>
 
 

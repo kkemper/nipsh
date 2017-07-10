@@ -49,7 +49,7 @@ Rails.application.routes.draw do
 
   get 'user_sessions/new'
 
-  root 'static_pages#home'
+  root 'searches#index'
 
   get 'home' => 'static_pages#home'
 

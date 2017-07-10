@@ -34,6 +34,7 @@ gem 'faker'
 gem 'ransack'
 gem 'chartkick'
 gem 'spreadsheet_architect'
+gem 'hightop'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

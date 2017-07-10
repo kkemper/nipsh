@@ -1,13 +1,12 @@
 class Search < ActiveRecord::Base
 
-   def self.to_csv
+  def self.to_csv
     attributes = %w{lname fname date_of_birth}
 
-    CSV.generate(headers: true) do |csv|
-      csv << attributes
-
-      list.each do |patient|
-        csv << attributes.map{ |attr| patient.send(attr) }
+    CSV.open("results.csv", "wb") do |csv|
+      csv << @output.first.keys
+      @output.each.do |hash|
+        csv << hash.values
       end
     end
   end

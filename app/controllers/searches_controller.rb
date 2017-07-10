@@ -4,12 +4,13 @@ class SearchesController < ApplicationController
   def index
     @search = Patient.ransack(params[:q])
     @results = @search.result(distinct: true)
+    @output = @results.to_a
     @search.build_condition if @search.conditions.empty?
     @search.build_sort if @search.sorts.empty?
 
      respond_to do |format|
       format.html
-      format.csv { send_data @results.to_csv, filename: "results-#{Date.today}.csv" }
+      format.csv { send_data @output.to_csv, filename: "results-#{Date.today}.csv" }
     end
   end
 

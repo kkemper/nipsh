@@ -15,7 +15,7 @@ class PatientsController < ApplicationController
     @s.build_condition
     respond_to do |format|
       format.html
-      format.csv { send_data @patients.to_csv, filename: "results-#{Date.today}.csv" }
+      format.csv { send_data @output.to_csv, filename: "results-#{Date.today}.csv" }
     end
   end
 

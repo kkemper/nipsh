@@ -5,10 +5,10 @@
   <%= f.condition_fields do |c| %>
     <%= render "condition_fields", f: c %>
   <% end %>
-   <p><%= link_to_add_fields "Add Conditions", f, :condition %></p>
+  <%= link_to_add_fields "Add Conditions", f, :condition %>
  
   <div class="form_group">
 
 
-  <%= f.submit class: 'btn btn-primary' %>
+  <%= f.submit class: 'btn btn-success' %>
 <% end %>

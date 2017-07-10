@@ -10,7 +10,7 @@ class SearchesController < ApplicationController
 
      respond_to do |format|
       format.html
-      format.csv { send_data @output.to_csv, filename: "results-#{Date.today}.csv" }
+      format.csv { render csv: @results, filename: "results-#{Date.today}.csv" }
     end
   end
 

@@ -1,5 +1,6 @@
 class Search < ActiveRecord::Base
-
+  include SpreadsheetArchitect
+  
   def self.to_csv
     attributes = %w{lname fname date_of_birth}
 

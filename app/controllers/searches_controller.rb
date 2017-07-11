@@ -3,6 +3,8 @@ class SearchesController < ApplicationController
 
   def index
     @search = Patient.ransack(params[:q])
+    @bsdi_bp = BsdiBloodPressure.ransack(params[:q])
+    @bp_results = @bsdi_bp.result(distinct: true)
     @results = @search.result(distinct: true)
     @output = @results.to_a
     @search.build_condition if @search.conditions.empty?
@@ -14,12 +16,6 @@ class SearchesController < ApplicationController
     end
   end
 
-  def advanced_search
-
-   @search = Patient.ransack(params[:q])
-    @search.build_grouping unless @search.groupings.any?
-    @results = @search_result
-  end
 
   private
 

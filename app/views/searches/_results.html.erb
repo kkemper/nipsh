@@ -5,6 +5,8 @@
 <h2><span class="label label-default"> <%= @results.count('id', :distinct => true) %></span> Results Found</h2>
 
 <%= link_to "Download CSV", searches_path({:format => :csv}.merge(params)),  :class => "btn btn-success no-underline" %>
+<br /><br />
+
 
 <% end %>
 

@@ -1,14 +1,19 @@
-<h4>Results</h4>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">Results</h4>
+  </div>
+  <div class="panel-body">
 
-<% if @results %>
-   
-<h2><span class="label label-default"> <%= @results.count('id', :distinct => true) %></span> Results Found</h2>
+    <% if @results %>
+       
+    <h2><span class="label label-default"> <%= @results.count('id', :distinct => true) %></span> Results Found</h2>
 
-<%= link_to "Download CSV", searches_path({:format => :csv}.merge(params)),  :class => "btn btn-success no-underline" %>
-<br /><br />
+    <%= link_to "Download CSV", searches_path({:format => :csv}.merge(params)),  :class => "btn btn-success no-underline" %>
 
+    <% end %>
+  </div>
+</div>
 
-<% end %>
 
 
 

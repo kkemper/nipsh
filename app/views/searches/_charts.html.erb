@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">Charts</h4>
+  </div>
+  <div class="panel-body">
+    <h5>Diastolic Blood Pressure</h5>
+    <%= column_chart @results.group(:bsdi_diastolic).count %>
+
+    <h5>Systolic Blood Pressure</h5>
+    <%= column_chart @results.group(:bsdi_systolic).count %>
+  </div>
+</div>

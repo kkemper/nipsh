@@ -3,13 +3,8 @@
 <% if @results %>
    
 <h2><span class="label label-default"> <%= @results.count('id', :distinct => true) %></span> Results Found</h2>
-<h2><span class="label label-default"> <%= @bp_results.count('id', :distinct => true) %></span> Results Found</h2>
+
 <%= link_to "Download CSV", searches_path({:format => :csv}.merge(params)),  :class => "btn btn-success no-underline" %>
-
-<%= column_chart @bp_results.group(:bsdi_diastolic).count %>
-
-<%= @bp_results %>
-
 
 <% end %>
 

@@ -2,9 +2,7 @@ class SearchesController < ApplicationController
   include SearchesHelper
 
   def index
-    @search = Patient.ransack(params[:q])
-    @bsdi_bp = BsdiBloodPressure.ransack(params[:q])
-    @bp_results = @bsdi_bp.result(distinct: true)
+    @search = MasterSearch.ransack(params[:q])
     @results = @search.result(distinct: true)
     @output = @results.to_a
     @search.build_condition if @search.conditions.empty?

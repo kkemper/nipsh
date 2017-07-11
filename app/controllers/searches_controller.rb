@@ -15,7 +15,7 @@ class SearchesController < ApplicationController
       format.csv { render csv: @results, filename: "results-#{Date.today}.csv" }
     end
   end
-
+ 
 
   private
 

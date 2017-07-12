@@ -1,6 +1,6 @@
 class AddingOhmAndMdsToView < ActiveRecord::Migration
   def change
-    drop_table :master_searches
+    execute "DROP VIEW master_searches"
   end
 
   def up

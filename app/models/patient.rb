@@ -53,6 +53,6 @@ class Patient < ActiveRecord::Base
 private
 
 def self.ransackable_attributes(auth_object = nil)
-  %w(date_of_birth) + _ransackers.keys
+  %w(date_of_birth id) + _ransackers.keys
 end
 end

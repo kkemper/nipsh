@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714170111) do
+ActiveRecord::Schema.define(version: 20170714193037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -393,10 +393,6 @@ ActiveRecord::Schema.define(version: 20170714170111) do
     t.string   "mds_report_id"
     t.boolean  "male_heart_disease"
     t.boolean  "female_heart_disease"
-    t.boolean  "male_alcohol"
-    t.boolean  "female_alcohol"
-    t.boolean  "male_hypertension"
-    t.boolean  "female_hypertension"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end

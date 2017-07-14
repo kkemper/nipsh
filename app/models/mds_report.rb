@@ -4,10 +4,7 @@ class MdsReport < ActiveRecord::Base
 	has_one :current_job
 	has_one :duty
 	has_one :family_history
-	has_one :fitness_test
 	has_one :health_condition
-	has_one :hearing_test
-	has_one :immunization
 	has_one :injury_illness
 	has_one :other_employment
 	has_one :physical_activity

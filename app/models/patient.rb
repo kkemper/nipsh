@@ -22,17 +22,12 @@ class Patient < ActiveRecord::Base
   has_many :bsdi_smoking_barriers, through: :bsdi_reports
   has_many :bsdi_tobacco_and_alcohols, through: :bsdi_reports
   has_many :bsdi_weights, through: :bsdi_reports
-  has_many :lab_data, through: :mds_patient
-  has_many :physical_exams, through: :mds_patient
-  has_many :fitness_tests, through: :mds_reports
   has_many :cancer_screenings, through: :mds_reports
   has_many :current_jobs, through: :mds_reports
   has_many :demographics, through: :mds_patient
   has_many :duties, through: :mds_reports
   has_many :family_histories, through: :mds_reports
   has_many :health_conditions, through: :mds_reports
-  has_many :hearing_tests, through: :mds_reports
-  has_many :immunizations, through: :mds_reports
   has_many :injury_illnesses, through: :mds_reports
   has_many :other_employments, through: :mds_reports
   has_many :physical_activities, through: :mds_reports

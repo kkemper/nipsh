@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714162450) do
+ActiveRecord::Schema.define(version: 20170714170111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -501,22 +501,6 @@ ActiveRecord::Schema.define(version: 20170714162450) do
     t.string   "fitness_grip_l"
   end
 
-  create_table "fitness_tests", force: :cascade do |t|
-    t.string   "mds_report_id"
-    t.date     "fit_test_date"
-    t.integer  "aerobic_test_type"
-    t.float    "aerobic_capacity"
-    t.float    "flex_sit_reach"
-    t.float    "hand_strength"
-    t.float    "leg_strength"
-    t.float    "arm_strength"
-    t.float    "vertical_jump"
-    t.integer  "endurance_push_ups"
-    t.integer  "plank"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
   create_table "health_conditions", force: :cascade do |t|
     t.string   "mds_report_id"
     t.boolean  "diabetes"
@@ -591,45 +575,6 @@ ActiveRecord::Schema.define(version: 20170714162450) do
     t.boolean  "hernia_ty"
     t.boolean  "hernia_current"
     t.boolean  "hernia_medication"
-  end
-
-  create_table "hearing_tests", force: :cascade do |t|
-    t.string   "mds_report_id"
-    t.date     "hearing_date"
-    t.integer  "left_500"
-    t.integer  "right_500"
-    t.integer  "left_1000"
-    t.integer  "right_1000"
-    t.integer  "left_2000"
-    t.integer  "right_2000"
-    t.integer  "left_3000"
-    t.integer  "right_3000"
-    t.integer  "left_4000"
-    t.integer  "right_4000"
-    t.integer  "left_6000"
-    t.integer  "right_6000"
-    t.integer  "left_8000"
-    t.integer  "right_8000"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "immunizations", force: :cascade do |t|
-    t.string   "mds_report_id"
-    t.date     "immunization_date"
-    t.integer  "hepatitis_b"
-    t.integer  "hep_b_titer_1"
-    t.date     "hep_b_titer_1_date"
-    t.integer  "heb_b_titer_2"
-    t.date     "hep_b_titer_2_date"
-    t.integer  "hep_a"
-    t.boolean  "influenza"
-    t.integer  "tb_test"
-    t.date     "tb_test_date"
-    t.boolean  "tb_quantiferon"
-    t.integer  "hep_c"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
   end
 
   create_table "injury_illnesses", force: :cascade do |t|
